@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #ddd;
+    color: black;
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 20px;
+}
+
+.bgcol {
+    background-color: white;
+}
+
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: #ffffff;
+}
+
+.section1 {
+    background-color: #000000;
+    padding-top: 140px;
+}
+
+.section2 {
+    background-color: #ffffff;
+    margin-top: 110px;
+}
+
+.section3 {
+    background-color: #ffffff;
+    margin-top: 40px;
+}
+
+.section4 {
+    background-color: #ffffff;
+    margin-top: 80px;
+}
+
+
+.sizeimg {
+    height: 350px;
+    width: 1000px;
+}
+
+.sizeimg2 {
+    height: 200px;
+}
+
+.sizeimg3 {
+    height: 400px;
+    opacity: 0.8
+}
+
+.col1 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.text1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    color: #000000;
+    padding-top: 50px;
+
+}
+
+.footer {
+    background-color: black;
+}
+
+.text2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: blue;
+}
+
+.text3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #000000;
+    padding-top: 30px;
+}
+
+.text4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    color: #000000;
+}
+
+.text5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+    font-style: italic;
+}
+
+.text6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #000000;
+}
+
+
+
+
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+a,
+a:hover {
+    color: #000;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.socialbtnsbtnsbtns,
+.socialbtnsbtnsbtns ul,
+.socialbtnsbtnsbtns li {
+    margin: 0;
+    padding: 5px;
+}
+
+.socialbtnsbtnsbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.socialbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.socialbtns .fa {
+    color: #FFF;
+    text-shadow: 1px 1px 0px #000,
+        1px -1px 0px #000,
+        -1px 1px 0px #000,
+        -1px -1px 0px #000;
+    -webkit-text-shadow: 1px 1px 0px #000,
+        1px -1px 0px #000,
+        -1px 1px 0px #000,
+        -1px -1px 0px #000;
+    -moz-text-shadow: 1px 1px 0px #000,
+        1px -1px 0px #000,
+        -1px 1px 0px #000,
+        -1px -1px 0px #000;
+    -o-text-shadow: 1px 1px 0px #000,
+        1px -1px 0px #000,
+        -1px 1px 0px #000,
+        -1px -1px 0px #000;
+    transition: all ease-out 0.5s;
+    -moz-transition: all ease-out 0.5s;
+    -webkit-transition: all ease-out 0.5s;
+    -o-transition: all ease-out 0.5s;
+}
+
+.socialbtns .fa:hover {
+    color: #000;
+    text-shadow: 1px 1px 0px #fff,
+        1px -1px 0px #fff,
+        -1px 1px 0px #fff,
+        -1px -1px 0px #fff;
+    -webkit-text-shadow: 1px 1px 0px #fff,
+        1px -1px 0px #fff,
+        -1px 1px 0px #fff,
+        -1px -1px 0px #fff;
+    -moz-text-shadow: 1px 1px 0px #fff,
+        1px -1px 0px #fff,
+        -1px 1px 0px #fff,
+        -1px -1px 0px #fff;
+    -o-text-shadow: 1px 1px 0px #fff,
+        1px -1px 0px #fff,
+        -1px 1px 0px #fff,
+        -1px -1px 0px #fff;
+    transition: all ease 0.5s;
+    -moz-transition: all ease-in 0.5s;
+    -webkit-transition: all ease-in 0.5s;
+    -o-transition: all ease-in 0.5s;
+}
+
+.text10 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+}
