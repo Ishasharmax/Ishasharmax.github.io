@@ -15,7 +15,8 @@
     <script src="js/js1.js"></script>
     <!-- link in style sheets -->
     <link href="css/style.css" type="text/css" rel="stylesheet" />
-    <!-- include JS scripts -->
+
+    <?php include 'footer.php';?>
 </head>
 
 <body>
@@ -31,8 +32,8 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="gart.html">Generative Art</a>
                 </li>
@@ -133,70 +134,66 @@
     <section>
         <h1 class="text1 d-block mx-auto text-center">SKILLS </h1>
 
-        <p class="text6 d-block mx-auto text-center pr-5 pl-5"> <b>Technical</b>: Java, Python, C/C++, OOP, HTML5, CSS3, SASS, Bootstrap, Responsiveness, JavaScript, ReactJS, Ant Design, Wordpress, MacOS, Windows, iOS, UX/UI, Design Principles, User research, User scenarios, jQuery, Node.js, AngularJS, REST API, Git, GraphQL, JSON, SQL, AWS, Bash/Shell, Linux/Unix, Wireframe, Sketch, Mockups, R, Agile Methodologies, Webpack, Firebase, LaTeX, Swagger, Postman API, Processing, p5.js, Three.js</p>
-        <p class="text6 d-block mx-auto text-center pr-5 pl-5"> <b>Language:</b> English - Native proficiency, Hindi - Native proficiency, Spanish - Elementary proficiency</p>
+
+        <p class="text6 d-block mx-auto text-center pr-5 pl-5"> <u>Coding Languages:</u> Java, Python, C/C++, R, HTML, CSS, SASS, Bootstrap, JavaScript, PHP, GraphQL, JSON</p>
+        <p class="text6 d-block mx-auto text-center pr-5 pl-5"><u>Software:</u> MATLAB, Github, Postman, Swagger, AWS S3/EC2, LaTeX, MacOS, Windows, Wordpress, Processing, Linux/Unix, Bash/Shell, REST APIs, Rails, Postgres, Photoshop, Illustrator, InDesign</p>
+        <p class="text6 d-block mx-auto text-center pr-5 pl-5"><u>Libraries/Frameworks: </u>NodeJS, React, Backbone.js,baby5 Matplotlib, Numpy, Turtle, p5.js, Three.js, ml5.js, Webpack, Angular, jQuery, Django</p>
+        <p class="text6 d-block mx-auto text-center pr-5 pl-5"><u>Other: </u>HTTP, User Design, Wireframes, Responsiveness, User Scenarios, Sketch, Design Principles, Mockups, User empathy, Interaction design, Agile Methodologies, Npm, Market Research, Generative Art</p>
+        <p class="text6 d-block mx-auto text-center pr-5 pl-5"><u>Languages: </u>English - Native proficiency, Hindi - Native proficiency, Spanish - Elementary proficiency</p>
     </section>
 
     <section>
         <h1 class="text1 d-block mx-auto text-center">ORGANIZATIONS & REWARDS </h1>
-        <p class="text6 d-block mx-auto text-center">Technology Consulting Virtual Intern at Deloitte (July - Present)</p>
         <p class="text6 d-block mx-auto text-center">Ithaca College Women In Computing Outreach Coordinator (May 2018 - present)</p>
         <p class="text6 d-block mx-auto text-center">Photography volunteer for Ithaca Underground (Oct 2017 - present)<a class="text2" src="https://ishasharmax.wixsite.com/blog/iu-volunteering"> - Photos</a></p>
         <p class="text6 d-block mx-auto text-center">Awarded Merit-Based President's Scholarship by Ithaca College (2017 - present)</p>
+        <p class="text6 d-block mx-auto text-center">Technology Consulting Virtual Intern at Deloitte (July 2020 - August 2020)</p>
         <p class="text6 d-block mx-auto text-center">Summer Extern at AT&T Learning Academy 2020 - <a class="text2" src="https://www.youracclaim.com/badges/385c35bb-eb95-4ce1-a812-bbee19c6f8c8/public_url">Badge</a></p>
         <p class="text6 d-block mx-auto text-center">Student volunteer at Cornell Lab of Ornithology (Sept 2019 - March 2020)</p>
         <p class="text6 d-block mx-auto text-center">Participant of Women in Leadership Experience 2018 & 2019</p>
         <p class="text6 d-block mx-auto text-center">Participated in Social Leadership Retreat 2018</p>
-        <p class="text6 d-block mx-auto text-center">WiCHacks Liberty Mutual Hack Winner 2018</p>
+        <p class="text6 d-block mx-auto text-center">WiCHacks Liberty Mutual Hack Winner 2018 - <a href="https://devpost.com/software/ithaca-care" class="text2">App created</a></p>
     </section>
 
+    <section>
+        <div class="row">
+            <div class="col-12">
+                <button type="button" class="btn btn-dark d-block mx-auto" data-toggle="modal" data-target="#exampleModal">
+                    Resume
+                </button>
+                <div class="modal fade bg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content ">
+                            <div class="modal-header">
+                                <h5 class="modal-title mar" id="exampleModalLabel">Resume</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <iframe src="docs/Resume.pdf" height="550" width="770"></iframe>
+                            </div>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init('YOUR_USER_ID');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate the contact number value
-                this.contact_number.value = Math.random() * 100000 | 0;
-                emailjs.sendForm('contact_service', 'contact_form', this);
-            });
-        }
-    </script>
-
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer mt-5 pt-5 pb-5">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-4">
                 </div>
                 <div class="col-lg-4 col-sm-12">
-                    <form id="contact-form">
-                        <input type="hidden" name="contact_number">
-                        <label class="text10">Name</label>
-                        <input type="text" name="user_name">
-                        <label class="text10">Email</label>
-                        <input type="email" name="user_email">
-                        <label class="text10">Message</label>
-                        <textarea name="message"></textarea>
-                        <input type="submit" class="text10 d-block mx-auto" value="Send">
-                    </form>
-                    
-                    
-                    
-                    
-
-
+                    <br />
                     <div align="center" class="socialbtns">
                         <ul>
                             <li><a href="https://twitter.com/ishasharmax" class="fa fa-lg fa-twitter"></a></li>
                             <li><a href="https://github.com/Ishasharmax" class="fa fa-lg fa-github"></a></li>
                             <li><a href="https://www.linkedin.com/in/ishasharmax/" class="fa fa-lg fa-linkedin"></a></li>
+                            <li><a href="https://medium.com/@ishasharmax" class="fa fa-medium"></a></li>
                         </ul>
                     </div>
                 </div>
