@@ -60,32 +60,29 @@ header {
 }
 
 
-.custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+.navbar-toggler-icon {
+    background-image: url("https://www.shift8web.ca/wp-content/uploads/2016/01/menu-512.png");
 }
 
-.custom-toggler.navbar-toggler {
+.navbar-toggler {
     border-color: #ffffff;
 }
 
-.section1 {
-    background-color: #000000;
-    padding-top: 140px;
+
+#section2 {
+    background-color: #ffffff;
 }
 
-.section2 {
+#section3 {
     background-color: #ffffff;
-    margin-top: 110px;
-}
-
-.section3 {
-    background-color: #ffffff;
-    margin-top: 40px;
 }
 
 .section4 {
     background-color: #ffffff;
-    margin-top: 80px;
+}
+
+.section5 {
+    background-color: #ffffff;
 }
 
 
@@ -95,7 +92,7 @@ header {
 }
 
 .sizeimg2 {
-    height: 200px;
+    height: 180px;
 }
 
 .sizeimg3 {
@@ -103,20 +100,23 @@ header {
     opacity: 0.8
 }
 
+.sizeimg4 {
+    height: 270px;
+}
+
 .col1 {
-    color: white;
+    color: black;
     font-family: 'Montserrat', sans-serif;
-    font-size: 80px;
-    margin-top: 80px;
+    font-size: 40px;
+    padding-top: 50px;
+    padding-bottom: 40px;
     text-align: center;
 }
 
 .text1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 35px;
+    font-size: 29px;
     color: #000000;
-    padding-top: 50px;
-
 }
 
 .footer {
@@ -126,14 +126,23 @@ header {
 .text2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    color: blue;
+    color: cornflowerblue;
+    padding-top: 10px;
+}
+
+.text2:hover{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: darkblue;
+    padding-top: 10px;
+    
 }
 
 .text3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     color: #000000;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .text4 {
@@ -263,3 +272,18 @@ a:hover {
     text-decoration-line: underline;
     text-decoration-style: double;
 }
+
+.marNeg {
+    margin-top: -120px;
+}
+
+.marNeg2 {
+    margin-top: -5px;
+}
+
+.mar2 {
+    margin-top: 150px;
+}
+
+
+
