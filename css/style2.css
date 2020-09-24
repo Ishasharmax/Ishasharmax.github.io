@@ -9,25 +9,20 @@ body {
 
 .count-particles {
     position: relative;
-    top: 400px;
+    top: 460px;
     color: #ffffff;
     text-indent: 4px;
     line-height: 14px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     animation: bounceIn;
-    /* referring directly to the animation's @keyframe declaration */
     animation-duration: 4s;
-    /* don't forget to set a duration! */
 }
 
 .text7 {
     font-size: 50px;
-    padding-top: 30px;
     position: relative;
-
 }
-
 
 .text8 {
     font-size: 25px;
@@ -45,7 +40,6 @@ body {
     background-repeat: no-repeat;
     position: relative;
 }
-
 
 .link1 {
     color: cornflowerblue;
@@ -149,19 +143,16 @@ body {
     color: #414141;
 }
 
-
-
 .parallax {
-    background: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url("../images/download(48).png");
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../R_images/2020-07-23-01-07_seed_9355.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 50px;
 }
 
 .parallax2 {
-    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../images/download(48).png");
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../images/ambient.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -247,11 +238,76 @@ body {
 .back {
     transform: rotateY(180deg);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-    width: 470px; 
-
+    width: 470px;
 }
 
 .back p {
+    font-size: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+.flip-container2:hover .flipper2 {
+    transform: rotateY(180deg);
+}
+
+.flip-container2,
+.front2,
+.back2 {
+    width: 270px;
+    height: 270px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+/* flipping speed here */
+
+.flipper2 {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* making the the other side hidden while flipping */
+
+.front2,
+.back2 {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 270px;
+    height: 500px;
+}
+
+/* front side is in front of a back side */
+
+.front2 {
+    z-index: 2;
+    width: 270px;
+    color: white;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.back2 {
+    transform: rotateY(180deg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    width: 270px;
+    background-color: white;
+}
+
+.back2 p {
     font-size: 20px;
     padding: 30px;
     border-radius: 20px;
