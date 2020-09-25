@@ -43,21 +43,38 @@ body {
 
 .link1 {
     color: cornflowerblue;
-    text-decoration: underline;
-    font-size: 15px;
+    font-size: 18px;
+    text-align: left;
+    position: relative;
+}
+
+.link1:hover {
+    color: cornflowerblue;
+    text-decoration: line-through;
+    font-size: 18px;
     text-align: left;
     position: relative;
 }
 
 .link2 {
     color: cornflowerblue;
-    text-decoration: underline;
-    font-size: 15px;
+    font-size: 18px;
     text-align: right;
     position: absolute;
     right: 50px;
     margin-bottom: 20px;
 }
+
+.link2:hover {
+    color: cornflowerblue;
+    text-decoration: line-through;
+    font-size: 18px;
+    text-align: right;
+    position: absolute;
+    right: 50px;
+    margin-bottom: 20px;
+}
+
 
 .text9 {
     font-size: 15px;
@@ -316,19 +333,6 @@ body {
     font-size: 16px;
     color: #000000;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .btn {
