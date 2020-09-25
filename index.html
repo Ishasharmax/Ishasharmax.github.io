@@ -15,12 +15,19 @@
     <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
     <meta name="author" content="Vincent Garreau" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" media="screen" href="css/style2.css">
     <link rel="stylesheet" media="screen" href="css/style.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 
 <body>
+    <script>
+        AOS.init();
+</script>
     <header>
         <nav class="navbar navbar-expand-lg bgcol bg-fade fixed-top">
             <a class="navbar-brand" href="index.html">
@@ -35,16 +42,19 @@
                         <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#section2">About me</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#section1">Work Experience</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section2">Skills</a>
-                    </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#section3">Projects</a>
+                        <a class="nav-link" href="#section3">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#section4">Generative Art</a>
+                        <a class="nav-link" href="#section4">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section5">Generative Art</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#section5">Organisations & Rewards</a>
@@ -85,11 +95,10 @@
     </section>
 
     <!-- scripts -->
-
     <script src="particles.js"></script>
     <script src="js/app.js"></script>
 
-    <section id="section2">
+    <section id="section2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
         <h1 class="col1 text-center">ABOUT ME</h1>
         <div class="container">
             <div class="row">
@@ -103,10 +112,9 @@
         </div>
     </section>
 
-
     <section id="section1" class="heightX parallax">
-        <h1 class="col2 text-center">WORK EXPERIENCE</h1>
-        <div class="container">
+        <h1 class="col2 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">WORK EXPERIENCE</h1>
+        <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
             <div class="row">
                 <div class="col-lg-4 col-sm-12">
                     <div class="raw2">
@@ -179,11 +187,10 @@
         </div>
     </section>
 
-
     <div class="d-block d-sm-none d-md-none"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
-    <section id="section2">
-        <h1 class="text-center col1">SKILLS</h1>
-        <div class="container pb-5">
+    <section id="section3">
+        <h1 class="text-center col1" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">SKILLS</h1>
+        <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
             <div class="row">
                 <div class="col-lg-1"></div>
                 <div class="col-lg-10 col-sm-12">
@@ -200,9 +207,9 @@
     </section>
 
 
-    <section id="section3" class="parallax3">
-        <h1 class="col2 text-center">PROJECTS</h1>
-        <div class="container">
+    <section id="section4" class="parallax3">
+        <h1 class="col2 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">PROJECTS</h1>
+        <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
             <div class="row">
                 <div class="col-lg-6 col-sm-12">
                     <div class="raw">
@@ -278,7 +285,7 @@
     </section>
 
 
-    <section id="section6">
+    <section id="section6" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
         <div class="container pb-4 pt-4">
             <div class="row">
                 <div class="col-lg-1"></div>
@@ -293,7 +300,7 @@
 
 
     <section id="section4" class="parallax2">
-        <div class="container">
+        <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
             <h1 class="col2 text-center">GENERATIVE ART</h1>
             <div class="row">
                 <div class="col-lg-1"></div>
@@ -359,43 +366,49 @@
     <br>
 
     <section id="section5">
-        <div class="container">
+        <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
             <div class="row">
                 <div class="col-lg-1"></div>
                 <div class="col-lg-10 col-sm-12">
                     <div class="card card2">
-                        <h1 class="col1 text-center">ORGANISATIONS & REWARDS </h1>
-                        <p class="text6 d-block mx-auto text-center">Ithaca College Women In Computing Outreach Coordinator (May 2018 - present)</p>
-                        <p class="text6 d-block mx-auto text-center">Photography volunteer for Ithaca Underground (Oct 2017 - present)<a class="text2" src="https://ishasharmax.wixsite.com/blog/iu-volunteering"> - Photos</a></p>
-                        <p class="text6 d-block mx-auto text-center">Awarded Merit-Based President's Scholarship by Ithaca College (2017 - present)</p>
+                        <h1 class="col1 text-center">REWARDS & ORGANISATIONS</h1>
+                        <p class="text6 d-block mx-auto text-center">Awarded Merit-Based President's Scholarship by Ithaca College</p>
+                        <p class="text6 d-block mx-auto text-center">Member of Ithaca College Honors Program</p>
                         <p class="text6 d-block mx-auto text-center">Technology Consulting Virtual Intern at Deloitte (July 2020 - August 2020)</p>
                         <p class="text6 d-block mx-auto text-center">Summer Extern at AT&T Learning Academy 2020 - <a class="text2" src="https://www.youracclaim.com/badges/385c35bb-eb95-4ce1-a812-bbee19c6f8c8/public_url">Badge</a></p>
-                        <p class="text6 d-block mx-auto text-center">Student volunteer at Cornell Lab of Ornithology (Sept 2019 - March 2020)</p>
                         <p class="text6 d-block mx-auto text-center">Participant of Women in Leadership Experience 2018 & 2019</p>
                         <p class="text6 d-block mx-auto text-center">Participated in Social Leadership Retreat 2018</p>
                         <p class="text6 d-block mx-auto text-center">WiCHacks Liberty Mutual Hack Winner 2018 - <a href="https://devpost.com/software/ithaca-care" class="text2">App created</a></p>
+                        <p class="text6 d-block mx-auto text-center">Student volunteer at Cornell Lab of Ornithology (Sept 2019 - Present)</p>
+                        <p class="text6 d-block mx-auto text-center">Ithaca College Women In Computing Outreach Coordinator (May 2018 - present)</p>
+                        <p class="text6 d-block mx-auto text-center">Photography volunteer for Ithaca Underground (Oct 2017 - present)<a class="text2" src="https://ishasharmax.wixsite.com/blog/iu-volunteering"> - Photos</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Hover #1 -->
+
 
     <footer class="footer mt-5 pt-5 pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-3"></div>
-                <div class="col-3">
-                    <a class="contactMe btn btn-dark d-block mx-auto" href="mailto:1999sharma19@gmail.com">
-                        Contact Me
-                    </a>
+                <div class="col-lg-3"></div>
+                <div class="col-lg-3 col-sm-12 col-xs-12">
+                        <a class="pt-4 btn btn-one d-block mx-auto" href="mailto:1999sharma19@gmail.com">
+                            Contact Me
+                        </a>
                 </div>
-                <div class="col-3">
-                    <button type="button" class="btn btn-dark d-block mx-auto" data-toggle="modal" data-target="#exampleModal">
-                        My Resume
-                    </button>
+                <div class="col-lg-3 col-sm-12 col-xs-12">
+                    <div class="box-1">
+                        <button type="button" class="btn btn-one d-block mx-auto" data-toggle="modal" data-target="#exampleModal">
+                            Resume
+                        </button>
+                    </div>
+
                 </div>
-                <div class="col-3"></div>
+                <div class="col-lg-3"></div>
             </div>
         </div>
 

@@ -70,11 +70,13 @@ header {
 
 #section3 {
     background-color: #ffffff;
-    padding-bottom: 150px;
+    padding-bottom: 30px;
 }
 
 .section4 {
     background-color: #ffffff;
+    padding-bottom: 130px;
+
 }
 
 .section5 {
@@ -105,8 +107,8 @@ header {
     padding-bottom: 30px;
     text-align: center;
     position: relative;
-    animation: wobble;
-    animation-duration: 2s;
+    animation: flipInX;
+    animation-duration: 3s;
 }
 
 .col2 {
@@ -117,8 +119,8 @@ header {
     padding-bottom: 30px;
     text-align: center;
     position: relative;
-    animation: fadeInDown;
-    animation-duration: 2s;
+    animation: flipInX;
+    animation-duration: 3s;
 }
 
 .text1 {
@@ -300,3 +302,5 @@ a:hover {
 .mar2 {
     margin-top: 150px;
 }
+
+
