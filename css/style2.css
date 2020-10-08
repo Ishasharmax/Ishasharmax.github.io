@@ -22,12 +22,16 @@ body {
 .text7 {
     font-size: 50px;
     position: relative;
+        font-family: 'Montserrat', sans-serif;
+
 }
 
 .text8 {
     font-size: 25px;
     padding-bottom: 10px;
     position: relative;
+        font-family: 'Montserrat', sans-serif;
+
 }
 
 /* ---- particles.js container ---- */
