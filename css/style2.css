@@ -186,11 +186,18 @@ body {
     padding-bottom: 50px;
 }
 
+.parallax4 {
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../R_images/2020-07-23-01-16_seed_5546.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
 .margNeg2 {
     margin-left: -40px;
 }
-
-
 
 /*
 
