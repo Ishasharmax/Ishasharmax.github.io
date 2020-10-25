@@ -173,7 +173,7 @@ body {
 }
 
 .parallax2 {
-    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../images/ambient.png");
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../images/FullSizeRender.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
