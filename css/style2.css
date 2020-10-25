@@ -165,7 +165,7 @@ body {
 }
 
 .parallax {
-    background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url("../R_images/2020-07-20-14-44_seed_2948.png");
+    background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url("../images/Untitled_Artwork.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -191,7 +191,7 @@ body {
 }
 
 .parallax4 {
-    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../R_images/2020-07-23-01-16_seed_5546.png");
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../images/download(44).png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
