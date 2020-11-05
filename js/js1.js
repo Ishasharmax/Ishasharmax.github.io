@@ -22,14 +22,3 @@ var scroll = window.requestAnimationFrame ||
 var elementsToShow = document.querySelectorAll('.show-on-scroll');
 
 
-window.onload = function(){
-    setTimeout(function(){
-            document.querySelector(".preloader").style.display = "none";
-    },1500); 
-}
-
-
-
-$(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();   
-});
