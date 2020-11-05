@@ -343,20 +343,6 @@ a:hover {
     opacity: 0.5;
 }
 
-
-/*
-#preloader {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-    background: #efedef url('../gifs/ezgif.com-gif-maker.gif') no-repeat center center;
-}
-*/
-
 .loader{
     height: 170px;
 }
