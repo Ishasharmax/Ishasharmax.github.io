@@ -128,7 +128,7 @@ header {
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     padding-top: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     text-align: center;
     position: relative;
     animation: flipInX;
@@ -140,6 +140,17 @@ header {
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+    animation: flipInX;
+    animation-duration: 3s;
+}
+
+.col3 {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
     padding-bottom: 20px;
     text-align: center;
     position: relative;
@@ -243,7 +254,7 @@ a:hover {
     display: inline-block;
 }
 
-.socialbtns .fa {
+.socialbtns .fab {
     color: #FFF;
     text-shadow: 1px 1px 0px #000,
         1px -1px 0px #000,
@@ -267,8 +278,59 @@ a:hover {
     -o-transition: all ease-out 0.5s;
 }
 
-.socialbtns .fa:hover {
+.socialbtns .fab:hover {
     color: #000;
+    text-shadow: 1px 1px 0px #fff,
+        1px -1px 0px #fff,
+        -1px 1px 0px #fff,
+        -1px -1px 0px #fff;
+    -webkit-text-shadow: 1px 1px 0px #fff,
+        1px -1px 0px #fff,
+        -1px 1px 0px #fff,
+        -1px -1px 0px #fff;
+    -moz-text-shadow: 1px 1px 0px #fff,
+        1px -1px 0px #fff,
+        -1px 1px 0px #fff,
+        -1px -1px 0px #fff;
+    -o-text-shadow: 1px 1px 0px #fff,
+        1px -1px 0px #fff,
+        -1px 1px 0px #fff,
+        -1px -1px 0px #fff;
+    transition: all ease 0.5s;
+    -moz-transition: all ease-in 0.5s;
+    -webkit-transition: all ease-in 0.5s;
+    -o-transition: all ease-in 0.5s;
+}
+
+
+.iconHover .fab {
+        font-size:45px;
+    padding-left: 5px;
+            color: #000;
+   text-shadow: 1px 1px 0px #fff,
+        1px -1px 0px #fff,
+        -1px 1px 0px #fff,
+        -1px -1px 0px #fff;
+    -webkit-text-shadow: 1px 1px 0px #fff,
+        1px -1px 0px #fff,
+        -1px 1px 0px #fff,
+        -1px -1px 0px #fff;
+    -moz-text-shadow: 1px 1px 0px #fff,
+        1px -1px 0px #fff,
+        -1px 1px 0px #fff,
+        -1px -1px 0px #fff;
+    -o-text-shadow: 1px 1px 0px #fff,
+        1px -1px 0px #fff,
+        -1px 1px 0px #fff,
+        -1px -1px 0px #fff;
+    transition: all ease-out 0.5s;
+    -moz-transition: all ease-out 0.5s;
+    -webkit-transition: all ease-out 0.5s;
+    -o-transition: all ease-out 0.5s;
+}
+.iconHover .fab:hover {
+    font-size:45px;
+    color: #f76;
     text-shadow: 1px 1px 0px #fff,
         1px -1px 0px #fff,
         -1px 1px 0px #fff,
@@ -409,6 +471,52 @@ a:hover {
     }
 }
 */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
 
 
 
