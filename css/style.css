@@ -414,7 +414,7 @@ a:hover {
 
 .preloader {
   align-items: center;
-  background:rgba(239,237,239); 
+  background:#EAE8EC; 
   display: flex;
   height: 100vh;
   justify-content: center;
