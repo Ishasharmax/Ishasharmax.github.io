@@ -522,4 +522,10 @@ a:hover {
 }
 
 
+#canvas{
+    margin:0 auto;
+    display:block;
+}
+
+
 
