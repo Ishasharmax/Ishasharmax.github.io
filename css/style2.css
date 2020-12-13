@@ -288,6 +288,7 @@ body {
 
 .flip-container2:hover .flipper2 {
     transform: rotateY(180deg);
+    cursor: pointer;
 }
 
 .flip-container2,

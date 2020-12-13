@@ -22,7 +22,7 @@
             i = {
                 animate: !0,
                 patternWidth: 100,
-                patternHeight: 100,
+                patternHeight: 50,
                 grainOpacity: .1,
                 grainDensity: 1,
                 grainWidth: 1,
