@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #212121;
+  
+  #wrapper {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  h1 {
+    font-size: 100px;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    color: white;
+    position: absolute;
+    z-index: 0;
+  }
+}
