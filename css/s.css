@@ -15,15 +15,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond:wght@300&display=swap');
 
-
-
-/*
-nav a {
-    opacity: 1;
-    font-size: 15px;
-    color: aliceblue;
+@font-face {
+    font-family: 'Saonara';
+    src: url(fonts/made_saonara/font.otf);
 }
-*/
 
 
 
@@ -438,3 +433,10 @@ footer {
     z-index: 1;
     top: 350px;
 }
+
+
+
+
+
+
+
