@@ -135,8 +135,15 @@ header {
     padding-bottom: 10px;
     text-align: center;
     position: relative;
-    animation: flipInX;
-    animation-duration: 3s;
+}
+.col4{
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    position: relative;
 }
 
 .col2 {
@@ -147,8 +154,6 @@ header {
     padding-bottom: 20px;
     text-align: center;
     position: relative;
-    animation: flipInX;
-    animation-duration: 3s;
 }
 
 .col3 {
@@ -158,8 +163,6 @@ header {
     padding-bottom: 20px;
     text-align: center;
     position: relative;
-    animation: flipInX;
-    animation-duration: 3s;
 }
 
 .text1 {
@@ -217,9 +220,6 @@ header {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     color: #000000;
-    animation: slideOutUp;
-    animation-duration: 3s;
-
 }
 
 .position {
@@ -312,6 +312,7 @@ a:hover {
     font-size: 45px;
     padding-left: 5px;
     color: #000;
+/*
     text-shadow: 1px 1px 0px #fff,
         1px -1px 0px #fff,
         -1px 1px 0px #fff,
@@ -328,6 +329,7 @@ a:hover {
         1px -1px 0px #fff,
         -1px 1px 0px #fff,
         -1px -1px 0px #fff;
+*/
     transition: all ease-out 0.5s;
     -moz-transition: all ease-out 0.5s;
     -webkit-transition: all ease-out 0.5s;
@@ -337,7 +339,8 @@ a:hover {
 
 .iconHover .fab:hover {
     font-size: 45px;
-    color: #f76;
+    color: lightsteelblue;
+/*
     text-shadow: 1px 1px 0px #fff,
         1px -1px 0px #fff,
         -1px 1px 0px #fff,
@@ -354,6 +357,7 @@ a:hover {
         1px -1px 0px #fff,
         -1px 1px 0px #fff,
         -1px -1px 0px #fff;
+*/
     transition: all ease 0.5s;
     -moz-transition: all ease-in 0.5s;
     -webkit-transition: all ease-in 0.5s;
@@ -479,12 +483,11 @@ a:hover {
 
 
 .bgcolpink{
-    background-color: lightpink;
-    
+    background-color: blue;
 }
 .wrapper {
     flex-wrap: wrap;
-    background-color: lightpink;
+    background-color: blue;
     padding-left: 50px;
     padding-bottom: 10px;
     display:grid;
@@ -496,7 +499,6 @@ a:hover {
 
 .item {
     background-color: yellow;
-    opacity: 0.8;
 }
 
 .wd{
