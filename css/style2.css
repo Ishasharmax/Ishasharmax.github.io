@@ -399,10 +399,12 @@ body {
     opacity: 0;
     transform: scale(0.1, 1);
 }
+/*
 
 .top1 {
     top: 100px;
 }
+*/
 
 #container {
     background-color: #FFF9FB;
