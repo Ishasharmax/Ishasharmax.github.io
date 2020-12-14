@@ -15,7 +15,7 @@ body {
 
 .count-particles {
     position: relative;
-    top: 460px;
+    top: 520px;
     color: #ffffff;
     text-indent: 4px;
     line-height: 14px;
@@ -202,7 +202,6 @@ body {
 }
 
 /
-
 /*
 
 .raw {
@@ -413,11 +412,11 @@ body {
     top: 100px;
 }
 
-#container{
-     background-color: #FFF9FB;
+#container {
+    background-color: #FFF9FB;
 }
 
-#container33{
-     background-color: whitesmoke;
+#container33 {
+    background-color: whitesmoke;
     margin-bottom: -40px;
 }

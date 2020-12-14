@@ -136,7 +136,8 @@ header {
     text-align: center;
     position: relative;
 }
-.col4{
+
+.col4 {
     color: whitesmoke;
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
@@ -280,7 +281,7 @@ a:hover {
     -moz-transition: all ease-out 0.5s;
     -webkit-transition: all ease-out 0.5s;
     -o-transition: all ease-out 0.5s;
-    
+
 }
 
 .socialbtns .fab:hover {
@@ -312,7 +313,7 @@ a:hover {
     font-size: 45px;
     padding-left: 5px;
     color: #000;
-/*
+    /*
     text-shadow: 1px 1px 0px #fff,
         1px -1px 0px #fff,
         -1px 1px 0px #fff,
@@ -334,13 +335,13 @@ a:hover {
     -moz-transition: all ease-out 0.5s;
     -webkit-transition: all ease-out 0.5s;
     -o-transition: all ease-out 0.5s;
-           cursor: pointer;
+    cursor: pointer;
 }
 
 .iconHover .fab:hover {
     font-size: 45px;
     color: lightsteelblue;
-/*
+    /*
     text-shadow: 1px 1px 0px #fff,
         1px -1px 0px #fff,
         -1px 1px 0px #fff,
@@ -362,7 +363,7 @@ a:hover {
     -moz-transition: all ease-in 0.5s;
     -webkit-transition: all ease-in 0.5s;
     -o-transition: all ease-in 0.5s;
-    
+
 }
 
 .text10 {
@@ -397,13 +398,12 @@ a:hover {
 }
 
 .marNeg {
-    margin-top: -380px;
+    margin-top: -580px;
 }
 
 .mar2 {
     margin-top: 150px;
 }
-
 
 
 .image {
@@ -439,7 +439,7 @@ a:hover {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
- }
+}
 
 /* Tooltip text */
 .tooltip .tooltiptext {
@@ -482,79 +482,33 @@ a:hover {
 }
 
 
-.bgcolpink{
+.bgcolpink {
     background-color: blue;
 }
+
 .wrapper {
     flex-wrap: wrap;
     background-color: blue;
     padding-left: 50px;
     padding-bottom: 10px;
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(12, 20px);
     grid-template-rows: repeat(12, 20px);
     grid-gap: 1.1rem;
-    cursor: url('https://i.ibb.co/6bycCv7/Ellipse-4.png'), default;  
+    cursor: url('https://i.ibb.co/6bycCv7/Ellipse-4.png'), default;
 }
 
 .item {
     background-color: yellow;
 }
 
-.wd{
+.wd {
     width: 70%;
     margin: auto;
-    
+
 }
 
 
 
 
 
-
-
-body{background-color:#1A1919;text-align:center;}
-
-.tileContainer{
-  border:10px solid black;
-  display:inline-block;
-  position:relative;
-  width:1024px;
-  height:768px;
-  overflow:hidden;
-  box-sizing:border-box;
-}
-
-
-.tile{
-  position:relative;
-  vertical-align:top;
-  display:inline-block;
-  border-right:1px solid rgba(0, 0, 0, 0.5);
-  border-bottom:1px solid rgba(0, 0, 0, 0.5);  
-  box-sizing:border-box;
-}
-
-.tile:after{
-  content:"";
-  background-color:#cc1c32;
-  width:6px;
-  height:6px;
-  position:absolute;
-  top:100%;
-  right:0px;
-  transform:translate(50%, -50%);
-  z-index:2;
-  line-height:1;
-}
-
-/*-- no grid --*/
-
-.noGrid .tile{
-  border-right:0px solid rgba(0, 0, 0, 0.5);
-  border-bottom:0px solid rgba(0, 0, 0, 0.5);
-}
-
-.noGrid .tile:after{
-  content:none;
-}a

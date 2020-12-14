@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Isha Sharma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="icon" href="images/gif1.gif" type="image/x-icon">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -16,16 +18,18 @@
     <meta name="thumbnail" content="https://www.w3schools.com/w3css/img_lights.jpg" />
     <meta name="author" content="Isha Sharma" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 
-    
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" media="screen" href="css/style2.css">
     <link rel="stylesheet" media="screen" href="css/style.css">
     <link rel="stylesheet" media="screen" href="index.css">
+    <link rel="stylesheet" media="screen" href="menu3.css">
+
     <script src="js/js1.js"></script>
     <script src="loader.js"></script>
     <script src="Grained.js"></script>
@@ -38,230 +42,13 @@
     <script>
         AOS.init();
 </script>
-    
-    <script>// options
-var options = {
-  imgSrc : "images/flower.png",
-  containerName : "tileContainer",
-  grid : false,
-  tileWidth : 80,
-  tileHeight : 80,
-  mouseTrail:true
-}
 
-// ----------------------------------------------------------
-var tileWidth, tileHeight, numTiles, tileHolder, tileContainer;
-var directionX, directionY;
-var imgOriginalWidth, imgOriginalHeight;
-var imgCoverWidth, imgCoverHeight;
-var imageLoaded = false;
-
-numTiles=0;
-tileWidth = options.tileWidth;
-tileHeight = options.tileHeight;
-
-tileContainer = document.getElementsByClassName(options.containerName)[0];
-
-function init(){
-  if(options.grid == false)tileContainer.className += " noGrid";
-  
-  //preload image and get original image size, then create tiles
-  var image = new Image();
-  image.src = options.imgSrc;
-  image.onload = function(e){
-    imageLoaded = true;
-    imgOriginalWidth = e.currentTarget.width;
-    imgOriginalHeight = e.currentTarget.height;
-    
-    createTileHolder();
-    checkTileNumber();
-    positionImage();
-    addListeners();
-  };  
-}
-
-function resizeHandler()
-{
-  if(imageLoaded == false)return;
-  
-  //not working yet
-  
-  checkTileNumber();
-  positionImage();
-}
-
-function createTileHolder(){
-  tileHolder = document.createElement('div');
-  tileHolder.className = "tileHolder";
-  tileHolder.style.position = "absolute";
-  tileHolder.style.top = "50%";
-  tileHolder.style.left = "50%";
-  tileHolder.style.transform = "translate(-50%, -50%)";
-  tileContainer.appendChild(tileHolder);
-}
-
-function checkTileNumber()
-{
-  tileHolder.style.width = Math.ceil(tileContainer.offsetWidth / tileWidth) * tileWidth + "px";
-  tileHolder.style.height = Math.ceil(tileContainer.offsetHeight / tileHeight) * tileHeight + "px";
-  
-  var tilesFitInWindow = Math.ceil(tileContainer.offsetWidth / tileWidth) * Math.ceil(tileContainer.offsetHeight / tileHeight);
-  if(numTiles < tilesFitInWindow){
-    for (var i=0, l=tilesFitInWindow-numTiles; i < l; i++){
-      addTiles();
-    }
-  }else if(numTiles > tilesFitInWindow){
-      for (var i=0, l=numTiles-tilesFitInWindow; i < l; i++){
-        removeTiles();
-      }
-  }  
-}
-
-
-function addTiles()
-{
-  var tile = document.createElement('div');
-  tile.className = "tile";  
-  
-  //maintain aspect ratio
-  imgCoverWidth = tileContainer.offsetWidth;
-  imgCoverHeight = tileContainer.offsetHeight;
-
-  if(imgOriginalWidth > imgOriginalHeight){
-        imgCoverHeight = imgOriginalHeight / imgOriginalWidth * imgCoverWidth;
-    }else{
-        imgCoverWidth = imgOriginalWidth / imgOriginalHeight * imgCoverHeight;     
-    } 
-  
-  
-  tile.style.background = 'url("'+options.imgSrc+'") no-repeat';
-  tile.style.backgroundSize  = imgCoverWidth + "px " +  imgCoverHeight + "px";
-  tile.style.width = tileWidth + "px";
-  tile.style.height = tileHeight + "px";
-  document.querySelectorAll(".tileHolder")[0].appendChild(tile);
-  
-  tile.addEventListener("mouseover", moveImage);  
-  
-  numTiles++;
-}
-
-function removeTiles()
-{
-  var tileToRemove = document.querySelectorAll(".tile")[0];
-  tileToRemove.removeEventListener("mouseover", moveImage); 
-  
-  TweenMax.killTweensOf(tileToRemove);
-  tileToRemove.parentNode.removeChild(tileToRemove);
-  
-  numTiles--;
-}
-
-function addListeners(){
- if(options.mouseTrail){
-    document.addEventListener('mousemove', function (event) {
-      directionX = event.movementX || event.mozMovementX || event.webkitMovementX || 0;
-      directionY = event.movementY || event.mozMovementY || event.webkitMovementY || 0;
-    });
-  }
-}
-
-function positionImage(){
-  for(var t=0, l=numTiles; t < l; t++)
-  {
-    var nowTile = document.querySelectorAll(".tile")[t];
-   
-    var left = (-nowTile.offsetLeft - (tileHolder.offsetLeft - (tileHolder.offsetWidth/2)));
-    var top = (-nowTile.offsetTop - (tileHolder.offsetTop - (tileHolder.offsetHeight/2)));
-    
-    nowTile.style.backgroundPosition = left + "px " + top + "px";
-  }
-}
-
-function resetImage(nowTile){    
-  var left = (-nowTile.offsetLeft - (tileHolder.offsetLeft - (tileHolder.offsetWidth/2)));
-  var top = (-nowTile.offsetTop - (tileHolder.offsetTop - (tileHolder.offsetHeight/2)));
-  
-  
-  TweenMax.to(nowTile, 1, {backgroundPosition:left + "px " + top + "px", ease:Power1.easeInOut});
-}
-
-
-function moveImage(e){
-  var nowTile = e.currentTarget
-  var minWidth = -tileContainer.offsetWidth+nowTile.offsetWidth;
-  var minHeight = -tileContainer.offsetHeight+nowTile.offsetHeight;
-  var nowLeftPos = (-nowTile.offsetLeft - (tileHolder.offsetLeft - (tileHolder.offsetWidth/2)));
-  var nowTopPos = (-nowTile.offsetTop - (tileHolder.offsetTop - (tileHolder.offsetHeight/2)))
-  var offset = 60;
-  var left = nowLeftPos;
-  var top = nowTopPos;
-    
-  if(options.mouseTrail){
-    //direction-aware movement
-    if(directionX > 0){
-      left = nowLeftPos + offset;
-    }else if(directionX < 0){
-      left = nowLeftPos - offset;
-    }
-    
-    if(directionY > 0){
-      top = nowTopPos + offset;
-    }else if(directionY < 0){
-      top = nowTopPos - offset;
-    }
-  }else{
-    //random movement
-    left = getRandomInt(nowLeftPos - offset , nowLeftPos + offset);
-    top = getRandomInt(nowTopPos - offset, nowTopPos + offset);
-  }
-    
-  // bounds
-  if(left < minWidth)left=minWidth;
-  if(left > 0)left=0;
-  if(top < minHeight)top=minHeight;
-  if(top > 0)top=0;
-  
-  //tween
-  TweenMax.to(nowTile, 1.5, {backgroundPosition:left + "px " + top + "px", ease:Power1.easeOut, onComplete:resetImage, onCompleteParams:[nowTile]});
-}
-
-///////////////////////////////////////////////////////////////////
-
-init();
-// handle event
-//window.addEventListener("optimizedResize", resizeHandler);
-
-////////////////////////UTILS//////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-(function() {
-    var throttle = function(type, name, obj) {
-        obj = obj || window;
-        var running = false;
-        var func = function() {
-            if (running) { return; }
-            running = true;
-             requestAnimationFrame(function() {
-                obj.dispatchEvent(new CustomEvent(name));
-                running = false;
-            });
-        };
-        obj.addEventListener(type, func);
-    };
-
-    /* init - you can init any event */
-    throttle("resize", "optimizedResize");
-})();
-</script>
 
 
     <div class="preloader">
         <img class="loader" src="gifs/ezgif.com-crop.gif">
     </div>
+    <!--
     <header>
         <nav class="navbar navbar-expand-lg bgcol bg-fade fixed-top">
             <a class="navbar-brand" href="index.html">
@@ -303,6 +90,120 @@ function getRandomInt(min, max) {
             </div>
         </nav>
     </header>
+-->
+
+    <section>
+        <article>
+            <div class="menu">
+                <input id="menu--toggle" type="checkbox" />
+                <!-- /#menu--toggle -->
+                <label class="menu--toggle__trigger" for="menu--toggle"></label>
+                <!-- /.menu--toggle__trigger -->
+                <label class="menu--toggle__burger" for="menu--toggle"></label>
+                <!-- /.menu--toggle__burger -->
+
+
+                <ul class="menu__body">
+                    <li class="menu__body-element">
+                        <a class="menu__body-link" href="https://codepen.io/WispProxy/pens/public" target="_blank">
+                            Works
+                        </a>
+                        <!-- /.menu__body-link -->
+                    </li>
+                    <!-- /.menu__body-element -->
+
+                    <li class="menu__body-element">
+                        <a class="menu__body-link" href="https://twitter.com/WispProxy" target="_blank">
+                            Twitter
+                        </a>
+                        <!-- /.menu__body-link -->
+                    </li>
+                    <!-- /.menu__body-element -->
+
+                    <li class="menu__body-element">
+                        <a class="menu__body-link" href="mailto:hi@VBelozyorov.com">
+                            Mail
+                        </a>
+                        <!-- /.menu__body-link -->
+                    </li>
+                    <!-- /.menu__body-element -->
+                </ul>
+                <!-- /.menu__body -->
+            </div>
+            <!-- /.menu -->
+        </article>
+
+
+        <article>
+            <div class="promotion">
+            </div>
+            <!-- /.promotion -->
+        </article>
+
+    </section>
+
+    <!--
+    
+    <label>
+        <input type="checkbox">
+        <span class="menu">
+            <span class="hamburger"></span>
+        </span>
+        <ul>
+            <li>
+                <a class="menuText" href="#">Home</a>
+            </li>
+            <li>
+                <a class="menuText" href="#">About</a>
+            </li>
+            <li>
+                <a class="menuText" href="#">Work</a>
+            </li>
+        </ul>
+    </label>
+-->
+
+    <!--
+    <div class="wrap">
+        <label>
+            <input type="checkbox">
+            <span class="menu">
+                <span class="hamburger">
+                    <ul>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section2">About me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section1">Work Experience</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#section3">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section4">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section5">Generative Art</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section6">Organisations & Rewards</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section8">Prototypes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Generative Art Gallery</a>
+                        </li>
+
+                    </ul>
+                </span>
+            </span>
+        </label>
+    </div>
+-->
 
     <!-- count particles -->
     <section class="marNeg">
@@ -317,7 +218,7 @@ function getRandomInt(min, max) {
                             <h1 class="text7 text-center ">ISHA</h1>
                             <h4 class="text8 text-center ">developer.</h4>
                             <div class="pt-3 mr-3 ml-3 mb-4">
-                                <p class="text-center d-block text9"> interaction: hover over or click-on screen</p>
+                                <p class="text-center text9  d-none d-xs-block d-sm-block"> interaction: hover over or click-on screen</p>
                             </div>
                             <div class="d-block d-sm-none d-md-none"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
                         </div>
@@ -356,17 +257,17 @@ function getRandomInt(min, max) {
                     </p>
 -->
                 </div>
-                <div class="col-lg-6" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-6 col-md-6  col-sm-12" data-aos-easing="linear" data-aos-duration="500">
                     <div class="artist-card pb-4 pt-3 pr-4">
-                        <img class="artist-card__img " src="images/E30DFD55-F51D-4F72-8A3D-05BF44A12A56.JPG" alt="me">
+                        <img class="artist-card__img  d-none d-xs-block d-sm-block" src="images/E30DFD55-F51D-4F72-8A3D-05BF44A12A56.JPG" alt="me">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-      <script>
-            grained('#container', {});
+
+    <script>
+        grained('#container', {});
         </script>
 
 
@@ -375,7 +276,7 @@ function getRandomInt(min, max) {
     <section id="section1" class="heightX parallax">
         <h1 class="col2 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">WORK EXPERIENCE</h1>
         <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
-            
+
             <div class="row">
                 <div class="col-lg-4 col-sm-12">
                     <div class="raw2">
@@ -452,57 +353,57 @@ function getRandomInt(min, max) {
     <section id="section3">
         <div class="grained"></div>
         <div id="container33">
-        <h1 class="text-center col1" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">SKILLS</h1>
+            <h1 class="text-center col1" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">SKILLS</h1>
 
-        <div class="container  pb-4" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
-            <div class="row">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-10 col-sm-12">
-                    <div class="iconHover">
-                        <!--                    <h2 class="col3 d-block mx-auto text-center pr-5 pl-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500"><u>Portfolio Tech Stack</u></h2>-->
-                        <ul>
-                            <i class='fab fa-python' data-toggle="tooltip" title="Python exp: 4yrs || Django exp: 1yr" style=''></i>
-                            <i class='fab fa-java' data-toggle="tooltip" title="Java exp: 3yrs || Spring exp: 6mths" style=''></i>
-                            <i class='fab fa-html5' data-toggle="tooltip" title="HTML exp: 5yrs || Bootstrap exp: 4yrs" style=''></i>
-                            <i class='fab fa-css3-alt' data-toggle="tooltip" title="CSS exp: 5yrs" style=''></i>
-                            <i class='fab fa-sass' data-toggle="tooltip" title="Sass exp: 1yr" style=''></i>
-                            <i class='fab fa-js-square' data-toggle="tooltip" title="JS exp: 2yrs" style=''></i>
-                            <i class='fab fa-php' data-toggle="tooltip" title="Sass exp: 2mnths" style=''></i>
-                            <i class='fab fa-vuejs' data-toggle="tooltip" title="VueJS exp: 4mnths" style=''></i>
-                            <i class='fab fa-node-js' data-toggle="tooltip" title="NodeJS exp: 1yr" style=''></i>
-                            <i class='fab fa-react' data-toggle="tooltip" title="ReactJS exp: 2yr || React Native exp: 4mnths" style=''></i>
-                            <i class='fab fa-angular' data-toggle="tooltip" title="AngularJS exp: 1yr" style=''></i>
-                            <i class='fab fa-jira' data-toggle="tooltip" title="Jira exp: 6mnths" style=''></i>
-                            <i class='fab fa-npm' data-toggle="tooltip" title="npm exp: 1yr" style=''></i>
-                            <i class='fab fa-git-square' data-toggle="tooltip" title="Git exp: 2yrs" style=''></i>
-                            <i class='' data-toggle="tooltip" title="Wordpress exp: 3yrs" style=''></i>
-                            <i class='fab fa-r-project' data-toggle="tooltip" title="R exp: 1yr" style=''></i>
+            <div class="container  pb-4" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10 col-sm-12">
+                        <div class="iconHover">
+                            <!--                    <h2 class="col3 d-block mx-auto text-center pr-5 pl-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500"><u>Portfolio Tech Stack</u></h2>-->
+                            <ul>
+                                <i class='fab fa-python' data-toggle="tooltip" title="Python exp: 4yrs || Django exp: 1yr" style=''></i>
+                                <i class='fab fa-java' data-toggle="tooltip" title="Java exp: 3yrs || Spring exp: 6mths" style=''></i>
+                                <i class='fab fa-html5' data-toggle="tooltip" title="HTML exp: 5yrs || Bootstrap exp: 4yrs" style=''></i>
+                                <i class='fab fa-css3-alt' data-toggle="tooltip" title="CSS exp: 5yrs" style=''></i>
+                                <i class='fab fa-sass' data-toggle="tooltip" title="Sass exp: 1yr" style=''></i>
+                                <i class='fab fa-js-square' data-toggle="tooltip" title="JS exp: 2yrs" style=''></i>
+                                <i class='fab fa-php' data-toggle="tooltip" title="Sass exp: 2mnths" style=''></i>
+                                <i class='fab fa-vuejs' data-toggle="tooltip" title="VueJS exp: 4mnths" style=''></i>
+                                <i class='fab fa-node-js' data-toggle="tooltip" title="NodeJS exp: 1yr" style=''></i>
+                                <i class='fab fa-react' data-toggle="tooltip" title="ReactJS exp: 2yr || React Native exp: 4mnths" style=''></i>
+                                <i class='fab fa-angular' data-toggle="tooltip" title="AngularJS exp: 1yr" style=''></i>
+                                <i class='fab fa-jira' data-toggle="tooltip" title="Jira exp: 6mnths" style=''></i>
+                                <i class='fab fa-npm' data-toggle="tooltip" title="npm exp: 1yr" style=''></i>
+                                <i class='fab fa-git-square' data-toggle="tooltip" title="Git exp: 2yrs" style=''></i>
+                                <i class='' data-toggle="tooltip" title="Wordpress exp: 3yrs" style=''></i>
+                                <i class='fab fa-r-project' data-toggle="tooltip" title="R exp: 1yr" style=''></i>
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
+
+                    <div class="col-lg-1"></div>
                 </div>
 
-                <div class="col-lg-1"></div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-10 col-sm-12">
-                    <div>
-                        <p class="text6 d-block mx-auto text-center pr-5 pl-5">Other</p>
-                        <p class="text6 d-block mx-auto text-center pr-5 pl-5"><u>Software:</u> MATLAB, Postman, Swagger, AWS S3/EC2, LaTeX, MacOS, Windows, Processing, REST APIs, Postgres, Adobe (Photoshop, Illustrator, InDesign, XD)</p>
-                        <p class="text6 d-block mx-auto text-center pr-5 pl-5"><u>Libraries/Frameworks:</u> Backbone.js, Matplotlib, Numpy, Turtle, p5.js, Three.js, ml5.js, Webpack, jQuery, Django</p>
-                        <p class="text6 d-block mx-auto text-center pr-5 pl-5"><u>Other:</u> C/C++, GraphQL, JSON, HTTP, UX/UI, Responsiveness, Sketch, Design Principles, Agile Methodologies, Market Research</p>
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10 col-sm-12">
+                        <div>
+                            <p class="text6 d-block mx-auto text-center pr-5 pl-5">Other</p>
+                            <p class="text6 d-block mx-auto text-center pr-5 pl-5"><u>Software:</u> MATLAB, Postman, Swagger, AWS S3/EC2, LaTeX, MacOS, Windows, Processing, REST APIs, Postgres, Adobe (Photoshop, Illustrator, InDesign, XD)</p>
+                            <p class="text6 d-block mx-auto text-center pr-5 pl-5"><u>Libraries/Frameworks:</u> Backbone.js, Matplotlib, Numpy, Turtle, p5.js, Three.js, ml5.js, Webpack, jQuery, Django</p>
+                            <p class="text6 d-block mx-auto text-center pr-5 pl-5"><u>Other:</u> C/C++, GraphQL, JSON, HTTP, UX/UI, Responsiveness, Sketch, Design Principles, Agile Methodologies, Market Research</p>
+                        </div>
                     </div>
+                    <div class="col-lg-1"></div>
                 </div>
-                <div class="col-lg-1"></div>
             </div>
-        </div>
         </div>
     </section>
-    
+
     <script>
-            grained('#container33', {});
+        grained('#container33', {});
         </script>
 
 
@@ -728,7 +629,7 @@ function getRandomInt(min, max) {
                     <p class="text6 d-block mx-auto">WiCHacks Liberty Mutual Hack Winner 2018 - <a href="https://devpost.com/software/ithaca-care" class="text2">App created</a></p>
                     <p class="text6 d-block mx-auto">Presented on the topic "Women in Tech” at Ithaca Honors Symposium 2017</p>
                 </div>
-
+<div class=" d-none d-xs-block d-sm-block">
                 <div class="wrapper">
                     <div class="item"></div>
                     <div class="item"></div>
@@ -913,6 +814,7 @@ function getRandomInt(min, max) {
                 </div>
             </div>
         </div>
+            
     </section>
 
     <section id="section8" class="parallax4">
@@ -1086,12 +988,14 @@ function getRandomInt(min, max) {
 
             })
         </script>
-        
-        
+
+
+        <!--
         <div class="tileContainer">
 
-</div>
-        
+        </div>
+-->
+
         <p class="text-center text5">© 2020 Isha Sharma. All rights reserved.</p>
     </footer>
 
