@@ -52,7 +52,7 @@ body {
 }
 
 #particles-js {
-    background-color: #000000;
+    background-color:#021027;
     background-image: url('');
     background-size: cover;
     background-position: 100% 100%;
@@ -60,14 +60,6 @@ body {
     position: relative;
 }
 
-#particles-js2 {
-    background-color: #000000;
-    background-image: url('');
-    background-size: cover;
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    position: absolute;
-}
 
 .text9 {
     font-size: 1vw;
@@ -414,6 +406,10 @@ body {
 
 #container {
     background-color: #FFF9FB;
+}
+#containerX{
+     background-color: #FFF9FB;
+    
 }
 
 #container33 {
