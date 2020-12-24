@@ -16,7 +16,7 @@ body {
 .count-particles {
     position: relative;
     top: 520px;
-    color: #ffffff;
+    color: floralwhite;
     text-indent: 4px;
     line-height: 14px;
     font-family: 'Montserrat', sans-serif;
@@ -42,17 +42,8 @@ body {
 
 /* ---- particles.js container ---- */
 
-.count-particles2 {
-    position: relative;
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    animation: bounceIn;
-    animation-duration: 4s;
-}
-
 #particles-js {
-    background-color:#021027;
+    background-color: #021027;
     background-image: url('');
     background-size: cover;
     background-position: 100% 100%;
@@ -185,8 +176,7 @@ body {
 }
 
 .margNeg4 {
-    margin-bottom: -10px;
-    margin-top: -10px;
+    margin-top: -20px;
 }
 
 .margNeg3 {
@@ -399,6 +389,7 @@ body {
     opacity: 0;
     transform: scale(0.1, 1);
 }
+
 /*
 
 .top1 {
@@ -409,9 +400,10 @@ body {
 #container {
     background-color: #FFF9FB;
 }
-#containerX{
-     background-color: #FFF9FB;
-    
+
+#containerX {
+    background-color: #FFF9FB;
+
 }
 
 #container33 {
