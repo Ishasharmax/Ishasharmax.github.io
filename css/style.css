@@ -123,6 +123,11 @@ header {
     width: 350px;
 }
 
+.sizeimg9 {
+    width: 650px;
+}
+
+
 .sizeimg8 {
     width: 200px;
 }
@@ -207,7 +212,7 @@ header {
 .text4 {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    color: gray;
+    color: gainsboro;
 }
 
 .text5 {
@@ -650,3 +655,61 @@ transition: 1s ease;
     padding: 1em 1.5em;
 }
 
+
+
+
+
+
+.sig {
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 2px;
+    z-index: 9999;
+}
+
+/*
+
+.the-most {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 50vw;
+    max-width: 200px;
+    padding: 10px;
+}
+
+.the-most img {
+    max-width: 100%;
+}
+*/
+.bg2{
+    background-color: black;
+}
+
+
+.bodyClass {
+    background: linear-gradient(-45deg, #5433FF, #200122, #6f0000, #D7DDE8);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

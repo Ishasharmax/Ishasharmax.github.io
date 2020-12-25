@@ -43,7 +43,7 @@ body {
 /* ---- particles.js container ---- */
 
 #particles-js {
-    background-color: #021027;
+    background-color: #000000;
     background-image: url('');
     background-size: cover;
     background-position: 100% 100%;
@@ -137,7 +137,7 @@ body {
 }
 
 .parallax {
-    background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url("../images/Untitled_Artwork.png");
+    background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url("../images/download(48).png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -145,7 +145,8 @@ body {
 }
 
 .parallax2 {
-    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../images/FullSizeRender.jpg");
+/*    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../images/FullSizeRender.jpg");*/
+    background-color: #1a1b1c;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -239,8 +240,8 @@ body {
 .front {
     z-index: 2;
     width: 470px;
-    color: white;
-    background-color: white;
+    color: black;
+    background-color: black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
@@ -254,10 +255,10 @@ body {
     font-size: 20px;
     padding: 30px;
     border-radius: 20px;
-    background-color: white;
+    background-color: #000000;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    color: #000000;
+    color: #ffffff;
 }
 
 
@@ -397,8 +398,13 @@ body {
 }
 */
 
+/*
 #container {
     background-color: #FFF9FB;
+}
+*/
+#container {
+    background-color: black;
 }
 
 #containerX {
@@ -407,6 +413,7 @@ body {
 }
 
 #container33 {
-    background-color: whitesmoke;
+/*    background-color: whitesmoke;*/
     margin-bottom: -40px;
+    background-color: white;
 }

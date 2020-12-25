@@ -29,9 +29,7 @@
     <link rel="stylesheet" media="screen" href="css/style.css">
     <link rel="stylesheet" media="screen" href="index.css">
     <link rel="stylesheet" media="screen" href="menu3.css">
-
-    <link rel="stylesheet" type="text/css" href="css/base.css" />
-
+    <link rel="stylesheet" media="screen" href="slider.css">
 
     <script src="js/js1.js"></script>
     <script src="loader.js"></script>
@@ -45,6 +43,9 @@
     <script>
         AOS.init();
 </script>
+
+
+
 
     <div class="preloader">
         <img class="loader" src="gifs/ezgif.com-crop.gif">
@@ -146,8 +147,10 @@
 -->
                 </div>
                 <div class="col-lg-6 col-md-6  col-sm-12" data-aos-easing="linear" data-aos-duration="500">
-                    <div class="artist-card pb-4 pt-3 pr-4">
-                        <img class="artist-card__img  d-none d-xs-block d-sm-block" src="images/E30DFD55-F51D-4F72-8A3D-05BF44A12A56.JPG" alt="me">
+                    <div class="artist-card pb-4 pt-5 pr-4 mt-3">
+                        <!--                        <img class="artist-card__img  d-none d-xs-block d-sm-block" src="images/E30DFD55-F51D-4F72-8A3D-05BF44A12A56.JPG" alt="me">-->
+                        <img class="artist-card__img  d-none d-xs-block d-sm-block" src="images/1E6CB4B9-CD84-41C4-AF2A-30EC7B96A7AC.JPG" alt="me">
+
                     </div>
                 </div>
             </div>
@@ -452,15 +455,17 @@
         <div class="item2 image2" style="background-image: url(images/Stellar-Classification-System-1024x538-1.jpg)"><a href="https://github.com/Ishasharmax/Stellar_classification" class="projLink">link</a></div>
 
         <div class="item2 image2" style="background-image: url(images/unwind2.png);"><a href="https://github.com/Ishasharmax/Unwind" class="projLink">link</a></div>
-        <div class="item2 image2" style="background-image: url(images/download(18).png)"><a href="https://github.com/Ishasharmax/Digress" class="projLink">link</a></div>
+        <div class="item2 image2" style="background-image: url(images/ambient.png)"><a href="https://github.com/Ishasharmax/Digress" class="projLink">link</a></div>
 
         <div class="item2 image2" style="background-image: url(images/wlffcopy.png)"><a href="https://github.com/Ishasharmax/WubbaLubbaFlapFlap" class="projLink">link</a></div>
 
     </div>
 
 
-    <section class="parallax2 margNeg4">
-        <div class="container">
+
+    <div class="bodyClass margNeg4">
+        <!--         <section class="parallax2 margNeg4">-->
+        <div class="container mt-3 pb-5 pt-4">
             <h1 class="col2 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">GENERATIVE ART</h1>
             <div class="row" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
                 <div class="col-lg-1"></div>
@@ -524,10 +529,14 @@
             </div>
             <div class="col-lg-1"></div>
         </div>
-    </section>
+        <!--    </section>-->
+
+    </div>
+
+
 
     <section class="bgcolpink">
-        <div class="container margNeg4 pt-5 pb-5">
+        <div class="container  pt-5 pb-5">
             <h1 class="col4 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">LEADERSHIP & ORGANISATIONS</h1>
             <div class="row">
                 <div class=" text-left">
@@ -733,6 +742,7 @@
         </div>
     </section>
 
+<!--
     <section id="section8" class="parallax4">
         <h1 class="col2 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">PROTOTYPES</h1>
         <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
@@ -764,6 +774,7 @@
             </div>
         </div>
     </section>
+-->
 
 
     <div id="modal01" class="w3-modal top1" onclick="this.style.display='none'">
@@ -820,6 +831,131 @@
     </div>
 
 
+    <!--
+    
+    <div class="background">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+-->
+
+    <!--
+
+<a class="the-most" target="_blank" href="https://codepen.io/2017/popular/pens/10/">
+  <img src="https://raw.githubusercontent.com/supahfunk/supah-codepen/master/themost-2017.png">
+</a>
+-->
+
+    <script>$(document).ready(function(){
+	var slide = $(".slide");
+	var viewWidth = $(window).width();
+	var sliderInner = $(".slider-inner");
+	var childrenNo = sliderInner.children().length;
+	
+	sliderInner.width( viewWidth * childrenNo );
+	
+	$(window).resize(function(){
+		viewWidth = $(window).width();
+	});
+	
+	function setWidth(){
+		slide.each(function(){
+			$(this).width(viewWidth);
+			$(this).css("left", viewWidth * $(this).index());
+		});	
+	}
+	
+	function setActive(element){
+		var clickedIndex = element.index();
+		
+		$(".slider-nav .active").removeClass("active");
+		element.addClass("active");
+		
+		sliderInner.css("transform", "translateX(-" + clickedIndex * viewWidth + "px) translateZ(0)");
+		
+		$(".slider-inner .active").removeClass("active");
+		$(".slider-inner .slide").eq(clickedIndex).addClass("active");
+	}
+	
+	setWidth();
+	
+	$(".slider-nav > div").on("click", function(){
+		setActive($(this));
+	});
+	
+	$(window).resize(function(){
+		setWidth();
+	});
+	
+	setTimeout(function(){
+		$(".slider").fadeIn(500);
+	}, 2000);
+});
+
+</script>
+
+    <section class="bg2">
+        <div class="container-fluid" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+            <div class="row">
+                <!--
+        <nav class="nav">
+	<h1>Gummy slider</h1>
+	<p class="author">by Lewi Hussey</p>
+</nav>
+-->
+
+                <div class="loading">
+                    Loading...
+                </div>
+
+                <div class="slider">
+                    <div class="slider-inner">
+                        <div class="slide active"> <img src="images/mock2.png" class="img-fluid mx-auto d-block sizeimg9 pt-5" style="cursor:zoom-in;" onclick="document.getElementById('modal05').style.display='block'">
+                        </div>
+                        <div class="slide"> <img src="images/mock1.png" class="img-fluid mx-auto d-block sizeimg9 pt-5" style="cursor:zoom-in;" onclick="document.getElementById('modal06').style.display='block'">
+                        </div>
+                        <div class="slide"> <img src="images/mock3.png" class="img-fluid mx-auto d-block sizeimg9 pt-5" style="cursor:zoom-in;" onclick="document.getElementById('modal08').style.display='block'">
+                        </div>
+                        <div class="slide"> <img src="images/ezgif.com-video-to-gif.gif" class="img-fluid mx-auto d-block sizeimg9 pt-5" style="cursor:zoom-in;" onclick="document.getElementById('modal03').style.display='block'">
+                        </div>
+                        <div class="slide"> <img src="images/mock4.png" class="img-fluid mx-auto d-block sizeimg9 pt-5" style="cursor:zoom-in;" onclick="document.getElementById('modal07').style.display='block'">
+                        </div>
+                        <div class="slide"> <img src="images/wb.png" class="img-fluid mx-auto d-block sizeimg9 pt-5" style="cursor:zoom-in;" onclick="document.getElementById('modal04').style.display='block'">
+                        </div>
+                    </div>
+
+
+                    <nav class="slider-nav">
+                        <div class="active"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a class="sig" href="http://nathan.tokyo" target="_blank">ISHA SHARMA</a>
 
     <footer class="footer pb-5 pt-5">
         <div class="container">
@@ -905,9 +1041,10 @@
                 })
 
             })
+
         </script>
 
-        <p class="text-center text5">© 2020 Isha Sharma. All rights reserved.</p>
+        <!--        <p class="text-center text5">© 2020 Isha Sharma. All rights reserved.</p>-->
     </footer>
 
     <!--
