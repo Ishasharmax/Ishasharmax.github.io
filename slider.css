@@ -65,7 +65,7 @@ body {
   position: absolute;
   top: 0;
   height: 100%;
-  background-color: #f1c40f;
+  background-color: orangered;
   background-visibility: hidden;
   transition-timing-function: cubic-bezier(0.25, 0.5, 0.25, 1.25);
   transform: translateZ(0) scale(0.8, 0.8);
@@ -80,13 +80,13 @@ body {
   transition-delay: 2s;
 }
 .slide:nth-child(2n) {
-  background-color: #2ecc71;
+  background-color: gold;
 }
 .slide:nth-child(3n) {
-  background-color: #3498db;
+  background-color: deeppink;
 }
 .slide:nth-child(4n) {
-  background-color: #9b50ba;
+  background-color: lightpink;
 }
 
 .slider-nav {
