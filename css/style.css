@@ -123,8 +123,19 @@ header {
     width: 350px;
 }
 
-.sizeimg9 {
-    width: 650px;
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 651px) {
+    .sizeimg9 {
+         width: 650px;
+    }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 650px) {
+    .sizeimg9 {
+        width: 440px;
+    }
 }
 
 
@@ -151,6 +162,7 @@ header {
     text-align: center;
     position: relative;
 }
+
 
 .col2 {
     color: #fff;
@@ -217,15 +229,37 @@ header {
 
 .text5 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     color: #ffffff;
     font-style: italic;
 }
 
-.text6 {
+
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+    .text6center {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        color: #ffffff;
+    }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    .text6center {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        color: azure;
+        margin: 20px;
+    }
+}
+
+
+.text66 {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    color: #000000;
+    color: #FFFFFF;
 }
 
 .position {
@@ -317,7 +351,7 @@ a:hover {
 .iconHover .fab {
     font-size: 45px;
     padding-left: 5px;
-    color: #000;
+    color: #FFF;
     /*
     text-shadow: 1px 1px 0px #fff,
         1px -1px 0px #fff,
@@ -345,25 +379,7 @@ a:hover {
 
 .iconHover .fab:hover {
     font-size: 45px;
-    color: lightsteelblue;
-    /*
-    text-shadow: 1px 1px 0px #fff,
-        1px -1px 0px #fff,
-        -1px 1px 0px #fff,
-        -1px -1px 0px #fff;
-    -webkit-text-shadow: 1px 1px 0px #fff,
-        1px -1px 0px #fff,
-        -1px 1px 0px #fff,
-        -1px -1px 0px #fff;
-    -moz-text-shadow: 1px 1px 0px #fff,
-        1px -1px 0px #fff,
-        -1px 1px 0px #fff,
-        -1px -1px 0px #fff;
-    -o-text-shadow: 1px 1px 0px #fff,
-        1px -1px 0px #fff,
-        -1px 1px 0px #fff,
-        -1px -1px 0px #fff;
-*/
+    color: lightcoral;
     transition: all ease 0.5s;
     -moz-transition: all ease-in 0.5s;
     -webkit-transition: all ease-in 0.5s;
@@ -488,12 +504,12 @@ a:hover {
 
 
 .bgcolpink {
-    background-color: blue;
+    background-color: black;
 }
 
 .wrapper {
     flex-wrap: wrap;
-    background-color: blue;
+    background-color: black;
     padding-left: 50px;
     padding-bottom: 10px;
     display: grid;
@@ -504,7 +520,7 @@ a:hover {
 }
 
 .item {
-    background-color: yellow;
+    background-color: lightcoral;
 }
 
 .wd {
@@ -560,7 +576,6 @@ a:hover {
 }
 
 .grid2 {
-    margin: 20px auto;
     max-width: auto;
 }
 
@@ -578,7 +593,7 @@ a:hover {
     opacity: 0.9;
     transition: .5s ease;
     backface-visibility: hidden;
-    cursor: url('https://i.ibb.co/6bycCv7/Ellipse-4.png'), default;
+    cursor: pointer;
 }
 
 .image2:hover {
@@ -621,24 +636,6 @@ a:hover {
     }
 }
 
-
-/*
-.image2 {
-transition: 1s ease;
-    opacity: 1;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    cursor: pointer;
-}
-
-.image2:hover{
--webkit-transform: scale(1.2);
--ms-transform: scale(1.2);
-transform: scale(1.2);
-transition: 1s ease;
-}
-*/
-
 .projLink {
     opacity: 0;
     color: white;
@@ -656,8 +653,19 @@ transition: 1s ease;
 }
 
 
+.sizeO {
+    width: 90px;
+}
 
+@font-face {
+    font-family: 'comodo';
+    src: url(fonts/comodo-sans-serif/Fonts/ComodoStamp.ttf);
+}
 
+@font-face {
+    font-family: 'artisan';
+    src: url(fonts/sunshine_valley/SunshineValley.otf);
+}
 
 
 .sig {
@@ -667,35 +675,20 @@ transition: 1s ease;
     text-decoration: none;
     font-size: 12px;
     font-weight: 100;
-    font-family: sans-serif;
+    font-family: 'comodo';
     color: rgba(255, 255, 255, 0.4);
     letter-spacing: 2px;
     z-index: 9999;
 }
-.padd4{
+
+.padd4 {
     padding-top: 70px;
 }
-/*
-
-.the-most {
-    position: fixed;
-    z-index: 1;
-    bottom: 0;
-    left: 0;
-    width: 50vw;
-    max-width: 200px;
-    padding: 10px;
-}
-
-.the-most img {
-    max-width: 100%;
-}
-*/
 
 
 .bodyClass {
-/*    background-color: ;*/
-    background: linear-gradient(-45deg, #0f0c29, #636FA4, #D3CCE3, #191654);
+    z-index: 100;
+    background: linear-gradient(-45deg, #fffcdc, #f7797d, #BE93C5, #F15F79);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
