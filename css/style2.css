@@ -175,11 +175,11 @@ body {
 }
 
 .parallax {
-    background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url("../images/download(48).png");
+    background: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, 0.8)), url("../images/download(48).png");
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+    background-size: contain;
 }
 
 .parallax2 {
