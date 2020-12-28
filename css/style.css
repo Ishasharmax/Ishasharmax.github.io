@@ -127,7 +127,7 @@ header {
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
 @media screen and (min-width: 651px) {
     .sizeimg9 {
-         width: 650px;
+        width: 650px;
     }
 }
 
@@ -221,10 +221,21 @@ header {
     color: #000000;
 }
 
-.text4 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    color: gainsboro;
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+    .text4 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        color: gainsboro;
+    }
+}
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    .text4 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        color: gainsboro;
+    }
 }
 
 .text5 {
