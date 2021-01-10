@@ -437,7 +437,7 @@ a:hover {
 
 .preloader {
     align-items: center;
-    background: #ffffff;
+    background: #000000;
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -699,3 +699,5 @@ a:hover {
         background-position: 0% 50%;
     }
 }
+
+
