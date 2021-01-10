@@ -217,8 +217,9 @@ header {
 
 .text3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     color: #000000;
+    text-align: left;
 }
 
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
@@ -279,9 +280,7 @@ header {
     color: #000000;
 }
 
-.heightX {
-    height: 670px;
-}
+
 
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
@@ -371,7 +370,7 @@ a:hover {
 }
 
 .iconHover .fab:hover {
-    font-size: 45px;
+    font-size: 35px;
     color: lightcoral;
     transition: all ease 0.5s;
     -moz-transition: all ease-in 0.5s;
@@ -686,6 +685,14 @@ a:hover {
     animation: gradient 15s ease infinite;
 }
 
+.bodyClass1 {
+    z-index: 100;
+    background: linear-gradient(-45deg, #ffdde1, #f7797d, #ee9ca7, #F15F79);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -699,5 +706,7 @@ a:hover {
         background-position: 0% 50%;
     }
 }
+
+
 
 

@@ -3,6 +3,7 @@
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
+
 @font-face {
     font-family: 'Saonara';
     src: url(fonts/made_saonara/font.otf);
@@ -104,13 +105,8 @@ body {
     padding-bottom: 6px;
 }
 
-.card2 {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-}
-
-
 .card .face {
-    width: 245px;
+    width:245px;
     transition: 0.5s;
 }
 
@@ -119,7 +115,7 @@ body {
     background-color: transparent;
 }
 
-.card .face.face1 {
+.face1 {
     height: 104px;
     position: relative;
     justify-content: center;
@@ -222,14 +218,10 @@ body {
 
 /
 /*
-
 .raw {
     margin: auto;
-
 }
-
  perspective 
-
 .flip-container {
     perspective: 1000;
     margin: 10px;
@@ -428,7 +420,6 @@ body {
 }
 
 /*
-
 .top1 {
     top: 100px;
 }
