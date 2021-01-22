@@ -98,6 +98,13 @@ body {
     padding-bottom: 90px;
 }
 
+
+.pad3 {
+    padding-bottom: 20px;
+}
+
+
+
 .card1 {
     box-shadow: 0 6px 7px rgba(0, 0, 0, 0.8);
     background-color: white;
