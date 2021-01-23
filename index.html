@@ -27,6 +27,8 @@
     <link rel="stylesheet" media="screen" href="menu3.css">
     <link rel="stylesheet" media="screen" href="slider.css">
     <link rel="stylesheet" media="screen" href="flip.css">
+    <link rel="stylesheet" media="screen" href="menu22.css">
+
     <script src="js/js1.js"></script>
     <script src="loader.js"></script>
     <script src="Grained.js"></script>
@@ -43,7 +45,7 @@
     <div class="preloader">
         <img class="loader" src="gifs/ezgif.com-crop.gif">
     </div>
-<!--
+    <!--
 
     <section>
         <article>
@@ -89,6 +91,38 @@
 
 -->
 
+
+    <section id="home">
+        <div class="button_container" id="toggle">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+        </div>
+
+        <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="gallery.html">Generative Art Gallery</a></li>
+<!--                    <li><a href="#activities">Activities</a></li>-->
+<!--                    <li><a href="#hobbies">Hobbies</a></li>-->
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <script>
+        $('#toggle').click(function() {
+   $(this).toggleClass('active');
+   $('#overlay').toggleClass('open');
+  });
+    </script>
+
     <section class="marNeg">
         <div id="particles-js">
             <div class="container">
@@ -100,7 +134,7 @@
                             <div class="d-none d-lg-block d-xl-block"><br><br><br><br><br><br><br><br><br><br><br><br></div>
                             <h1 class="text7 text-center">Isha</h1>
                             <h4 class="text8 text-center textt">developer.</h4>
-<!--
+                            <!--
                             <div class="pt-3 mr-3 ml-3 mb-4">
                                 <p class="text-center text9  d-none d-xs-block d-sm-block"> interaction: hover over or click-on screen</p>
                             </div>
@@ -119,7 +153,7 @@
     <script src="particles.js"></script>
     <script src="js/app.js"></script>
 
-    <section id="section2" class="margNeg3">
+    <section id="about" class="margNeg3">
         <div class="grained"></div>
         <div id="container">
             <div class="row pt-5  pb-3 wd">
@@ -156,7 +190,7 @@
         grained('#container', {});
     </script>
 
-    <section id="section1" class="bodyClass1">
+    <section id="work" class="bodyClass1">
         <h1 class="col2 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">WORK EXPERIENCE</h1>
         <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
             <div class="row">
@@ -361,7 +395,7 @@
 
     </section>
 
-    <section id="section3">
+    <section id="skills">
         <div class="grained"></div>
         <div id="container33">
             <h1 class="text-center col2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">SKILLS</h1>
@@ -559,16 +593,9 @@
   return false;
 });</script>
 
-    <section>
+    <section id="projects">
         <div class="grained"></div>
         <div id="container343">
-
-            <!--
-    <div class="container-fluid">
-        <div class="row">
-            <img src="images/A09F0CED-96E9-48B9-B6BF-3E63D18C8D14.JPG" class="img-fluid"></div>
-    </div>
--->
             <div class="container-fluid">
                 <div class="row">
                     <h1 class="text-center colorP" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Projects</h1>
@@ -576,7 +603,7 @@
             </div>
 
             <div class="grid2" style="margin-top: -1px;">
-                <div class="item2 image2" class="myBox" style="background-image: url(images/flower.png);" target="_blank"onclick="location.href='https://github.com/Ishasharmax/FlowerClassificationCNN';"></div>
+                <div class="item2 image2" class="myBox" style="background-image: url(images/flower.png);" target="_blank" onclick="location.href='https://github.com/Ishasharmax/FlowerClassificationCNN';"></div>
                 <div class="item2 image2" style="background-image: url(gifs/logo.gif)" onclick="location.href='https://github.com/Ishasharmax/GroceryStoreApp';"></div>
                 <div class="item2 image2" style="background-image: url(images/ic.jpg)" onclick="location.href='https://github.com/polleyk/ithaca-care';"></div>
                 <div onclick="location.href='https://github.com/Ishasharmax/Stellar_classification';" class="item2 image2" style="background-image: url(images/Stellar-Classification-System-1024x538-1.jpg)"></div>
@@ -592,74 +619,74 @@
     </script>
 
 
-    <section>
+    <section id="gART">
         <div class="bodyClass margNeg4">
             <div class="container mt-3 pad2 pt-4">
                 <h1 class="col2 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">GENERATIVE ART</h1>
                 <div class="row" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
                     <div class="col-lg-1"></div>
                     <div class="col-lg-10 col-sm-12">
-                            <div class="card-deck">
-                                <div class="card">
-                                    <div class="face face1 ml-2 mx-auto d-block">
-                                        <div class="content">
-                                            <div class="icon">
-                                                <img src="images/download(44).png" class="sizeimg2 mt-5">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="face face2 mx-auto d-block">
-                                        <div class="content">
-                                            <br>
-                                            <h5 class="gArtText card-title d-block mx-auto text-center">p5.js</h5> <br>
-                                            <a class="text2 d-block mx-auto text-center pt-5" href="https://github.com/Ishasharmax/Generative_Art">Github Code</a>
+                        <div class="card-deck">
+                            <div class="card">
+                                <div class="face face1 ml-2 mx-auto d-block">
+                                    <div class="content">
+                                        <div class="icon">
+                                            <img src="images/download(44).png" class="sizeimg2 mt-5">
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="card  mx-auto d-block">
-                                    <div class="face face1 margLeft">
-                                        <div class="content">
-                                            <div class="icon">
-                                                <img src="R_Images/2020-07-23-01-16_seed_8470.png" class=" sizeimg2 mt-5">
-                                            </div>
-                                        </div>
+                                <div class="face face2 mx-auto d-block">
+                                    <div class="content">
+                                        <br>
+                                        <h5 class="gArtText card-title d-block mx-auto text-center">p5.js</h5> <br>
+                                        <a class="text2 d-block mx-auto text-center pt-5" href="https://github.com/Ishasharmax/Generative_Art">Github Code</a>
                                     </div>
-                                    <div class="face face2 mx-auto d-block">
-                                        <div class="content">
-                                            <br>
-                                            <h5 class="gArtText card-title d-block mx-auto text-center">RStudio</h5><br>
-                                            <a class="text2 d-block mx-auto text-center pt-5" href="https://github.com/Ishasharmax/Generative_Art">Github Code</a>
+                                </div>
+                            </div>
+
+                            <div class="card  mx-auto d-block">
+                                <div class="face face1 margLeft">
+                                    <div class="content">
+                                        <div class="icon">
+                                            <img src="R_Images/2020-07-23-01-16_seed_8470.png" class=" sizeimg2 mt-5">
                                         </div>
                                     </div>
                                 </div>
+                                <div class="face face2 mx-auto d-block">
+                                    <div class="content">
+                                        <br>
+                                        <h5 class="gArtText card-title d-block mx-auto text-center">RStudio</h5><br>
+                                        <a class="text2 d-block mx-auto text-center pt-5" href="https://github.com/Ishasharmax/Generative_Art">Github Code</a>
+                                    </div>
+                                </div>
+                            </div>
 
-                                <div class="card mx-auto d-block">
-                                    <div class="face face1 ">
-                                        <div class="content">
-                                            <div class="icon">
-                                                <img src="gifs/Border_gif.gif" class=" sizeimg22 mt-5">
-                                            </div>
+                            <div class="card mx-auto d-block">
+                                <div class="face face1 ">
+                                    <div class="content">
+                                        <div class="icon">
+                                            <img src="gifs/Border_gif.gif" class=" sizeimg22 mt-5">
                                         </div>
                                     </div>
-                                    <div class="face face2 mx-auto d-block">
-                                        <div class="content">
-                                            <br>
-                                            <h5 class="gArtText card-title d-block mx-auto text-center">Python</h5><br>
-                                            <a class="text2 d-block mx-auto text-center  pt-5" href="https://github.com/Ishasharmax/Generative_Art">Github Code</a>
-                                        </div>
+                                </div>
+                                <div class="face face2 mx-auto d-block">
+                                    <div class="content">
+                                        <br>
+                                        <h5 class="gArtText card-title d-block mx-auto text-center">Python</h5><br>
+                                        <a class="text2 d-block mx-auto text-center  pt-5" href="https://github.com/Ishasharmax/Generative_Art">Github Code</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 <div class="col-lg-1"></div>
             </div>
         </div>
     </section>
 
 
-    <section class="bgcolpink">
+    <section class="bgcolpink" id="activities">
         <div class="container  pt-5 pb-5">
             <h1 class="col4 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">LEADERSHIP & ACTIVITIES</h1>
             <div class="row">
@@ -681,7 +708,7 @@
                 </div>
 
 
-<!--
+                <!--
                 <div class=" d-none d-xs-block d-sm-block pt-4">
                     <div class="wrapper">
                         <div class="item"></div>
@@ -866,7 +893,7 @@
                         <div class="item"></div>
                     </div>
 -->
-<!--                </div>-->
+                <!--                </div>-->
             </div>
         </div>
     </section>
@@ -972,7 +999,7 @@
 });
 </script>
 
-    <section>
+    <section id="mockups">
         <div class="container-fluid" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
             <div class="row ">
                 <div class="loading">
@@ -1005,10 +1032,10 @@
             </div>
         </div>
     </section>
-<!--    <a class="sig" href="https://ishasharmax.github.io/" target="_blank">Isha Sharma</a>-->
-    <a href="https://ishasharmax.github.io/" target="_blank"><img class="sig2"  src="images/IMG_0507.PNG" class="img-fluid"></a>
+    <!--    <a class="sig" href="https://ishasharmax.github.io/" target="_blank">Isha Sharma</a>-->
+    <a href="https://ishasharmax.github.io/" target="_blank"><img class="sig2" src="images/IMG_0507.PNG" class="img-fluid"></a>
 
-    <section>
+    <section id="hobbies">
         <div class="bodyClass3 margNeg4">
             <div class="container mt-3 pad3 pt-5">
                 <h1 class="col2 text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">HOBBIES</h1>
@@ -1051,8 +1078,8 @@
                     </div>
                 </div>
 
-                  <div class="row" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
-                       <div class="col-lg-3 col-sm-12">
+                <div class="row" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                    <div class="col-lg-3 col-sm-12">
                         <figure class="snip1256 mx-auto d-block ">
                             <img src="images/yoga.jpg" alt="sample20" />
                             <figcaption>
@@ -1061,8 +1088,8 @@
                             </figcaption>
                         </figure>
                     </div>
-                      <div class="col-lg-3 col-sm-12">
-                        
+                    <div class="col-lg-3 col-sm-12">
+
                         <figure class="snip1256 mx-auto d-block ">
                             <img src="images/cooking.png" />
                             <figcaption>
@@ -1075,21 +1102,21 @@
                         <figure class="snip1256 mx-auto d-block ">
                             <img src="images/music.JPG" alt="sample20" />
                             <figcaption>
-                                 <h3>Music</h3>
+                                <h3>Music</h3>
                                 <p>I'm a deep-dyed music fanatic, who loves to play guitar & create EDM in my leisure time. Always on a look out for music gigs.</p><a href="https://soundcloud.com/isha-sharma-xx" target="_blank" class="read-more">Soundcloud</a>
                             </figcaption>
                         </figure>
                     </div>
-                      <div class="col-lg-3 col-sm-12">
+                    <div class="col-lg-3 col-sm-12">
                         <figure class="snip1256 mx-auto d-block ">
                             <img src="images/art2.JPG" alt="sample20" />
                             <figcaption>
-                                  <h3>Art</h3>
+                                <h3>Art</h3>
                                 <p>I love making acrylic pours & sketches, as well as, talking about Cubism, Surrealism, & Expressionism. Got interest in those or art in general, let's talk!</p><a href="https://ishasharmax.wixsite.com/blog/paintings" class="read-more" target="_blank">Porfolio</a>
                             </figcaption>
                         </figure>
                     </div>
-              
+
                 </div>
             </div>
         </div>
@@ -1102,7 +1129,7 @@
     }
   );</script>
 
-    <footer class="footer pb-5 pt-5">
+    <footer class="footer pb-5 pt-5" id="contact">
         <div class="row">
             <div class="col-lg-3"></div>
             <div class="col-lg-3 col-sm-12 col-xs-12">
@@ -1154,7 +1181,7 @@
                         <li><a href="https://www.youtube.com/channel/UC15YCooagMzCqsLULH7r8Pg" class="fab fa-youtube"></a></li>
                     </ul>
                 </div>
-                
+
             </div>
             <div class="col-lg-4">
             </div>
