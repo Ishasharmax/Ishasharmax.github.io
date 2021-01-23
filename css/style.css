@@ -61,10 +61,6 @@ header {
 
 }
 
-.content {
-    padding: 16px;
-}
-
 .sticky {
     position: fixed;
     top: 0;
@@ -104,7 +100,14 @@ header {
 }
 
 .sizeimg2 {
-    height: 170px;
+    height: 150px;
+}
+.sizeimg22 {
+    height: 150px;
+    max-width: 280px;
+}
+.margLeft{
+    margin-left: 60px;
 }
 
 .sizeimg3 {
@@ -299,10 +302,8 @@ a:hover {
     margin: 0;
     padding: 5px;
 }
-
-.socialbtnsbtnsbtns li {
-    list-style: none outside none;
-    display: inline-block;
+.socialbtns {
+    margin-left: -30px;
 }
 
 .socialbtns li {
@@ -520,10 +521,7 @@ a:hover {
 .wd {
     width: 70%;
     margin: auto;
-
 }
-
-
 
 .grid2 {
     display: grid;
@@ -531,8 +529,7 @@ a:hover {
         repeat(3, 180px);
     grid-template-columns:
         repeat(3, 1fr);
-    /*  grid-gap: 1px;*/
-    /*    width: 100%;*/
+    z-index: 200;
 }
 
 .item2:nth-child(1) {
@@ -675,13 +672,21 @@ a:hover {
     z-index: 9999;
 }
 
+.sig2 {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 9999;
+    height: 10vh;
+}
+
 .padd4 {
     padding-top: 70px;
 }
 
 
 .bodyClass {
-    z-index: 100;
+    z-index: -100;
     background: linear-gradient(-45deg, #fffcdc, #f7797d, #BE93C5, #F15F79);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -692,6 +697,7 @@ a:hover {
     background: linear-gradient(-45deg, #ffdde1, #f7797d, #ee9ca7, #F15F79);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
+    margin-bottom: -50px;
 }
 
 .bodyClass2 {
@@ -759,14 +765,14 @@ figure.snip1256 figcaption {
     top: 0;
     left: 0;
     width: 100%;
-    -webkit-transform: rotateX(-90deg);
-    transform: rotateX(-90deg);
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
     -webkit-transform-origin: 50% -50%;
     -ms-transform-origin: 50% -50%;
     transform-origin: 50% -50%;
     z-index: 1;
     opacity: 0;
-    padding: 20px 30px;
+    padding: 20px 20px;
 }
 
 figure.snip1256 h3,
@@ -802,8 +808,8 @@ figure.snip1256 .read-more:hover {
 
 figure.snip1256:hover img,
 figure.snip1256.hover img {
-    -webkit-transform: rotateX(90deg);
-    transform: rotateX(90deg);
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
     opacity: 0;
 }
 

@@ -1,10 +1,5 @@
   @import url("https://use.typekit.net/ftb1ctq.css");
 
-
-  body {
-      font-size: 1em;
-  }
-
   /***************************
  *  Application Main Styles
  **************************/
@@ -17,7 +12,7 @@
   .menu--toggle__burger,
   .menu--toggle__burger:before,
   .menu--toggle__burger:after {
-      position: absolute;
+      position: fixed;
       top: 1.6em;
       left: 1.6em;
       width: 2em;
@@ -47,13 +42,12 @@
   }
 
   .menu__body {
-      position: absolute;
-      width: 7em;
-      height: 7em;
+      position: fixed;
+      width: 6em;
+      height: 6em;
       margin: 0;
       padding: 0;
       background-color: floralwhite;
-/*      background-color: #FFF9FB;*/
       border-bottom-right-radius: 100%;
       box-shadow: 3px 3px 7px rgba(40, 40, 40, 0.2);
       z-index: 10;
