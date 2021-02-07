@@ -26,7 +26,8 @@ body {
 .count-particles {
     position: relative;
     top: 520px;
-    color: floralwhite;
+    /*    color:black;*/
+    color: white;
     text-indent: 4px;
     line-height: 14px;
     font-family: 'Montserrat', sans-serif;
@@ -49,13 +50,13 @@ body {
     font-family: 'artisan';
     font-size: 4vw;
     margin-top: -50px;
-    color: coral;
+    color: #ffd76b;
 }
 
 /* ---- particles.js container ---- */
 
 #particles-js {
-    background-color: #000000;
+    background-color: black;
     background-image: url('');
     background-size: cover;
     background-position: 100% 100%;
@@ -113,7 +114,7 @@ body {
 }
 
 .card .face {
-    width:245px;
+    width: 245px;
     transition: 0.5s;
 }
 
@@ -428,7 +429,7 @@ body {
 }
 
 #container {
-    background-color: black;
+    background-color: #ffd76b;  
 }
 
 #containerX {
