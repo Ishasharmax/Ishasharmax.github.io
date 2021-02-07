@@ -231,7 +231,7 @@ header {
     .text4 {
         font-family: 'Montserrat', sans-serif;
         font-size: 15px;
-        color: black;
+        color: white;
     }
 }
 
@@ -240,7 +240,7 @@ header {
     .text4 {
         font-family: 'Montserrat', sans-serif;
         font-size: 12px;
-        color: black;
+        color: white;
     }
 }
 
@@ -693,11 +693,11 @@ a:hover {
 }
 
 .bodyClass1 {
-    z-index: 100;
+/*    z-index: 100;*/
     background: linear-gradient(-45deg, #ffdde1, #f7797d, #ee9ca7, #F15F79);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    margin-bottom: -50px;
+/*    margin-bottom: -50px;*/
 }
 
 .bodyClass2 {
