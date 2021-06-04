@@ -1160,7 +1160,6 @@ img {
 .active {
     background-color: #717171;
 }
-/*
 
 .fade {
     -webkit-animation-name: fade;
@@ -1188,7 +1187,6 @@ img {
         opacity: 1
     }
 }
-*/
 
 
 .loader {
