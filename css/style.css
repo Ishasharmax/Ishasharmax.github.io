@@ -1160,8 +1160,8 @@ img {
 .active {
     background-color: #717171;
 }
+/*
 
-/* Fading animation */
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -1188,6 +1188,7 @@ img {
         opacity: 1
     }
 }
+*/
 
 
 .loader {
@@ -1220,29 +1221,27 @@ img {
     text-align: center;
 }
 
+/*
 
 
 @media screen and (min-width: 651px) {
     .loader .intro h1 {
         font-size: 6em;
         text-transform: uppercase;
-        font-weight: 200;
         color: #fff;
-        font-family: 'Branic Bold';
+    font-family: "Roses Bold";
     }
-
 }
 
 @media screen and (max-width: 650px) {
     .loader .intro h1 {
         font-size: 3em;
         text-transform: uppercase;
-        font-weight: 200;
         color: #fff;
-        font-family: 'Branic Bold';
+    font-family: "Roses Bold";
     }
-
 }
+*/
 
 .container-right {
     position: absolute;
@@ -1444,7 +1443,7 @@ img {
 
 .menu9 {
     padding: 10vh 0 25vh;
-    --offset: 20vw;
+    --offset: 10vw;
     --move-initial: calc(-25% + var(--offset));
     --move-final: calc(-50% + var(--offset));
     font-size: 7vw;
