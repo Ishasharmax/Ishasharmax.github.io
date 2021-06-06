@@ -998,7 +998,6 @@ canvas {
     bottom: 4%;
     left: 5%;
     z-index: 9;
-    mix-blend-mode: difference;
 }
 
 
