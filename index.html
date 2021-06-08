@@ -25,7 +25,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js" integrity="sha512-3WGIRFCuTpZhqYujwLp5RtARPkOy3uRtc3RXB31bJ9/i6VH2C66Z0WBV6gHhdhbUIDKFx8yTkLfEjdQM5Wl+ZQ==" crossorigin="anonymous"></script>
 
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <!--    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <!-- TweenMax - GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
@@ -45,6 +46,40 @@
 
 <body>
 
+
+
+    <div class="transition transition-2 is-active">
+        <div class="preloader">
+            <div class="counter">1999</div>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        function counter(){
+        var count = setInterval(function(){
+            var c = parseInt($('.counter').text());
+            $('.counter').text((++c).toString());
+            if(c==2021){
+                clearInterval(count);
+                $('.counter').addClass('hide');
+                $('.preloader').addClass('active');
+            }
+        },150)
+    }
+    
+    counter()
+    
+    
+    </script>
+
+
+
+
+    <!--
     <div class="loader">
         <marquee direction="right" scrollamount="40">UX/UI.</marquee>
         <marquee direction="left" scrollamount="40">Generative Art.</marquee>
@@ -54,6 +89,7 @@
             <h1 class="intro-title"></h1>
         </div>
     </div>
+-->
 
     <a class="sig lang" href="https://ishasharmax.github.io/" target="_blank" style="text-decoration: none;">ISHA SHARMA</a>
 
@@ -217,7 +253,7 @@ myAudio.onpause = function() {
 
         function scrollRotate() {
             let image = document.getElementById("reload2");
-            image.style.transform = "rotate(" + window.pageYOffset / 40 + "deg)";
+            image.style.transform = "rotate(" + window.pageYOffset / 100 + "deg)";
         }
     </script>
 
@@ -252,9 +288,11 @@ myAudio.onpause = function() {
             <img src="img/Frame%2041.svg" style="width:100%">
         </div>
 
+        <!--
         <div class="mySlides fade">
             <img src="img/Frame%2019.svg" style="width:100%">
         </div>
+-->
 
         <div class="mySlides fade">
             <img src="img/Frame%2046.svg" style="width:100%">
@@ -263,9 +301,9 @@ myAudio.onpause = function() {
         <div class="mySlides fade">
             <img src="img/Frame%2047.svg" style="width:100%">
         </div>
-        
-         <div class="mySlides fade">
-            <img src="img/Frame%2013.svg" style="width:100%">
+
+        <div class="mySlides fade">
+            <img src="img/Frame%2020.png" style="width:100%">
         </div>
 
         <div class="mySlides fade">
@@ -279,7 +317,6 @@ myAudio.onpause = function() {
     </div>
 
     <div style="text-align:center">
-        <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
@@ -313,6 +350,21 @@ myAudio.onpause = function() {
             setTimeout(showSlides, 500); // Change image every 2 seconds
         }
     </script>
+
+    <br><br><br>
+
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+                <a href="#" style="text-decoration: none;" class="indexButton text-center d-block">SEE ALL DESIGNS<span></span></a>
+            </div>
+            <div class="col-sm-4">
+            </div>
+        </div>
+    </div>
 
     <br><br><br>
 
@@ -488,9 +540,10 @@ myAudio.onpause = function() {
                 </div>
             </div>
 
+
             <div class="container">
                 <div class="row">
-                    <div class="col item social"><a href="https://github.com/Ishasharmax" style="text-decoration: none;" target="_blank">Gh.</a><a href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;" target="_blank">Tw.</a><a href="https://dribbble.com/ishasharmax" style="text-decoration: none;" target="_blank">Dr.</a><a href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;" target="_blank">Lk.</a><a href="#" style="text-decoration: none;" target="_blank">In.</a><a href="https://ishasharmax.medium.com/" style="text-decoration: none;" target="_blank">Md.</a></div>
+                    <div class="col item social"><a onclick='window.open("https://github.com/Ishasharmax");return true;' style="text-decoration: none;">Gh.</a><a onclick='window.open("https://twitter.com/sxdcoldsoup");return false;' style="text-decoration: none;">Tw.</a><a onclick='window.open("https://dribbble.com/ishasharmax");return false;' style="text-decoration: none;">Dr.</a><a onclick='window.open("https://www.linkedin.com/in/ishasharmax/");return false;' style="text-decoration: none;">Lk.</a><a onclick='window.open("https://www.instagram.com/ishxshxrmx/");return false;' style="text-decoration: none;">In.</a><a onclick='window.open("https://ishasharmax.medium.com/");return false;' style="text-decoration: none;">Md.</a></div>
                 </div>
             </div>
 
@@ -559,7 +612,10 @@ myAudio.onpause = function() {
     </script>
 
 
-    <script src="js/script.js"></script>
+
+    <!--    <script src="js/script.js"></script>-->
+
+    <script src="js/loader.js"></script>
 
     <script src="js/hover.js"> </script>
 </body>

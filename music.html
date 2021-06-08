@@ -31,6 +31,13 @@
 </head>
 
 <body id="myDIV">
+    
+      <div class="transition transition-2 is-active">
+        <div class="preloader2">
+            <div class="counter2">1</div>
+        </div>
+
+    </div>
 
     <!--
     <div class="loader">
@@ -42,6 +49,42 @@
             <h1 class="intro-title"></h1>
         </div>
     </div>
+-->
+
+    <script>
+        function counter(){
+        var count = setInterval(function(){
+            var c = parseInt($('.counter2').text());
+            $('.counter2').text((++c).toString());
+            if(c==22){
+                clearInterval(count);
+                $('.counter2').addClass('hide2');
+                $('.preloader2').addClass('active');
+            }
+        },160)
+    }
+    
+    counter()
+    
+    
+    </script>
+<!--
+
+ <div class="preloader">
+        <div class="counter"></div>
+    </div>
+
+    
+    <div class="loader">
+        <marquee direction="right" scrollamount="40">UX/UI.</marquee>
+        <marquee direction="left" scrollamount="40">Generative Art.</marquee>
+        <marquee direction="right" scrollamount="40">Programming.</marquee>
+        <marquee direction="" scrollamount="40">Machine Learning.</marquee>
+        <div class="intro">
+            <h1 class="intro-title"></h1>
+        </div>
+    </div>
+
 -->
 
 
@@ -132,7 +175,7 @@
     </section>
 
 
-    <script src="music.js">
+    <script src="js/music.js">
 
     </script>
 
@@ -176,7 +219,7 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col item social"><a href="https://github.com/Ishasharmax" style="text-decoration: none;" target="_blank">Gh.</a><a href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;" target="_blank">Tw.</a><a href="https://dribbble.com/ishasharmax" style="text-decoration: none;" target="_blank">Dr.</a><a href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;" target="_blank">Lk.</a><a href="#" style="text-decoration: none;" target="_blank">In.</a><a href="https://ishasharmax.medium.com/" style="text-decoration: none;" target="_blank">Md.</a></div>
+                    <div class="col item social"><a href="https://github.com/Ishasharmax" style="text-decoration: none;" target="_blank">Gh.</a><a href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;" target="_blank">Tw.</a><a href="https://dribbble.com/ishasharmax" style="text-decoration: none;" target="_blank">Dr.</a><a href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;" target="_blank">Lk.</a><a href="https://www.instagram.com/ishxshxrmx/" style="text-decoration: none;" target="_blank">In.</a><a href="https://ishasharmax.medium.com/" style="text-decoration: none;" target="_blank">Md.</a></div>
                 </div>
             </div>
 
@@ -231,7 +274,9 @@
             cursor.removeClass("active");
             follower.removeClass("active");
         });
+
     </script>
+    <script src="js/loader.js"></script>
 
 
     <script src="js/hover.js"> </script>

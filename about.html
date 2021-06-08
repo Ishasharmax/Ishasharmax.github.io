@@ -36,7 +36,14 @@
 
 <body>
 
+    <div class="transition transition-2 is-active">
+        <div class="preloader2">
+            <div class="counter2">1</div>
+        </div>
 
+    </div>
+
+    <!--
     <div class="loader">
         <marquee direction="right" scrollamount="40">UX/UI.</marquee>
         <marquee direction="left" scrollamount="40">Generative Art.</marquee>
@@ -46,6 +53,40 @@
             <h1 class="intro-title"></h1>
         </div>
     </div>
+-->
+
+    <script>
+        function counter(){
+        var count = setInterval(function(){
+            var c = parseInt($('.counter2').text());
+            $('.counter2').text((++c).toString());
+            if(c==22){
+                clearInterval(count);
+                $('.counter2').addClass('hide2');
+                $('.preloader2').addClass('active');
+            }
+        },160)
+    }
+    
+    counter()
+    
+    
+    </script>
+
+
+    <!--     <div class="transition transition-2 is-active"></div>-->
+
+    <!--
+    <div class="loader">
+        <marquee direction="right" scrollamount="40">UX/UI.</marquee>
+        <marquee direction="left" scrollamount="40">Generative Art.</marquee>
+        <marquee direction="right" scrollamount="40">Programming.</marquee>
+        <marquee direction="" scrollamount="40">Machine Learning.</marquee>
+        <div class="intro">
+            <h1 class="intro-title"></h1>
+        </div>
+    </div>
+-->
 
 
     <a class="sig lang" href="https://ishasharmax.github.io/" target="_blank" style="text-decoration: none;">ISHA SHARMA</a>
@@ -73,7 +114,7 @@
 
     <br><br><br><br><br><br>
 
-<!--
+    <!--
     <section>
         <div class="container">
             <div class="row">
@@ -89,9 +130,9 @@
         </div>
     </section>
 -->
-    
-    
-     <section>
+
+
+    <section>
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
@@ -163,7 +204,6 @@
             let percent = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
             textPath.setAttribute("startOffset", (-percent * 20) + 1200)
         });
-
     </script>
 
 
@@ -199,9 +239,10 @@
                     <div class="col-sm-2"></div>
                 </div>
             </div>
+
             <div class="container">
                 <div class="row">
-                    <div class="col item social"><a href="https://github.com/Ishasharmax" style="text-decoration: none;" target="_blank">Gh.</a><a href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;" target="_blank">Tw.</a><a href="https://dribbble.com/ishasharmax" style="text-decoration: none;" target="_blank">Dr.</a><a href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;" target="_blank">Lk.</a><a href="#" style="text-decoration: none;" target="_blank">In.</a><a href="https://ishasharmax.medium.com/" style="text-decoration: none;" target="_blank">Md.</a></div>
+                    <div class="col item social"><a href="https://github.com/Ishasharmax" style="text-decoration: none;" target="_blank">Gh.</a><a href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;" target="_blank">Tw.</a><a href="https://dribbble.com/ishasharmax" style="text-decoration: none;" target="_blank">Dr.</a><a href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;" target="_blank">Lk.</a><a href="https://www.instagram.com/ishxshxrmx/" style="text-decoration: none;" target="_blank">In.</a><a href="https://ishasharmax.medium.com/" style="text-decoration: none;" target="_blank">Md.</a></div>
                 </div>
             </div>
 
@@ -258,13 +299,13 @@
             cursor.removeClass("active");
             follower.removeClass("active");
         });
-
     </script>
 
+    <!--     <script src="js/loader.js"></script>-->
 
     <script src="js/hover.js"> </script>
 
-    <script src="js/script.js"></script>
+    <!--    <script src="js/script.js"></script>-->
 
 </body>
 
