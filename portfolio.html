@@ -36,32 +36,25 @@
     <!-- Slider Plugin -->
     <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js"></script>
     <link rel="stylesheet" media="screen" href="css/style.css">
-    <link rel="stylesheet" media="screen" href="css/arrow.css">
-    <link rel="stylesheet" media="screen" href="css/menu.css">
     <link rel="stylesheet" media="screen" href="css/hover.css">
+    <link rel="stylesheet" media="screen" href="horizontal.css">
+
 
 </head>
 
 <body>
 
-      <div class="transition transition-2 is-active">
+
+    <div class="transition transition-2 is-active">
         <div class="preloader2">
             <div class="counter2">1</div>
         </div>
 
     </div>
 
-    <!--
-    <div class="loader">
-        <marquee direction="right" scrollamount="40">UX/UI.</marquee>
-        <marquee direction="left" scrollamount="40">Generative Art.</marquee>
-        <marquee direction="right" scrollamount="40">Programming.</marquee>
-        <marquee direction="" scrollamount="40">Machine Learning.</marquee>
-        <div class="intro">
-            <h1 class="intro-title"></h1>
-        </div>
-    </div>
--->
+
+
+
 
     <script>
         function counter(){
@@ -81,24 +74,7 @@
     
     </script>
 
-<!--
-     <div class="preloader">
-        <div class="counter"></div>
-    </div>
 
-
-
-      
-    <div class="loader">
-        <marquee direction="right" scrollamount="40">UX/UI.</marquee>
-        <marquee direction="left" scrollamount="40">Generative Art.</marquee>
-        <marquee direction="right" scrollamount="40">Programming.</marquee>
-        <marquee direction="" scrollamount="40">Machine Learning.</marquee>
-        <div class="intro">
-            <h1 class="intro-title"></h1>
-        </div>
-    </div>
--->
 
 
     <a class="sig" href="https://ishasharmax.github.io/" target="_blank" style="text-decoration: none;">ISHA SHARMA</a>
@@ -112,68 +88,85 @@
         </label>
         <nav class="navHeader nav3">
             <ul class="ul3">
-                <li class="li3"><a class="menuLink" href="index.html" style="text-decoration: none;">HOME</a></li>
-                <li class="li3"><a class="menuLink" href="about.html" style="text-decoration: none;">ABOUT</a></li>
-                <li class="li3"><a class="menuLink" href="portfolio.html" style="text-decoration: none;">PROJECTS</a></li>
-                <li class="li3"><a class="menuLink" href="#" style="text-decoration: none;">CONTACT ME</a></li>
-                <li class="li3"><a class="menuLink" href="music.html" style="text-decoration: none;">AURAL AESTHETICS*</a></li>
+                <li class="li3"><a href="index.html" style="text-decoration: none;">HOME</a></li>
+                <li class="li3"><a href="about.html" style="text-decoration: none;">ABOUT</a></li>
+                <li class="li3"><a href="portfolio.html" style="text-decoration: none;">PROJECTS</a></li>
+                <li class="li3"><a href="mailto:1999sharma19@gmail.com" style="text-decoration: none;">CONTACT ME</a></li>
+                <li class="li3"><a href="music.html" style="text-decoration: none;">AURAL AESTHETICS*</a></li>
             </ul>
         </nav>
     </header>
 
-    <!--    <div class="cursor"></div>-->
+    <div class="d-block d-sm-none">
+        <br></div>
 
-    <!--
-    <main>
-        <div class="slider">
-            <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
-            <nav class="nav2">
-                <a href="#" class="main-nav link">SEE ALL PROJECTS<span></span></a>
-                <a href="#" class="main-nav prev" data-nav="previous">Prev <span></span></a>
-                <a href="#" class="main-nav next" data-nav="next">Next <span></span></a>
-            </nav>
+    <div class="d-none d-md-block">
+    </div>
+
+
+    <div class="scrollOverflow">
+        <div class="container">
+            <div class="block block-1 "><a target="_blank" class="scroll text2" href="https://github.com/Ishasharmax/Generative_Art" style="text-decoration: none;">Generative Art.
+                </a>
+            </div>
+            <div class="block block-2">
+                <a class="scroll text1" target="_blank" href="WomHop.html" style="text-decoration: none;">WOM-HOP.
+                </a>
+            </div>
+            <div class="block block-3">
+                <a class="scroll text2" target="_blank" href="https://icunwind.netlify.app" style="text-decoration: none;">Unwind.
+                </a>
+            </div>
+            <div class="block block-4">
+                <a class="scroll text1" target="_blank" href="https://wubbalubbaflapflap.netlify.app" style="text-decoration: none;">WLFF.
+                </a>
+            </div>
+            <div class="block block-5">
+                <a class="scroll text2" target="_blank" href="https://github.com/Ishasharmax/undercovermusic" style="text-decoration: none;">Undercover Music.
+                </a>
+            </div>
+            <div class="block block-6">
+                <a class="scroll text1" target="_blank" href="https://github.com/Ishasharmax/GroceryStoreApp" style="text-decoration: none;">Jiv's Groceries.
+                </a>
+            </div>
+            <div class="block block-7">
+                <a class="scroll text2" target="_blank" href="https://github.com/Ishasharmax/FlowerClassificationCNN" style="text-decoration: none;">Floral Class. (CNN).
+                </a>
+            </div>
+            <div class="block block-8">
+                <a class="scroll text1" target="_blank" href="Blender.html" style="text-decoration: none;">Blender Renders.
+                </a>
+            </div>
+            <div class="block block-9">
+                <a class="scroll text2" target="_blank" href="GraphicD.html" style="text-decoration: none;">Graphic Designs.
+                </a>
+            </div>
         </div>
-    </main>
--->
+        <script src="scroll.js"></script>
+        <script>
+            var blocks = document.getElementsByClassName("block");
+            var container = document.getElementsByClassName("container");
+            var hs = new HorizontalScroll.default({
+                blocks: blocks,
+                container: container,
+                isAnimated: true,
+                springEffect: 0.8,
+            });
+        </script>
+    </div>
 
-    <div class="d-md-block"><br><br><br></div>
+    <br><br>
 
+    <div class="d-none d-md-block">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+
+
+    <div class="d-block d-sm-none">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
 
     <div class="footer-dark">
         <footer>
-            <div class="container footerContainer">
-                <div class="row mt-5 mb-5">
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-6">
-                        <h3>LET'S GET<span class="NYText"> GROOVY</span></h3>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="container3">
-                            <ul>
-                                <li>
-                                    <a class="animated-arrow" href="mailto:1999sharma19@gmail.com">
-                                        <span class="the-arrow -left">
-                                            <span class="shaft"></span>
-                                        </span>
-                                        <span class="main">
-                                            <span class="text">
-                                                Connect here!
-                                            </span>
-                                            <span class="the-arrow -right">
-                                                <span class="shaft"></span>
-                                            </span>
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-2"></div>
-                </div>
-            </div>
-
-
-            <div class="container">
+            <div class="container4">
                 <div class="row">
                     <div class="col item social"><a href="https://github.com/Ishasharmax" style="text-decoration: none;" target="_blank">Gh.</a><a href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;" target="_blank">Tw.</a><a href="https://dribbble.com/ishasharmax" style="text-decoration: none;" target="_blank">Dr.</a><a href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;" target="_blank">Lk.</a><a href="https://www.instagram.com/ishxshxrmx/" style="text-decoration: none;" target="_blank">In.</a><a href="https://ishasharmax.medium.com/" style="text-decoration: none;" target="_blank">Md.</a></div>
                 </div>
@@ -183,55 +176,6 @@
         </footer>
     </div>
     <script src="js/hover.js"> </script>
-
-    <!--
-    <script>
-        const images = ["img/img1.png", "img/img2.png", "img/img3.png"];
-        const texts = [
-            ["CODING"],
-            ["UX/UI"],
-            ["GRAPHICS"]
-        ];
-        const links = [
-            ["www.google.com"],
-            ["UX/UI"],
-            ["GRAPHICS"]
-        ];
-
-        rgbKineticSlider = new rgbKineticSlider({
-            slideImages: images,
-            itemsTitles: texts,
-            itemLinks: links,
-
-            backgroundDisplacementSprite: "http://hmongouachon.com/_demos/rgbKineticSlider/map-9.jpg",
-            cursorDisplacementSprite: "http://hmongouachon.com/_demos/rgbKineticSlider/displace-circle.png",
-            cursorScaleIntensity: 0.4,
-            cursorMomentum: 0.14,
-
-            swipe: true,
-            swipeDistance: window.innerWidth * 0.4,
-            swipeScaleIntensity: 2,
-
-            slideTransitionDuration: 0.8,
-            transitionScaleIntensity: 30,
-            transitionScaleAmplitude: 160,
-
-            nav: true,
-            navElement: ".main-nav",
-
-            imagesRgbEffect: false,
-            imagesRgbIntensity: 4,
-            navImagesRgbIntensity: 120,
-
-            textsDisplay: true,
-            textTitleSize: 144,
-            textsTiltEffect: true,
-            googleFonts: ["Playfair Display:400"],
-            textsRgbEffect: true,
-            textsRgbIntensity: 1,
-        });
-    </script>
--->
 
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
@@ -281,13 +225,8 @@
             cursor.removeClass("active");
             follower.removeClass("active");
         });
-
     </script>
     <script src="js/loader.js"></script>
-
-
-    <!--    <script src="js/script.js"></script>-->
-
 </body>
 
 </html>
