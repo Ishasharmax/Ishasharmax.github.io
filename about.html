@@ -36,42 +36,32 @@
 
 <body>
 
-    <div class="transition transition-2 is-active">
-        <div class="preloader2">
-            <div class="counter2">1</div>
+   <div class="transition transition-2 is-active">
+        <div class="preloader">
+            <div class="counter">1</div>
         </div>
+
     </div>
 
-    <!--
-    <div class="loader">
-        <marquee direction="right" scrollamount="40">UX/UI.</marquee>
-        <marquee direction="left" scrollamount="40">Generative Art.</marquee>
-        <marquee direction="right" scrollamount="40">Programming.</marquee>
-        <marquee direction="" scrollamount="40">Machine Learning.</marquee>
-        <div class="intro">
-            <h1 class="intro-title"></h1>
-        </div>
-    </div>
--->
+
+
 
     <script>
         function counter(){
         var count = setInterval(function(){
-            var c = parseInt($('.counter2').text());
-            $('.counter2').text((++c).toString());
-            if(c==22){
+            var c = parseInt($('.counter').text());
+            $('.counter').text((++c).toString());
+            if(c==10){
                 clearInterval(count);
-                $('.counter2').addClass('hide2');
-                $('.preloader2').addClass('active');
+                $('.counter').addClass('hide');
+                $('.preloader').addClass('active');
             }
-        },160)
+        },150)
     }
     
     counter()
     
-    
     </script>
-
 
     <!--     <div class="transition transition-2 is-active"></div>-->
 

@@ -36,32 +36,32 @@
 
 <body>
 
-    <!--
     <div class="transition transition-2 is-active">
-        <div class="preloader2">
-            <div class="counter2">1</div>
+        <div class="preloader">
+            <div class="counter">1</div>
         </div>
+
     </div>
+
+
+
 
     <script>
         function counter(){
         var count = setInterval(function(){
-            var c = parseInt($('.counter2').text());
-            $('.counter2').text((++c).toString());
-            if(c==22){
+            var c = parseInt($('.counter').text());
+            $('.counter').text((++c).toString());
+            if(c==10){
                 clearInterval(count);
-                $('.counter2').addClass('hide2');
-                $('.preloader2').addClass('active');
+                $('.counter').addClass('hide');
+                $('.preloader').addClass('active');
             }
-        },160)
+        },150)
     }
     
     counter()
     
-    
     </script>
--->
-
     <a class="sig lang" href="https://ishasharmax.github.io/" target="_blank" style="text-decoration: none;">ISHA SHARMA</a>
 
     <header>
