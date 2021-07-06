@@ -2068,3 +2068,8 @@ figure a {
 .landscape {
     grid-column-end: span 2;
 }
+
+.white{
+    background-color: #F3F3F3;
+    width: 90%;
+}
