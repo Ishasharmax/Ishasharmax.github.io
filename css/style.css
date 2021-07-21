@@ -248,53 +248,6 @@ p {
 
 }
 
-
-.footer-dark .item.social {
-    text-align: center;
-}
-
-@media screen and (min-width: 651px) {
-    .footer-dark .item.social > a {
-        font-size: 18px;
-        display: inline-block;
-        text-align: center;
-        margin: 0 60px;
-        color: #fff;
-        opacity: 0.5;
-        font-family: 'font';
-        font-weight: 400;
-
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .footer-dark .item.social > a {
-        font-size: 18px;
-        display: inline-block;
-        text-align: center;
-        margin: 0px 20px;
-        color: #fff;
-        opacity: 0.5;
-        font-family: 'font';
-        font-weight: 400;
-    }
-}
-
-
-.footer-dark .item.social > a:hover {
-    opacity: 1;
-    color: white;
-}
-
-
-.footer-dark .copyright {
-    text-align: center;
-    font-size: 12px;
-    margin-bottom: 0;
-    color: #fff;
-    font-family: 'Roses Bold';
-}
-
 .marquee3 {
     position: relative;
     overflow: hidden;
