@@ -66,10 +66,8 @@
             });
 
         });
+
     </script>
-
-
-
 
     <div class="navbar">
         <a class="menu" href="index.html"><img alt="3d logo" class="sigIMG" src="img/is.png"></a>
@@ -78,9 +76,8 @@
         <a class="menu link link--metis" style="text-decoration: none;" href="#contact">CONTACT</a>
     </div>
 
-
     <br><br><br><br><br><br><br><br><br><br><br>
-    <h2 class="ml-5 mr-5">A <span class="h1Extra">Generative Art</span> gallery showcasing some of the <span class="h1Extra">visually appealing </span> art created by <span class="h1Extra"> me </span> with RStudio, Processing, Javascript, p5.js, Python.</h2>
+    <h2 class="h2 ml-5 mr-5">A <span class="h1Extra">Generative Art</span> gallery showcasing some of the <span class="h1Extra">visually appealing </span> art created by <span class="h1Extra"> me </span> with RStudio, Processing, Javascript, p5.js, Python.</h2>
     <br>
 
 
@@ -127,6 +124,7 @@
             let image = document.getElementById("reload2");
             image.style.transform = "rotate(" + window.pageYOffset / 30 + "deg)";
         }
+
     </script>
 
 
@@ -140,6 +138,7 @@
             scrollPercent = (scroll / (dh - wh)) * 100;
             $(".progressbar").css("height", scrollPercent + "%");
         });
+
     </script>
 
 
@@ -366,15 +365,48 @@
 
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
-    <!--
-        <div id="wrapper">
-            <div class="portfolio-item">
-                <div class="portfolio-thumb">
-                    <img src="img/14.jpg" alt="" />
-                </div>
-            </div>
-        </div>
--->
+
+    <script>
+        const scrollElements = document.querySelectorAll(".js-scroll");
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+
+            return (
+                elementTop <=
+                (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+
+        const elementOutofView = (el) => {
+            const elementTop = el.getBoundingClientRect().top;
+
+            return (
+                elementTop > (window.innerHeight || document.documentElement.clientHeight)
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add("scrolled");
+        };
+
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                } else if (elementOutofView(el)) {
+                    hideScrollElement(el)
+                }
+            })
+        }
+
+        window.addEventListener("scroll", () => {
+            handleScrollAnimation();
+        });
+    </script>
+
+
     <script>
         var cursor = $(".cursor"),
             follower = $(".cursor-follower");
@@ -420,6 +452,7 @@
             cursor.removeClass("active");
             follower.removeClass("active");
         });
+
     </script>
 
 

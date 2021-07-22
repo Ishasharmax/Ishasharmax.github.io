@@ -70,7 +70,7 @@
 
 
     
-    <div class="navbar">
+    <div class="navbar js-scroll fade-in">
         <a class="menu" href="index.html"><img alt="3d logo" class="sigIMG" src="img/is.png"></a>
         <a href="index.html" class="menu link link--metis" style="text-decoration: none;">HOME</a>
         <a class="menu link link--metis" style="text-decoration: none;" href="#cs">CASE STUDY</a>
@@ -79,7 +79,7 @@
 
 
     <br><br><br><br><br><br><br><br><br><br><br>
-    <h2 class="ml-5 mr-5"><span class="h1Extra">Jiv's</span> is a grocery store app programmed in<span class="h1Extra"> React Native </span> with <span class="h1Extra"> Redux </span>.</h2>
+    <h2 class="h2 ml-5 mr-5"><span class="h1Extra">Jiv's</span> is a grocery store app programmed in<span class="h1Extra"> React Native </span> with <span class="h1Extra"> Redux </span>.</h2>
     <br>
 
 
@@ -274,6 +274,52 @@
             </div>
         </div>
 -->
+    
+    
+    
+
+    <script>
+        const scrollElements = document.querySelectorAll(".js-scroll");
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+
+            return (
+                elementTop <=
+                (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+
+        const elementOutofView = (el) => {
+            const elementTop = el.getBoundingClientRect().top;
+
+            return (
+                elementTop > (window.innerHeight || document.documentElement.clientHeight)
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add("scrolled");
+        };
+
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                } else if (elementOutofView(el)) {
+                    hideScrollElement(el)
+                }
+            })
+        }
+
+        window.addEventListener("scroll", () => {
+            handleScrollAnimation();
+        });
+    </script>
+
+
+    
     <script>
         var cursor = $(".cursor"),
             follower = $(".cursor-follower");

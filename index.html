@@ -33,12 +33,12 @@
         $(window).on('load', function() {
             $('#preloader').css({
                 "transform": "translateY(-100%)",
-                "transition-delay": "5s"
+                "transition-delay": "4s"
             });
             $('.loader').css({
                 "opacity": "0",
                 "transform": "translate(-50%,-100%)",
-                "transition-delay": "5s"
+                "transition-delay": "4s"
             });
 
             $('.loader_text_unit').each(function() {
@@ -53,7 +53,7 @@
 
                     {
 
-                        duration: 4000,
+                        duration: 3000,
                         easing: 'linear',
                         step: function() {
                             $this.text(Math.floor(this.countNum));
@@ -68,6 +68,7 @@
     </script>
 
 
+
     <script>
         $('.loader_text_unit').each(function() {
             var $this = $(this),
@@ -80,7 +81,6 @@
                 },
 
                 {
-
                     duration: 300,
                     easing: 'linear',
                     step: function() {
@@ -92,7 +92,7 @@
                 });
         });
     </script>
-    <div class="navbar">
+    <div class="navbar js-scroll fade-in">
         <a class="menu" href="index.html"><img alt="3d logo" class="sigIMG" src="img/is.png"></a>
         <a href="#home" class="menu link link--metis" style="text-decoration: none;">HOME</a>
         <a class="menu link link--metis" style="text-decoration: none;" href="#work">WORK</a>
@@ -103,7 +103,7 @@
         <br><br><br><br><br>
 
         <img class="imgMe mx-auto img-fluid d-block border-rounded" src="img/me2.JPG">
-        <h2 class="ml-5 mr-5">Hello! I’m Isha, <span class="h1Extra">designer</span> and creative front-end <span class="h1Extra">developer</span>.</h2>
+        <h2 class="scrolled fade-in-bottom ml-5 mr-5">Hello! I’m Isha, <span class="h1Extra">designer</span> and creative front-end <span class="h1Extra">developer</span>.</h2>
         <br>
     </section>
 
@@ -440,12 +440,40 @@
         </div>
     </div>
 
+    <br><br><br> <br><br>
+<!--    <span class="dot2"></span>-->
+    <!--
 
 
-    <br><br><br> <br><br><br>
-    <span class="dot2"></span>
+    <section class="scroll-container">
+        <div class="scroll-element js-scroll fade-in">
 
+        </div>
+        <div class="scroll-caption">
+        </div>
+    </section>
+    <section class="scroll-container">
+        <div class="scroll-element js-scroll fade-in-bottom">
 
+        </div>
+        <div class="scroll-caption">
+        </div>
+    </section>
+    <section class="scroll-container">
+        <div class="scroll-element js-scroll slide-left">
+
+        </div>
+        <div class="scroll-caption">
+        </div>
+    </section>
+    <section class="scroll-container">
+        <div class="scroll-element js-scroll slide-right">
+
+        </div>
+        <div class="scroll-caption">
+        </div>
+    </section>
+-->
 
 
     <div class="d-none d-sm-block"><br><br><br><br></div>
@@ -455,14 +483,13 @@
                 <div class="row mt-5 mb-5">
                     <div class="col-sm-4"></div>
                     <div class="col-sm-4">
-                        <h3>LET'S GET <a href="mailto:1999sharma19@gmail.com" class="NYText">in touch </a></h3>
+                        <h3 >LET'S GET <a href="mailto:1999sharma19@gmail.com" class="NYText">in touch </a></h3>
                     </div>
                     <div class="col-sm-4">
 
                     </div>
                 </div>
             </div>
-
 
             <div class="container">
                 <div class="row">
@@ -473,6 +500,51 @@
             <p class="copyright mb-4 mt-5 pt-2"><i>©COPYRIGHT - ISHA 2021</i></p>
         </footer>
     </div>
+
+
+
+
+
+    <script>
+        const scrollElements = document.querySelectorAll(".js-scroll");
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+
+            return (
+                elementTop <=
+                (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+
+        const elementOutofView = (el) => {
+            const elementTop = el.getBoundingClientRect().top;
+
+            return (
+                elementTop > (window.innerHeight || document.documentElement.clientHeight)
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add("scrolled");
+        };
+
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                } else if (elementOutofView(el)) {
+                    hideScrollElement(el)
+                }
+            })
+        }
+
+        window.addEventListener("scroll", () => {
+            handleScrollAnimation();
+        });
+    </script>
+
 
 
 
