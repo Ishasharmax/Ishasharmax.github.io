@@ -814,129 +814,59 @@ img {
 
 
 
-
-
-
-@media screen and (min-width: 651px) {
-    .counter {
-        position: relative;
-        color: white;
-        font-size: 200px;
-        font-family: 'Momcake';
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .counter {
-        position: relative;
-        color: white;
-        font-size: 80px;
-        font-family: 'Momcake';
-    }
-}
-
-
-
-
-
-
-.counter::after {
-    /*    content: '%';*/
-    font-size: 0.5em;
-}
-
-
-.preloader {
+#preloader {
     position: fixed;
     top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 0;
     width: 100%;
     height: 100vh;
-    background: #1a1a1a;
-    z-index: 100000000;
-}
-
-.preloader.active {
-    transform: translateY(-100vh);
-    transition: ease-in-out 2s;
-    transition-delay: 1s;
-    left: 0px;
-}
-
-.preloader::before {
-    /*    content: 'Loading';*/
-    position: absolute;
-    font-size: 12em;
-    text-transform: uppercase;
-    color: #fff;
-
+    background: #F6F6F6;
+    z-index: 999999;
+    transition: all 2s ease;
+    overflow: none;
 }
 
 
-.hide {
-    opacity: 0;
-    transition: 1s;
-    pointer-events: none;
-}
-
-
-
-
-
-.counter2 {
-    position: relative;
-    color: #1a1a1a;
-    font-size: 16em;
-    font-family: 'Momcake';
-}
-
-
-.counter2::after {
-    font-size: 0.5em;
-}
-
-
-.preloader2 {
+#preloader2 {
     position: fixed;
     top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 0;
     width: 100%;
     height: 100vh;
-    background: #1a1a1a;
-    z-index: 100000000;
-    font-family: 'Momcake';
-
+    background: #F6F6F6;
+    z-index: 999999;
+    transition: all 1s ease;
+    overflow: none;
 }
 
-.preloader2.active {
-    transform: translateY(-100vh);
-    transition: ease-in-out 2s;
-    transition-delay: 1s;
-    left: 0px;
-    font-family: 'Momcake';
 
-}
-
-.preloader2::before {
-    /*    content: 'Loading';*/
+.loader {
     position: absolute;
-    font-size: 12em;
-    text-transform: uppercase;
-    color: #fff;
-
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 2s;
 }
 
-.hide2 {
-    opacity: 0;
-    transition: 1s;
-    pointer-events: none;
+.loader .loader_text {
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'CL2';
+    color: #26001B;
+    margin: 20px auto;
+    text-align: center;
 }
 
 
+@keyframes fill {
+    0% {
+        width: 0%
+    }
+
+    100% {
+        width: 100%
+    }
+}
 
 
 ::-webkit-scrollbar {
@@ -1092,7 +1022,7 @@ h5 {
 }
 
 
-.live{
+.live {
     color: white;
     font-size: 20px;
     margin: 30px;
@@ -1101,7 +1031,7 @@ h5 {
     text-align: center;
 }
 
-.live:hover{
+.live:hover {
     color: white;
     font-size: 20px;
     margin: 30px;

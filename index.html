@@ -21,6 +21,77 @@
 </head>
 
 <body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <div id="preloader">
+        <div class="loader">
+            <p class="loader_text" id="loader_text"><span class="loader_text_unit" data-count="100">0</span><span>%</span></p>
+        </div>
+    </div>
+
+    <script>
+        $(window).on('load', function() {
+            $('#preloader').css({
+                "transform": "translateY(-100%)",
+                "transition-delay": "5s"
+            });
+            $('.loader').css({
+                "opacity": "0",
+                "transform": "translate(-50%,-100%)",
+                "transition-delay": "5s"
+            });
+
+            $('.loader_text_unit').each(function() {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+
+                $({
+                    countNum: $this.text()
+                }).animate({
+                        countNum: countTo
+                    },
+
+                    {
+
+                        duration: 4000,
+                        easing: 'linear',
+                        step: function() {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function() {
+                            $this.text(this.countNum);
+                        }
+                    });
+            });
+
+        });
+    </script>
+
+
+    <script>
+        $('.loader_text_unit').each(function() {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+
+            $({
+                countNum: $this.text()
+            }).animate({
+                    countNum: countTo
+                },
+
+                {
+
+                    duration: 300,
+                    easing: 'linear',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum);
+                    }
+                });
+        });
+    </script>
     <div class="navbar">
         <a class="menu" href="index.html"><img alt="3d logo" class="sigIMG" src="img/is.png"></a>
         <a href="#home" class="menu link link--metis" style="text-decoration: none;">HOME</a>
