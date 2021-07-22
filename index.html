@@ -2,37 +2,46 @@
 <html lang="en">
 
 <head>
-    <title>Home - Isha Sharma</title>
+    <title>Isha Sharma - Portfolio Website</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/is2.png" type="image/x-icon">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
     <meta name="thumbnail" content="img/mockup1.svg" />
     <link rel="image_src" href="img/mockup1.svg">
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- TweenMax - GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <link rel="stylesheet" media="screen" href="style2.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <!-- TweenMax - GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+    <link rel="stylesheet" media="screen" href="css/style2.css">
 </head>
 
 <body>
-
     <div class="navbar">
-        <a class="menu" href="index3.html"><img class="sigIMG" src="img/is.png"></a>
+        <a class="menu" href="index.html"><img alt="3d logo" class="sigIMG" src="img/is.png"></a>
         <a href="#home" class="menu link link--metis" style="text-decoration: none;">HOME</a>
         <a class="menu link link--metis" style="text-decoration: none;" href="#work">WORK</a>
         <a class="menu link link--metis" style="text-decoration: none;" href="#contact">CONTACT</a>
     </div>
 
     <section id="home">
-        <!--        <h1 class="ml-5 mr-5">Isha Sharma</h1>-->
         <br><br><br><br><br>
 
         <img class="imgMe mx-auto img-fluid d-block border-rounded" src="img/me2.JPG">
         <h2 class="ml-5 mr-5">Hello! I’m Isha, <span class="h1Extra">designer</span> and creative front-end <span class="h1Extra">developer</span>.</h2>
         <br>
     </section>
+
+
+    <br><br><br>
+    <span class="dot2"></span>
+    <br><br>
+
+
 
     <section class="scrollerH scrollerDown mt-5 mb-5 pb-5 pt-5">
         <div class="wrapper22">
@@ -97,35 +106,124 @@
                 let percent = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
                 textPath.setAttribute("startOffset", (-percent * 20) + 1200)
             });
-
         </script>
 
 
-        <ol class="content">
-            <li class="content__item">
-                <a class="workLink" target="_blank" href="https://github.com/Ishasharmax/Unwind">01. UNWIND</a>
-            </li>
-            <li class="content__item">
-                <a class="workLink" target="_blank" href="https://github.com/Ishasharmax/GroceryStoreApp">02. JIV'S GROCERIES</a>
-            </li>
-            <li class="content__item">
-                <a class="workLink" target="_blank" href="https://github.com/Ishasharmax/Generative_Art">03. GENERATIVE ART</a>
-            </li>
-            <li class="content__item">
-                <a class="workLink" target="_blank" href="https://github.com/Ishasharmax/undercovermusic">04. UNDERCO. MUSIC</a>
-            </li>
-            <!--
-            <li class="content__item">
-                <a class="workLink" target="_blank" href="#">05. RAAG</a>
-            </li>
--->
-            <li class="content__item">
-                <a class="workLink" target="_blank" href="https://github.com/Ishasharmax/WubbaLubbaFlapFlap">06. WLFF</a>
-            </li>
-            <li class="content__item">
-                <a class="workLink" target="_blank" href="#">07. BLENDER</a>
-            </li>
-        </ol>
+        <div class="navigation-wrapper">
+            <div class="project-preview-wrapper">
+                <div class="project-preview"></div>
+            </div>
+            <ul class="navigation-list">
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-1" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/Unwind"> <span class="span2" data-text="UNWIND">UNWIND</span>
+                    </a>
+                </li>
+
+                <div class="project-overlay"></div>
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-2" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/Unwind"> <span class="span2" data-text="JIV">JIV'S GROCERIES</span>
+                    </a>
+                </li>
+                <li class=" navigation-item">
+                    <a class="navigation-link navigation-link-3" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/Unwind"> <span class="span2" data-text="GENERATIVE ART">GENERATIVE ART</span>
+                    </a>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-4" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/Unwind"> <span class="span2" data-text="UNDERCOVER MUSIC">UNDERCO. MUSIC</span>
+                    </a>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-5" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/Unwind"> <span class="span2" data-text="WLFF">WLFF</span>
+                    </a>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-6" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/Unwind"> <span class="span2" data-text="RAAG">RAAG</span>
+                    </a>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-7" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/Unwind"> <span class="span2" data-text="BLENDER">BLENDER</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="progressbar"></div>
+
+        <script>
+            $(document).ready(function() {
+                TweenMax.set(".project-preview", {
+                    width: 0
+                });
+
+                var tl = new TimelineLite();
+
+                $(document)
+                    .on("mouseover", ".navigation-item", function(evt) {
+                        tl = new TimelineLite();
+                        tl.to($(".project-preview"), 1, {
+                            width: "600px",
+                            ease: Expo.easeInOut
+                        });
+                    })
+                    .on("mouseout", ".navigation-item", function(evt) {
+                        tl = new TimelineLite();
+                        tl.to($(".project-preview"), 0.5, {
+                            width: 0,
+                            ease: Expo.easeInOut
+                        });
+                    });
+            });
+
+            $(".navigation-link-1").hover(function() {
+                $(".project-preview").css({
+                    "background-image": "url(img/unwind.png)"
+                });
+            });
+
+            $(".navigation-link-2").hover(function() {
+                $(".project-preview").css({
+                    "background-image": "url(img/logo.gif)"
+                });
+            });
+
+            $(".navigation-link-3").hover(function() {
+                $(".project-preview").css({
+                    "background-image": "url(img/download.png)"
+                });
+            });
+
+            $(".navigation-link-4").hover(function() {
+                $(".project-preview").css({
+                    "background-image": "url(img/C45E8DC6-5038-4A77-A734-E3EDDDFB10C3.JPEG)"
+                });
+            });
+
+            $(".navigation-link-5").hover(function() {
+                $(".project-preview").css({
+                    "background-image": "url(img/wlff.png)"
+                });
+            });
+
+            $(".navigation-link-6").hover(function() {
+                $(".project-preview").css({
+                    "background-image": "url(img/raga.png)"
+                });
+            });
+
+            $(".navigation-link-7").hover(function() {
+                $(".project-preview").css({
+                    "background-image": "url(img/butterfly3.png)"
+                });
+            });
+
+
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop(),
+                    dh = $(document).height(),
+                    wh = $(window).height();
+                scrollPercent = (scroll / (dh - wh)) * 100;
+                $(".progressbar").css("height", scrollPercent + "%");
+            });
+        </script>
 
         <br><br><br><br><br><br><br><br><br>
 
@@ -133,7 +231,7 @@
             <svg width="100%" height="210px" viewBox="0 0 1098.72 89.55">
                 <path id="curve2" fill="transparent" d="M0.17,0.23c0,0,105.85,77.7,276.46,73.2s243.8-61.37,408.77-54.05c172.09,7.64,213.4,92.34,413.28,64.19"></path>
                 <text class="wave" width="100%">
-                    <textPath xlink:href="#curve2" startOffset="2000px" id="text-path2">Graphic Designs</textPath>
+                    <textPath xlink:href="#curve2" startOffset="3000px" id="text-path2">UI & Graphic Designs</textPath>
                 </text>
             </svg>
         </div>
@@ -147,29 +245,24 @@
 
             document.addEventListener("scroll", e => {
                 let percent = (h2[st2] || b2[st2]) / ((h2[sh2] || b2[sh2]) - h2.clientHeight) * 140;
-                textPath2.setAttribute("startOffset", (-percent * 20) + 2000)
+                textPath2.setAttribute("startOffset", (-percent * 20) + 2300)
             });
-
         </script>
 
         <br><br><br><br><br><br><br><br><br>
-
-
         <div class="slideshow-container">
 
             <div class="mySlides fade">
-                <img src="img/Web1920.png" style="width:100%">
+                <img src="img/Custom%20Size%20%E2%80%93%202.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Frame%2055.png" style="width:100%">
             </div>
 
             <div class="mySlides fade">
                 <img src="img/Web1920.png" style="width:100%">
             </div>
-
-
-            <div class="mySlides fade">
-                <img src="img/Frame%2046.svg" style="width:100%">
-            </div>
-
 
             <div class="mySlides fade">
                 <img src="img/Frame%2042.svg" style="width:100%">
@@ -177,6 +270,33 @@
 
             <div class="mySlides fade">
                 <img src="img/Frame%2064.svg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Group%2036.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Group%2038.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Group%2037.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Group%2039.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Group%2041.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/Frame%2056.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/Group%2078.png" style="width:100%">
             </div>
 
         </div>
@@ -190,6 +310,11 @@
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
         </div>
 
         <script>
@@ -214,7 +339,6 @@
                 dots[slideIndex - 1].className += " active";
                 setTimeout(showSlides, 500); // Change image every 2 seconds
             }
-
         </script>
 
     </section>
@@ -250,8 +374,8 @@
 
 
     <div class="d-none d-sm-block"><br><br><br><br><br></div>
-    <div class="footer-dark mb-3 pt-3">
-        <footer  id="contact">
+    <div id="contact" class="footer-dark mb-3 pt-3">
+        <footer>
             <div class="container footerContainer">
                 <div class="row mt-5 mb-5">
                     <div class="col-sm-4"></div>
@@ -274,6 +398,7 @@
             <p class="copyright mb-4 mt-5 pt-2"><i>©COPYRIGHT - ISHA 2021</i></p>
         </footer>
     </div>
+
 
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
@@ -331,8 +456,9 @@
             cursor.removeClass("active");
             follower.removeClass("active");
         });
-
     </script>
+
+
 </body>
 
 </html>
