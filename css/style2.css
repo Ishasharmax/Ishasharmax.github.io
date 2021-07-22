@@ -601,7 +601,7 @@ img {
 
     .link {
         cursor: pointer;
-        font-size: 25px;
+        font-size: 15px;
         position: relative;
         white-space: nowrap;
         color: white;
@@ -952,37 +952,75 @@ img {
     z-index: 1;
 }
 
-.navigation-wrapper ul {
-    margin-top: 80px;
-    margin-left: 100px;
-    /*    margin-bottom: 200px;*/
-    list-style: none;
-    position: relative;
+
+
+
+
+@media screen and (min-width: 651px) {
+    .navigation-wrapper ul {
+        margin-top: 80px;
+        margin-left: 100px;
+        /*    margin-bottom: 200px;*/
+        list-style: none;
+        position: relative;
+    }
+
+    .navigation-item {
+        display: block;
+        user-select: none;
+        margin: 10px 0;
+        font-family: 'Momcake';
+        font-size: 130px;
+        color: white;
+    }
+
+    .span2 {
+        position: relative;
+        display: block;
+        font-family: 'Momcake';
+        font-size: 130px;
+        color: white;
+    }
 }
 
-.navigation-item {
-    display: block;
-    user-select: none;
-    margin: 10px 0;
-    font-family: 'Momcake';
-    font-size: 130px;
-    color: white;
+@media screen and (max-width: 650px) {
+    .navigation-wrapper ul {
+        margin-top: 80px;
+        margin-left: 10px;
+        /*    margin-bottom: 200px;*/
+        list-style: none;
+        position: relative;
+    }
+
+    .navigation-item {
+        display: block;
+        user-select: none;
+        margin: 10px 0;
+        font-family: 'Momcake';
+        font-size: 130px;
+        color: white;
+    }
+
+    .span2 {
+        position: relative;
+        display: block;
+        font-family: 'Momcake';
+        font-size: 50px;
+        color: white;
+    }
 }
 
-.span2 {
-    position: relative;
-    display: block;
-    font-family: 'Momcake';
-    font-size: 130px;
-    color: white;
-}
+
+
+
+
 
 .navigation-item .span2:before {
-/*    width: 0;*/
+    /*    width: 0;*/
     color: #ffffff;
-/*    overflow: hidden;*/
+    /*    overflow: hidden;*/
     position: absolute;
-/*    transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);*/
+    /*    transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);*/
     font-family: 'Momcake';
     font-size: 130px;
     color: white;
@@ -1025,12 +1063,11 @@ img {
 
 
 .dot2 {
-  height: 7px;
-  width: 7px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: block;
+    height: 7px;
+    width: 7px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
     margin: auto;
-    
-}
 
+}
