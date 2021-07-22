@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Isha Sharma - Portfolio Website</title>
+    <title>Unwind - Case Study</title>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/is2.png" type="image/x-icon">
@@ -23,18 +23,15 @@
 <body>
     <div class="navbar">
         <a class="menu" href="index.html"><img alt="3d logo" class="sigIMG" src="img/is.png"></a>
-        <a href="#home" class="menu link link--metis" style="text-decoration: none;">HOME</a>
-        <a class="menu link link--metis" style="text-decoration: none;" href="#work">WORK</a>
+        <a href="index.html" class="menu link link--metis" style="text-decoration: none;">HOME</a>
+        <a class="menu link link--metis" style="text-decoration: none;" href="#cs">CASE STUDY</a>
         <a class="menu link link--metis" style="text-decoration: none;" href="#contact">CONTACT</a>
     </div>
 
-    <section id="home">
-        <br><br><br><br><br>
 
-        <img class="imgMe mx-auto img-fluid d-block border-rounded" src="img/me2.JPG">
-        <h2 class="ml-5 mr-5">Hello! I’m Isha, <span class="h1Extra">designer</span> and creative front-end <span class="h1Extra">developer</span>.</h2>
-        <br>
-    </section>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <h2 class="ml-5 mr-5"><span class="h1Extra">Unwind </span> is a mediation plus stress reducing website, which helps reduce stress with the help of <span class="h1Extra">calm music</span> and <span class="h1Extra">guided meditation</span>.</h2>
+    <br>
 
 
     <br><br><br>
@@ -58,12 +55,12 @@
 
                     <text dy="1" font-size="40" stroke="white" textLength="531">
                         <textPath textLength="531" href="#topSemiCircle" aria-label="Smashing">
-                            scroll down for some groove
+                            scroll down to learn more
                         </textPath>
                     </text>
                     <text dy="1" font-size="40" stroke="white" textLength="531">
                         <textPath textLength="531" href="#bottomSemiCircle" aria-label="MAGAZINE">
-                            scroll down for some groove
+                            scroll down to learn more
                         </textPath>
                     </text>
                 </svg>
@@ -72,7 +69,6 @@
     </section>
 
     <script>
-        // index.js
         window.onscroll = function() {
             scrollRotate();
         };
@@ -83,319 +79,202 @@
         }
     </script>
 
-    <section id="work">
-        <div class="mt-5 pt-5 mb-4">
-            <svg width="100%" height="210px" viewBox="0 0 1098.72 89.55">
-                <path id="curve" fill="transparent" d="M0.17,0.23c0,0,105.85,77.7,276.46,73.2s243.8-61.37,408.77-54.05c172.09,7.64,213.4,92.34,413.28,64.19"></path>
-                <text class="wave" width="100%">
-                    <textPath xlink:href="#curve" startOffset="-120px" id="text-path">Selected work</textPath>
-                </text>
-            </svg>
+
+    <div class="progressbar"></div>
+
+    <script>
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop(),
+                dh = $(document).height(),
+                wh = $(window).height();
+            scrollPercent = (scroll / (dh - wh)) * 100;
+            $(".progressbar").css("height", scrollPercent + "%");
+        });
+    </script>
+
+
+    <section id="cs">
+
+        <div class="content2">
+
+            <img class="img-fluid d-block mx-auto unwindSize" src="img/unwind.png" alt="unwind">
+            
+            
+            <a class="live"  style="text-decoration: none;" target="_blank" href="https://icunwind.netlify.app/finalhci">Click here to view live</a>
+
+            <h4>Summary</h4>
+
+            <p>
+
+                Unwind is a mediation plus stress reducing website, which helps college students, particular Ithaca college students to reduce their stress with the help of calm music and guided meditation, as well as breathing circle, which helps you regulate your breathing patterns and help you breathe deeply. Meditation has been shown to help people stress less, focus more and sleep better. Unwind is meditation made simple, it helps you relax within a few minutes a day. With a bit more clarity of mind and stress-free state, what couldn’t you do?</p>
+
+
+            <p> People also use meditation to develop other beneficial habits and feelings, such as a positive mood and outlook, self-discipline, healthy sleep patterns and even increased pain tolerance. Through meditation and other calming techniques, the user could improve their mental and emotional health. One of the things about the meditation is that if you learn how to do it using our app, you could do it anywhere. I have experienced it myself. When I started doing the meditation as a kid my dad used to guide me, but now as I have inculcated in my life I am able to do anytime anywhere. If the user generates that habit of doing meditation through this app, as it does have guided meditation track, they might able to develop the ability to concentrate and do meditation anywhere and anytime. It becomes a lot easier to focus on things and be able to give those things our hundred percent. Unwind helps provide a number of ways, breathing circle, instrumental meditation, guided meditation, through which you can meditate, and you could choose which one best suits to your goals, as meditation improves your life quality, even if you only have a few minutes to do it each day.</p>
+
+
+            <p>Relaxing music which is one of the features of our website has also proven to make us feel peaceful and helps in the production of serotonin to relieve our stress and relieve physical pain. That's not all, music has a huge impact on our brain, and relaxing music does actually make us feel better. For example, there is a well-known theory, although it’s not yet empirically proven about the good that a frequency of 528 Hz can do to our body. These frequencies are known as the Solfeggio frequencies, originally used in Gregorian chants. Whether it’s healing or not, what we do know is that music is capable of making changes in our mind and body. Solfeggio frequencies can help you balance your energy and keep your body, mind, and spirit in harmony.</p>
+
+
+            <p>We didn't dominantly use the Solfeggio frequencies, but some soothing modern music and traditional instrumental music from around the world for our website. We didn't want our site to be used by only the people who are fond of the Solfeggio frequencies, we wanted to have a mix of styles to suit a plethora of people. We used a lot of nature sounds on our website, particular in our breathe page. The sounds of nature improve our concentration. Whether its the sounds of the birds chirping, water falling, boat sailing through the water, the rustling of leaves, or simply the sound of pouring rain, the nature sounds have a certain cathartic effect in our body. It is like we go back to where we came from. It focuses us and liberates us at the same time. It has that organic feel that makes us satiated about ourselves and our surroundings.</p>
+
+
+            <p>One of the reasons why we have used the breathing circle is because we want people to understand the importance of every single breath and how deep breathing could help us alleviates stress, improve confidence, and help maintain normal blood circulation. Breathing is free and effortless and with the ambient nature sound in the background, we could deceive our brains into thinking about being in a natural place which is quite rare in this advanced and urbanized world where people don't have time to go in nature and embrace it. Through this website, it’s easy to lose yourself in the pseudo-natural environment for some time. We also use very soothing pictures on our website to accompany the feel of our stress-reducing platform.</p>
+
+
+            <p>On the top of this all, we have also implemented a random positive quote generator, which strives to motivate and inspire the users. According to an article on the Lifehack, “Daily inspirations remind you that you are not alone.”, it will help the users to feel that they are not alone who are struggling with this, but there are many others out with the similar or worse problems. Daily positive quotes also act as a reminder for what we want to chaise in our lives and how to do it; they are a push for something you really strive to achieve in life. We want our users to keep on moving on in life with a positive attitude, even when the times are rough.</p>
+
+
+            <p>We have also implemented the blog style pages which are the friends and self-help pages, they include al the information and the articles and relevant for the IC students. For the self-help page there are different tips and tricks that suggest the users how to be less stressed and help yourself through rough times. Similarly, the friends page is a resource guide through which you can get the hep of your friends and read off the articles from the peel around the campus. The CAPS pages directly links the user to the IC CAPS resources page, which tells the students about the mental health and stress reducing resources around the campus.</p>
+
+
+            <p>One of the reasons why we thought of making something like this is because we both are perfectionists and want everything to be perfect. If by chance something doesn't work out the way we intended we feel very stressed and dysfunctional. Moreover, we stress a lot about menial situations such as coursework in college, future internships, today’s meal, or it could be something really small, but unfortunately, it’s in our nerves to be a little concerned and over-think every situation. Through this website, we were able to reduce stress ourselves as we did find ourselves using this site while doing our homework. For us this has been the most happening and exciting as we created something that could help us and other people around the campus, if they feel the same as us, or for their recreational purposes.</p>
+
+
+            <h4>Moodboard</h4>
+            <img class="img-fluid d-block mx-auto unwindSize" src="img/mb%201.png" alt="unwind">
+
+
+
+            <h4>Personas</h4>
+
+            <div class="row4">
+                <div class="column4">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/Donna%201.png" alt="unwind">
+                </div>
+                <div class="column4">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/Alex%201.png" alt="unwind">
+                </div>
+                <div class="column4">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/Erica%201.png" alt="unwind">
+                </div>
+            </div>
+
+            <h4>WIREFRAMES</h4>
+
+            <div class="row3">
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/wf21.png" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/wf3.png" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/wf31.png" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/wf41.png" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/wf51.png" alt="unwind">
+                </div>
+
+            </div>
+
+            <h4>FUNCTIONALITY</h4>
+
+            <p>
+
+                We used basic web development platforms, HTML, CSS, JavaScript, Bootstrap, and jQuery. For making the logos and Mood-board we used Canva app, which is designed to create sleek graphic designs. For the inhale and exhale circle we got the code from the xhalr.com, which allowed us to embed their pre-made breathing circle. For making the personas we used xtensio.com, for the wireframes we used the wireframe.cc. These sites have helped us layout and design the website we intended to make.</p>
+
+            <p>Using the basic web development languages helped us create a user experience that we intend while making our wireframes. One of the biggest helped for creating this layout was Bootstrap. Bootstrap helps us implement a very sleek and clearly laid out pages without any messiness. Using the Bootstrap grid system really helped us achieved what we intended for. This also gives the user a wholesome and very polished experience. This makes the navigation in our website really easy, as the things are perfectly aligned at the intentional positions. While the HTML helped in the creation of the basic website, CSS helped us give the style to the HTML page, as well as it gave us some of the animations, which really seems to capture our users. JavaScript and jQuery, on the other hand, help us create interactive pages, which really enhanced the user experience to the whole another level.</p>
+
+            <p>Furthermore, the Bootstrap also provide us consistency throughout our website which gives it a similar look on each page, as it helps the user to feel they are on the same site. It really enhances the user experience on our website as it connects everything to one another, even though the pages might have different content.</p>
+
+            <p>Also for our blog pages the HTML and the CSS play a really significant role as they help align the content in the required position, which looks visually soothing and very navigable. The JavaScript and jQuery, play a very significant role in helping us create a usable site. JavaScript not only supports web pages but also supports external applications like PDF documents, running widgets, supporting for flash applications etc. JavaScript has emerged in web industry like a boom and if you look at the current web scenario there are no web technologies that are not using JavaScript. Also it is extremely easy to implement and make it workable just like we did in the Unwind page. JavaScript stands unique as it brings out all the special functionalities in the client’s browser instead of the site’s server.</p>
+
+
+
+            <h4>EVALUATION</h4>
+
+            <p>
+
+                For the evaluation of this website, we did a focus group, which included people from around the Ithaca College campus. We showed them this website and asked them how they felt while using it and is it good enough to reduce their stress and anxiety. Our participants varied in the ways through which they relax and their sources for stress reduction. We clearly told them what our website intends to do and what our goals were while creating this website.</p>
+
+
+            <p>Most of our participants liked the idea of what we have created and would love to use it regularly. As we were showing them the website they kept of saying how relaxing and claiming this whole experience is. Our participants found our website visually pleasing, which is one of the things we intended and we are successful with that. Because of the soothing visuals, we are able to at least set the calm and serene mood through for our users, which induces the positivity and tranquillity within them. This is a thing one of our participants pointed out while interacting with our website, and this made us as developers feel extremely good about our website.
+            </p>
+
+
+            <p>One of the participants pointed out about the water video on the Home page gave her the feeling of calmness, which is positive feedback for our website as we tried our best to include most of the pleasing and positivity inducing things around the internet. Through our users' expressions, we were able to deduce how they were feeling while using our site, particularly the user who pointed out the video looked really relaxed all of a sudden. It was Interesting to notice users' reactions while they used the site as it really helped us understand users' frustrations and satisfaction.</p>
+
+            <p>Our participants liked the Unwind page as they went through the different music tracks, three of them pointed out the music suited whatever the image was used for that and the different tracks gave them a different vibe. Their reactions with each soundtrack and guided meditation changed accordingly, which was interesting to notice. We were pleased by the fact that they pointed out the imagery and the music relatedness, which we really strived to achieve with our own experience, and we can see that it gives the same feel to our intended users. Many of our users like the sound used for the breath page as it is subtle and complements the breathing activity. Five of our participants really like the idea of the positive pop-up, as quotes help us stay motivated and inspire us at the same time. They are a great way to activate an emotional pulse in our hearts and minds when we are in a distressing situation. The right quote can help us to see light at the end of the tunnel, and give us that extra burst of hope and courage to persevere, one of our participants said this.</p>
+
+            <p>Indeed, our website was able to get a lot of positive feedback from our participants but there are still some of the participants who gave negative and constructive feedback, which would really help us iterate this website in the future and make it usable for most of the potential users out there. One of the things that the fact that the colors of the content in the toggle menu remains the same when scrolled down, which makes our participates view the content of the menu hard to read on the Unwind page, as they are white in color just like the background, it would be better to change the color of the menu background, but I don't really know how to change it at this point. Four of our participants pointed out the yellow color on the menu links when hovered over should be altered as it blends in with the white overlay in the background, it is something even we think is a major problem for the people who are visually impaired. A lot of work could be done to improve our menu to be honest, as we ourselves are not very satisfied with it, but for the sake of less noisy layout, we thought of implementing it.</p>
+
+            <p>Many of our participants don't really know how to use there netID to log into the site, as our log-in form is not working at this moment and we would love to make it work in the future when we gain some knowledge of database systems. Our website would become a lot more usable. This is major thing missing from our website as we need the netId to be able to use the mood tracker. We were able to see the frustrations on people’s faces as they tried to use the log-in form, which is in non-workable condition right now.</p>
+
+
+
+
+            <h4>MOCKUPS</h4>
+
+            <div class="row2">
+                <div class="column2">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/mk4%201.png" alt="unwind">
+                </div>
+                <div class="column2">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/mk3%201.png" alt="unwind">
+                </div>
+                <div class="column2">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/mk%204.png" alt="unwind">
+                </div>
+                <div class="column2">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/mk5%201.png" alt="unwind">
+                </div>
+
+            </div>
+            
+            
+            
+                        <h4>CONTRIBUTIONS</h4>
+
+            <p>"Want To Be More Productive? Listen To The Sounds Of Nature”. Fast Company, July, 2015. Sneed, Annie.</p>
+
+<p>“5 Reasons Why We Should Practice Deep Breathing”, Mind Body Green, Scarbro, Denise</p>
+
+<p>“Why Nature Sounds Help You Relax, According to Science”, health.com, April 05, 2017, MacMillan, Amanda</p>
+
+<p>11 Aug 2014, “The power of pictures. How we can use images to promote and communicate science”, BMC, Balm, James.</p>
+
+<p>“7 Essential Ways That Inspirational Quotes Can Literally Change Your Day …and Your Life!”, Lifehack, Belmont, Judy.</p>
+
+<p>“What are the Solfeggio frequencies?”, Attuned Vibrations</p>
+
+            
+            
         </div>
-
-        <script>
-            const textPath = document.querySelector("#text-path");
-            const h = document.documentElement,
-                b = document.div,
-                st = 'scrollTop',
-                sh = 'scrollHeight';
-
-            document.addEventListener("scroll", e => {
-                let percent = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
-                textPath.setAttribute("startOffset", (-percent * 20) + 1200)
-            });
-        </script>
-
-
-        <div class="navigation-wrapper">
-            <div class="project-preview-wrapper">
-                <div class="project-preview"></div>
-            </div>
-            <ul class="navigation-list">
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-1" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/Unwind"> <span class="span2" data-text="UNWIND">UNWIND</span>
-                    </a>
-                </li>
-
-                <div class="project-overlay"></div>
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-2" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/GroceryStoreApp"> <span class="span2" data-text="JIV">JIV'S GROCERIES</span>
-                    </a>
-                </li>
-                <li class=" navigation-item">
-                    <a class="navigation-link navigation-link-3" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/Generative_Art"> <span class="span2" data-text="GENERATIVE ART">GENERATIVE ART</span>
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-4" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/undercovermusic"> <span class="span2" data-text="UNDERCOVER MUSIC">UNDERCO. MUSIC</span>
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-5" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/WubbaLubbaFlapFlap"> <span class="span2" data-text="WLFF">WLFF</span>
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-6" style="text-decoration: none;" target="_blank" href="Raag.html"> <span class="span2" data-text="RAAG">RAAG</span>
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-7" style="text-decoration: none;" target="_blank" href="blender.html"> <span class="span2" data-text="BLENDER">BLENDER</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="progressbar"></div>
-
-        <script>
-            $(document).ready(function() {
-                TweenMax.set(".project-preview", {
-                    width: 0
-                });
-
-                var tl = new TimelineLite();
-
-                $(document)
-                    .on("mouseover", ".navigation-item", function(evt) {
-                        tl = new TimelineLite();
-                        tl.to($(".project-preview"), 1, {
-                            width: "600px",
-                            ease: Expo.easeInOut
-                        });
-                    })
-                    .on("mouseout", ".navigation-item", function(evt) {
-                        tl = new TimelineLite();
-                        tl.to($(".project-preview"), 0.5, {
-                            width: 0,
-                            ease: Expo.easeInOut
-                        });
-                    });
-            });
-
-            $(".navigation-link-1").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/unwind.png)"
-                });
-            });
-
-            $(".navigation-link-2").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/logo.gif)"
-                });
-            });
-
-            $(".navigation-link-3").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/download.png)"
-                });
-            });
-
-            $(".navigation-link-4").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/C45E8DC6-5038-4A77-A734-E3EDDDFB10C3.JPEG)"
-                });
-            });
-
-            $(".navigation-link-5").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/wlff.png)"
-                });
-            });
-
-            $(".navigation-link-6").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/raga.png)"
-                });
-            });
-
-            $(".navigation-link-7").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/butterfly3.png)"
-                });
-            });
-
-
-            $(window).scroll(function() {
-                var scroll = $(window).scrollTop(),
-                    dh = $(document).height(),
-                    wh = $(window).height();
-                scrollPercent = (scroll / (dh - wh)) * 100;
-                $(".progressbar").css("height", scrollPercent + "%");
-            });
-        </script>
-
-        <br><br><br><br><br><br><br><br><br>
-
-        <div>
-            <svg width="100%" height="210px" viewBox="0 0 1098.72 89.55">
-                <path id="curve2" fill="transparent" d="M0.17,0.23c0,0,105.85,77.7,276.46,73.2s243.8-61.37,408.77-54.05c172.09,7.64,213.4,92.34,413.28,64.19"></path>
-                <text class="wave" width="100%">
-                    <textPath xlink:href="#curve2" startOffset="3000px" id="text-path2">UI & Graphic Designs</textPath>
-                </text>
-            </svg>
-        </div>
-
-        <script>
-            const textPath2 = document.querySelector("#text-path2");
-            const h2 = document.documentElement,
-                b2 = document.div,
-                st2 = 'scrollTop',
-                sh2 = 'scrollHeight';
-
-            document.addEventListener("scroll", e => {
-                let percent = (h2[st2] || b2[st2]) / ((h2[sh2] || b2[sh2]) - h2.clientHeight) * 140;
-                textPath2.setAttribute("startOffset", (-percent * 20) + 2300)
-            });
-        </script>
-
-        <br><br><br><br><br><br><br><br><br>
-        <div class="slideshow-container">
-
-            <div class="mySlides fade">
-                <img src="img/Custom%20Size%20%E2%80%93%202.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Frame%2055.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Web1920.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Frame%2042.svg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Frame%2064.svg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Group%2036.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Group%2038.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Group%2037.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Group%2039.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Group%2041.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Frame%2056.png" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <img src="img/Group%2078.png" style="width:100%">
-            </div>
-
-        </div>
-
-        <div style="text-align:center">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-
-        </div>
-
-        <script>
-            var slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {
-                    slideIndex = 1
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-                setTimeout(showSlides, 500); // Change image every 2 seconds
-            }
-        </script>
-
     </section>
-    <br><br><br><br><br><br>
+
+    <br><br> <br>
+
+    <section id="contact">
+
+        <div class="d-none d-sm-block"><br><br><br><br><br></div>
+        <div id="contact" class="footer-dark mb-3 pt-3">
+            <footer>
+                <div class="container footerContainer">
+                    <div class="row mt-5 mb-5">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <h3>LET'S GET <a href="mailto:1999sharma19@gmail.com" class="NYText">in touch </a></h3>
+                        </div>
+                        <div class="col-sm-4">
+
+                        </div>
+                    </div>
+                </div>
 
 
+                <div class="container">
+                    <div class="row">
+                        <div class="col item social"><a target="_blank" class="item" href="https://github.com/Ishasharmax" style="text-decoration: none;">Gh.</a><a class="item" target="_blank" href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;">Tw.</a><a target="_blank" href="https://dribbble.com/Ishasharmax" class="item" style="text-decoration: none;">Dr.</a><a class="item" target="_blank" href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;">Lk.</a><a class="item" target="_blank" href="https://www.instagram.com/ishxshxrmx/" style="text-decoration: none;">In.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Md.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Pn.</a></div>
+                    </div>
+                </div>
 
-    <div class="bg33 mt-5">
-        <div class="marquee" id="showScroll2">
-            <div class="marquee__inner" aria-hidden="true">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>SASS</span>
-                <span>JAVASCRIPT</span>
-                <span>VUE.JS</span>
-                <span>PYTHON</span>
-                <span>JAVA</span>
-                <span>REACT</span>
-                <span>GIT</span>
-                <span>NPM</span>
-                <span>RSTUDIO</span>
-                <span>JIRA</span>
-                <span>AGILE</span>
-                <span>FIGMA</span>
-                <span>PS</span>
-                <span>ILLUSTRATOR</span>
-                <span>BALSAMIQ</span>
-                <span>BLENDER</span>
-            </div>
+                <p class="copyright mb-4 mt-5 pt-2"><i>©COPYRIGHT - ISHA 2021</i></p>
+            </footer>
         </div>
-    </div>
-
-
-
-    <div class="d-none d-sm-block"><br><br><br><br><br></div>
-    <div id="contact" class="footer-dark mb-3 pt-3">
-        <footer>
-            <div class="container footerContainer">
-                <div class="row mt-5 mb-5">
-                    <div class="col-sm-4"></div>
-                    <div class="col-sm-4">
-                        <h3>LET'S GET <a href="mailto:1999sharma19@gmail.com" class="NYText">in touch </a></h3>
-                    </div>
-                    <div class="col-sm-4">
-
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="container">
-                <div class="row">
-                    <div class="col item social"><a target="_blank" class="item" href="https://github.com/Ishasharmax" style="text-decoration: none;">Gh.</a><a class="item" target="_blank" href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;">Tw.</a><a target="_blank" href="https://dribbble.com/Ishasharmax" class="item" style="text-decoration: none;">Dr.</a><a class="item" target="_blank" href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;">Lk.</a><a class="item" target="_blank" href="https://www.instagram.com/ishxshxrmx/" style="text-decoration: none;">In.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Md.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Pn.</a></div>
-                </div>
-            </div>
-
-            <p class="copyright mb-4 mt-5 pt-2"><i>©COPYRIGHT - ISHA 2021</i></p>
-        </footer>
-    </div>
+    </section>
 
 
     <div class="cursor"></div>

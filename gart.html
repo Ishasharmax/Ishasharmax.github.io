@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Unwind - Case Study</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/is2.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="thumbnail" content="img/mockup1.svg" />
+    <link rel="image_src" href="img/mockup1.svg">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- TweenMax - GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <!-- TweenMax - GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+    <link rel="stylesheet" media="screen" href="css/style2.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="menu" href="index.html"><img alt="3d logo" class="sigIMG" src="img/is.png"></a>
+        <a href="index.html" class="menu link link--metis" style="text-decoration: none;">HOME</a>
+        <a class="menu link link--metis" style="text-decoration: none;" href="#cs">CASE STUDY</a>
+        <a class="menu link link--metis" style="text-decoration: none;" href="#contact">CONTACT</a>
+    </div>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <h2 class="ml-5 mr-5">A <span class="h1Extra">Generative Art</span> gallery showcasing some of the <span class="h1Extra">visually appealing </span> art created by <span class="h1Extra"> me </span> with RStudio, Processing, Javascript, p5.js, Python.</h2>
+    <br>
+
+
+    <br><br><br>
+    <span class="dot2"></span>
+    <br><br>
+
+    <section class="scrollerH scrollerDown mt-5 mb-5 pb-5 pt-5">
+        <div class="wrapper22">
+            <div class="circle">
+                <svg class="svg2" viewBox="0 0 600 400" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" id="reload2" alt="scroll">
+                    <defs>
+                        <path id="topSemiCircle" d="
+        M 120, 200
+        a 175,175 0 1,1 350,0
+        " />
+                        <path id="bottomSemiCircle" d="
+        M 470, 200
+        a 175,175 0 1,1 -350,0
+        " />
+                    </defs>
+
+                    <text dy="1" font-size="40" stroke="white" textLength="531">
+                        <textPath textLength="531" href="#topSemiCircle" aria-label="Smashing">
+                            scroll down to see art
+                        </textPath>
+                    </text>
+                    <text dy="1" font-size="40" stroke="white" textLength="531">
+                        <textPath textLength="531" href="#bottomSemiCircle" aria-label="MAGAZINE">
+                            scroll down to see art
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.onscroll = function() {
+            scrollRotate();
+        };
+
+        function scrollRotate() {
+            let image = document.getElementById("reload2");
+            image.style.transform = "rotate(" + window.pageYOffset / 30 + "deg)";
+        }
+    </script>
+
+
+    <div class="progressbar"></div>
+
+    <script>
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop(),
+                dh = $(document).height(),
+                wh = $(window).height();
+            scrollPercent = (scroll / (dh - wh)) * 100;
+            $(".progressbar").css("height", scrollPercent + "%");
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+    <section class="mar2">
+        <p class="text1 d-block mx-auto text-center pl-5 pr-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">GENERATIVE ART
+        </p>
+
+        <h5 class="text4 d-block mx-auto text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">COLOR FLASH</h5>
+        <br>
+        <div class="container ">
+            <div class="row" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-6 col-sm-12"> <img src="gifs/square.gif" class="img-fluid mx-auto d-block sizeimg5 image">
+                </div>
+                <div class="col-lg-6 col-sm-12"> <img src="gifs/wave.gif" class="img-fluid mx-auto d-block sizeimg5 image">
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <h5 class="text4 d-block mx-auto text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">POINT ART</h5>
+        <br>
+        <div class="container ">
+            <div class="row " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-6 col-sm-12"> <img src="images/point1.png" class="img-fluid mx-auto d-block sizeimg5 image">
+                </div>
+                <div class="col-lg-6 col-sm-12"> <img src="images/point2.png" class="img-fluid mx-auto d-block sizeimg5 image">
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+        <h5 class="text4 d-block mx-auto text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">KADINSKY</h5>
+        <br>
+        <div class="container ">
+            <div class="row " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-6 col-sm-12"> <img src="images/kandinsky.jpg" class="img-fluid mx-auto d-block sizeimg5 image">
+                </div>
+                <div class="col-lg-6 col-sm-12"> <img src="images/kandinsky3.jpg" class="img-fluid mx-auto d-block sizeimg5 image">
+                </div>
+            </div>
+        </div>
+
+
+        <h5 class="text4 d-block mx-auto text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">FLOWERS</h5>
+        <br>
+        <div class="container ">
+            <div class="row " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-4 col-sm-12"> <img src="images/download(34).png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="images/download(36).png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="images/download(44).png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+            </div>
+            <br>
+            <div class="row" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-4 col-sm-12"> <img src="images/download(48).png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="images/download(21).png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="images/download(32).png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+            </div>
+            <br>
+            <div class="row" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-4 col-sm-12"> <img src="images/download(18).png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+
+                <div class="col-lg-4 col-sm-12"> <img src="images/download(22).png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="images/download(45).png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <h5 class="text4 d-block mx-auto text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">CARBON DATED</h5>
+        <br>
+        <div class="container ">
+            <div class="row " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-23-01-16_seed_8470.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-20-14-06_seed_5771.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-20-15-19_seed_3369.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+            </div>
+            <br>
+            <div class="row" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-23-01-03_seed_9258.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-20-14-44_seed_2948.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-20-15-09_seed_281.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+            </div>
+            <br>
+            <div class="row" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-23-00-37_seed_4901.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-23-00-50_seed_3296.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-23-01-02_seed_2566.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+            </div>
+            <br>
+            <div class="row" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-23-01-06_seed_8650.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-23-01-07_seed_9355.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-23-01-15_seed_1073.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+            </div>
+            <br>
+            <div class="row" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-23-01-16_seed_5546.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-23-02-06_seed_8866.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="R_Images/2020-07-23-02-21_seed_6588.png" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+        <h5 class="text4 d-block mx-auto text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">VISUALIZERS</h5>
+        <br>
+        <div class="container ">
+            <div class="row " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-4 col-sm-12"> <img src="gifs/gif2.gif" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="gifs/gif3.gif" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="gifs/gif4.gif" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+            </div>
+            <br>
+            <div class="row " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-4 col-sm-12"> <img src="gifs/gif5.gif" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="gifs/gif6.gif" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-4 col-sm-12"> <img src="gifs/gif7.gif" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+
+        <h5 class="text4 d-block mx-auto text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">ALGORITHMIC</h5>
+        <br>
+        <div class="container ">
+            <div class="row " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-6 col-sm-12"> <img src="gifs/Border_gif.gif" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+                <div class="col-lg-6 col-sm-12"> <img src="gifs/10Print.gif" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <h5 class="d-block mx-auto text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">ANIMATION</h5>
+        <br>
+        <div class="container ">
+            <div class="row" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                <div class="col-lg-12 col-sm-12"> <img src="gifs/ani.gif" class="img-fluid mx-auto d-block sizeimg2 image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <br><br> <br>
+
+    <section id="contact">
+
+        <div class="d-none d-sm-block"><br><br><br><br><br></div>
+        <div id="contact" class="footer-dark mb-3 pt-3">
+            <footer>
+                <div class="container footerContainer">
+                    <div class="row mt-5 mb-5">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <h3>LET'S GET <a href="mailto:1999sharma19@gmail.com" class="NYText">in touch </a></h3>
+                        </div>
+                        <div class="col-sm-4">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col item social"><a target="_blank" class="item" href="https://github.com/Ishasharmax" style="text-decoration: none;">Gh.</a><a class="item" target="_blank" href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;">Tw.</a><a target="_blank" href="https://dribbble.com/Ishasharmax" class="item" style="text-decoration: none;">Dr.</a><a class="item" target="_blank" href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;">Lk.</a><a class="item" target="_blank" href="https://www.instagram.com/ishxshxrmx/" style="text-decoration: none;">In.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Md.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Pn.</a></div>
+                    </div>
+                </div>
+
+                <p class="copyright mb-4 mt-5 pt-2"><i>©COPYRIGHT - ISHA 2021</i></p>
+            </footer>
+        </div>
+    </section>
+
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <!--
+        <div id="wrapper">
+            <div class="portfolio-item">
+                <div class="portfolio-thumb">
+                    <img src="img/14.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+-->
+    <script>
+        var cursor = $(".cursor"),
+            follower = $(".cursor-follower");
+
+        var posX = 0,
+            posY = 0,
+            mouseX = 0,
+            mouseY = 0;
+
+        TweenMax.to({}, 0.016, {
+            repeat: -1,
+            onRepeat: function() {
+                posX += (mouseX - posX) / 9;
+                posY += (mouseY - posY) / 9;
+
+                TweenMax.set(follower, {
+                    css: {
+                        left: posX - 20,
+                        top: posY - 20
+                    }
+                });
+
+                TweenMax.set(cursor, {
+                    css: {
+                        left: mouseX,
+                        top: mouseY
+                    }
+                });
+            }
+        });
+
+        $(document).on("mousemove", function(e) {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+        });
+
+        $(".portfolio-item img").on("mouseenter", function() {
+            cursor.addClass("active");
+            follower.addClass("active");
+        });
+
+        $(".portfolio-item img").on("mouseleave", function() {
+            cursor.removeClass("active");
+            follower.removeClass("active");
+        });
+    </script>
+
+
+</body>
+
+</html>

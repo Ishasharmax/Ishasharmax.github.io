@@ -610,7 +610,7 @@ img {
 
     .link:hover {
         cursor: pointer;
-        font-size: 25px;
+        font-size: 15px;
         position: relative;
         white-space: nowrap;
         color: white;
@@ -1070,4 +1070,130 @@ img {
     display: block;
     margin: auto;
 
+}
+
+h4 {
+    color: white;
+    font-size: 30px;
+    margin: 30px;
+    display: block;
+    font-family: 'Momcake';
+    text-align: center;
+}
+
+
+h5 {
+    color: white;
+    font-size: 20px;
+    margin: 30px;
+    display: block;
+    font-family: 'Momcake';
+    text-align: center;
+}
+
+
+.live{
+    color: white;
+    font-size: 20px;
+    margin: 30px;
+    display: block;
+    font-family: 'Momcake';
+    text-align: center;
+}
+
+.live:hover{
+    color: white;
+    font-size: 20px;
+    margin: 30px;
+    display: block;
+    font-family: 'Momcake';
+    text-align: center;
+}
+
+
+
+@media screen and (min-width: 651px) {
+    p {
+        color: white;
+        font-size: 14px;
+        margin: auto;
+        display: block;
+        font-family: 'Momcake';
+
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    p {
+        color: white;
+        font-size: 12px;
+        margin: auto;
+        display: block;
+        font-family: 'Momcake';
+
+    }
+
+}
+
+
+
+
+.content2 {
+    margin-left: 4%;
+    margin-right: 4%;
+
+}
+
+.unwindSize {
+    width: 800px;
+}
+
+
+.row3 {
+    display: flex;
+}
+
+.column3 {
+    flex: 53.33%;
+    padding: 5px;
+}
+
+@media screen and (max-width: 500px) {
+    .column3 {
+        width: 100%;
+    }
+}
+
+
+
+.row4 {
+    display: flex;
+}
+
+.column4 {
+    flex: 53.33%;
+    padding: 5px;
+}
+
+@media screen and (max-width: 500px) {
+    .column4 {
+        width: 100%;
+    }
+}
+
+
+.row2 {
+    display: flex;
+}
+
+.column2 {
+    flex: 43.33%;
+    padding: 5px;
+}
+
+@media screen and (max-width: 500px) {
+    .column2 {
+        width: 100%;
+    }
 }

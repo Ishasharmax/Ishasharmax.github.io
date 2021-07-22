@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Isha Sharma - Portfolio Website</title>
+    <title>Jiv's Groceries - App Study</title>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/is2.png" type="image/x-icon">
@@ -23,18 +23,15 @@
 <body>
     <div class="navbar">
         <a class="menu" href="index.html"><img alt="3d logo" class="sigIMG" src="img/is.png"></a>
-        <a href="#home" class="menu link link--metis" style="text-decoration: none;">HOME</a>
-        <a class="menu link link--metis" style="text-decoration: none;" href="#work">WORK</a>
+        <a href="index.html" class="menu link link--metis" style="text-decoration: none;">HOME</a>
+        <a class="menu link link--metis" style="text-decoration: none;" href="#cs">CASE STUDY</a>
         <a class="menu link link--metis" style="text-decoration: none;" href="#contact">CONTACT</a>
     </div>
 
-    <section id="home">
-        <br><br><br><br><br>
 
-        <img class="imgMe mx-auto img-fluid d-block border-rounded" src="img/me2.JPG">
-        <h2 class="ml-5 mr-5">Hello! I’m Isha, <span class="h1Extra">designer</span> and creative front-end <span class="h1Extra">developer</span>.</h2>
-        <br>
-    </section>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <h2 class="ml-5 mr-5"><span class="h1Extra">Jiv's</span> is a grocery store app programmed in<span class="h1Extra"> React Native </span> with <span class="h1Extra"> Redux </span>.</h2>
+    <br>
 
 
     <br><br><br>
@@ -58,12 +55,12 @@
 
                     <text dy="1" font-size="40" stroke="white" textLength="531">
                         <textPath textLength="531" href="#topSemiCircle" aria-label="Smashing">
-                            scroll down for some groove
+                            scroll down to learn more
                         </textPath>
                     </text>
                     <text dy="1" font-size="40" stroke="white" textLength="531">
                         <textPath textLength="531" href="#bottomSemiCircle" aria-label="MAGAZINE">
-                            scroll down for some groove
+                            scroll down to learn more
                         </textPath>
                     </text>
                 </svg>
@@ -72,7 +69,6 @@
     </section>
 
     <script>
-        // index.js
         window.onscroll = function() {
             scrollRotate();
         };
@@ -83,319 +79,139 @@
         }
     </script>
 
-    <section id="work">
-        <div class="mt-5 pt-5 mb-4">
-            <svg width="100%" height="210px" viewBox="0 0 1098.72 89.55">
-                <path id="curve" fill="transparent" d="M0.17,0.23c0,0,105.85,77.7,276.46,73.2s243.8-61.37,408.77-54.05c172.09,7.64,213.4,92.34,413.28,64.19"></path>
-                <text class="wave" width="100%">
-                    <textPath xlink:href="#curve" startOffset="-120px" id="text-path">Selected work</textPath>
-                </text>
-            </svg>
-        </div>
 
-        <script>
-            const textPath = document.querySelector("#text-path");
-            const h = document.documentElement,
-                b = document.div,
-                st = 'scrollTop',
-                sh = 'scrollHeight';
+    <div class="progressbar"></div>
 
-            document.addEventListener("scroll", e => {
-                let percent = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
-                textPath.setAttribute("startOffset", (-percent * 20) + 1200)
-            });
-        </script>
+    <script>
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop(),
+                dh = $(document).height(),
+                wh = $(window).height();
+            scrollPercent = (scroll / (dh - wh)) * 100;
+            $(".progressbar").css("height", scrollPercent + "%");
+        });
+    </script>
 
 
-        <div class="navigation-wrapper">
-            <div class="project-preview-wrapper">
-                <div class="project-preview"></div>
-            </div>
-            <ul class="navigation-list">
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-1" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/Unwind"> <span class="span2" data-text="UNWIND">UNWIND</span>
-                    </a>
-                </li>
+    <section id="cs">
 
-                <div class="project-overlay"></div>
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-2" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/GroceryStoreApp"> <span class="span2" data-text="JIV">JIV'S GROCERIES</span>
-                    </a>
-                </li>
-                <li class=" navigation-item">
-                    <a class="navigation-link navigation-link-3" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/Generative_Art"> <span class="span2" data-text="GENERATIVE ART">GENERATIVE ART</span>
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-4" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/undercovermusic"> <span class="span2" data-text="UNDERCOVER MUSIC">UNDERCO. MUSIC</span>
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-5" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/WubbaLubbaFlapFlap"> <span class="span2" data-text="WLFF">WLFF</span>
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-6" style="text-decoration: none;" target="_blank" href="Raag.html"> <span class="span2" data-text="RAAG">RAAG</span>
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-7" style="text-decoration: none;" target="_blank" href="blender.html"> <span class="span2" data-text="BLENDER">BLENDER</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="progressbar"></div>
+        <div class="content2">
 
-        <script>
-            $(document).ready(function() {
-                TweenMax.set(".project-preview", {
-                    width: 0
-                });
+            <img class="img-fluid d-block mx-auto unwindSize" src="img/logo.gif" alt="unwind">
 
-                var tl = new TimelineLite();
+            <h4>Mission Statement</h4>
 
-                $(document)
-                    .on("mouseover", ".navigation-item", function(evt) {
-                        tl = new TimelineLite();
-                        tl.to($(".project-preview"), 1, {
-                            width: "600px",
-                            ease: Expo.easeInOut
-                        });
-                    })
-                    .on("mouseout", ".navigation-item", function(evt) {
-                        tl = new TimelineLite();
-                        tl.to($(".project-preview"), 0.5, {
-                            width: 0,
-                            ease: Expo.easeInOut
-                        });
-                    });
-            });
+            <p>
+                Provide grocery store customers with a convenient way to maneuver around the store to find the items they are looking for efficiently and effectively.
 
-            $(".navigation-link-1").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/unwind.png)"
-                });
-            });
+            </p>
 
-            $(".navigation-link-2").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/logo.gif)"
-                });
-            });
+            <h4>Audience</h4>
 
-            $(".navigation-link-3").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/download.png)"
-                });
-            });
-
-            $(".navigation-link-4").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/C45E8DC6-5038-4A77-A734-E3EDDDFB10C3.JPEG)"
-                });
-            });
-
-            $(".navigation-link-5").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/wlff.png)"
-                });
-            });
-
-            $(".navigation-link-6").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/raga.png)"
-                });
-            });
-
-            $(".navigation-link-7").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/butterfly3.png)"
-                });
-            });
+            <p>
+                The audience for this app would be customer’s at this hypothetical grocery store. This app could be utilized both by younger audiences who are familiar and reliant on technology for day to day activities. This app may also be utilized by older shoppers who may use the app for assistance finding things in a store they struggle to find on their own. During this time of COVID-19, this app would also be beneficial in reducing a shopper's time physically in the store. Rather, they can create their list from home and determine where in the store they will need to go before even arriving at the store.
 
 
-            $(window).scroll(function() {
-                var scroll = $(window).scrollTop(),
-                    dh = $(document).height(),
-                    wh = $(window).height();
-                scrollPercent = (scroll / (dh - wh)) * 100;
-                $(".progressbar").css("height", scrollPercent + "%");
-            });
-        </script>
+            </p>
 
-        <br><br><br><br><br><br><br><br><br>
+            <h4>Summary of User Feedback</h4>
 
-        <div>
-            <svg width="100%" height="210px" viewBox="0 0 1098.72 89.55">
-                <path id="curve2" fill="transparent" d="M0.17,0.23c0,0,105.85,77.7,276.46,73.2s243.8-61.37,408.77-54.05c172.09,7.64,213.4,92.34,413.28,64.19"></path>
-                <text class="wave" width="100%">
-                    <textPath xlink:href="#curve2" startOffset="3000px" id="text-path2">UI & Graphic Designs</textPath>
-                </text>
-            </svg>
-        </div>
+            <h5>Round 1</h5>
 
-        <script>
-            const textPath2 = document.querySelector("#text-path2");
-            const h2 = document.documentElement,
-                b2 = document.div,
-                st2 = 'scrollTop',
-                sh2 = 'scrollHeight';
+            <p>
+                One issue the clients had was that our website did not have a definitive home page. Originally we had planned to have the app open to the page that listed all items available at the grocery store, but they felt this was not intuitive and may confuse or intimate users. So, we opted to add an additional home screen to our page that gives general information about our grocery store and includes a button that can be used to access the “All Items” screen. For the “All Items” page, our original wire frame consisted of a simple FlatList with each item name listed. The clients though this may be difficult for users to look through, and suggested we add images for each FlatList item so that it can be scrolled through and viewed more easily. We thought this was a great idea and plan to incorporate this feature. For the “My List” screen, we originally had it so that the user could only keep one list going at a time. The clients suggested allowing users to maintain more than one list, so it can be more useful for customers who want to have separate lists or multiple lists at a given time. We decided to change the screen name from “My List” to “My Lists” and will give users the option to store multiple lists on this page of the app.
+            </p>
 
-            document.addEventListener("scroll", e => {
-                let percent = (h2[st2] || b2[st2]) / ((h2[sh2] || b2[sh2]) - h2.clientHeight) * 140;
-                textPath2.setAttribute("startOffset", (-percent * 20) + 2300)
-            });
-        </script>
+            <h5>Round 2</h5>
 
-        <br><br><br><br><br><br><br><br><br>
-        <div class="slideshow-container">
+            <p>
+                One suggestion we got for our client was to get a more definitive style for the app. As of right now it is fairly jumbled and we did not have a definitive style from screen to screen. So, we’ve been aiming to get a more definitive style throughout the app. One task we wanted to work on for this round was to create our home screen. In order to do this the clients suggested we work on coming up with a name and logo. The clients also suggested having buttons on the home page that can lead the user to the other pages our app has available. So, we have added all of these suggestions to our sprint for next week and have started initially thinking of names and logos. The clients wanted to actually get the search page working. Currently, there are some features shown on the screen, but it does not currently work with search functionality. We are planning to add this to our list of things to complete for the next sprint and hope to get this feature working.
 
-            <div class="mySlides fade">
-                <img src="img/Custom%20Size%20%E2%80%93%202.png" style="width:100%">
+            </p>
+
+
+            <h5>Round 3</h5>
+
+            <p>
+                The clients wanted to actually get the search page working. Currently, there are some features shown on the screen, but it does not currently work with search functionality. We are aiming to finish the search page so that it can actually be used to search items in the All Items FlatList. The clients suggested the next big feature we should work on implementing would be the “Locate” screen. This will require some research given we have not worked with maps in class yet. For our next sprint, we will begin looking into options to create this map feature and hope to have a basic implementation completed. They also suggested we implement Redux in our app so that we can use that to store our data for the “Items” screen. For the next sprint, we are going to shift our data storage to Redux to store the grocery store items as per the client's request.
+
+            </p>
+
+            <h5>Round 4</h5>
+
+            <p>
+                The client wanted us to finish implementing Redux within our app. Although we were able to start getting Redux implemented, we ran into some issues during the previous sprint, so for this sprint completing this Redux functionality will be our top priority. Once Redux is completely implemented, the clients wanted us to finalize the search page to work with this new Redux functionality. So, after getting Redux incorporated in our app, we will adjust the search screen and get it to work with the new Redux implementation. The clients finally asked us to finish getting the store map implemented. Although we currently have a map view implemented to help shoppers locate where the store is, the clients still want to have the ability to locate where items are located in the store. So, we will be working to implement this by having an image and touchable areas within the image to mimic this sort of functionality.
+
+
+            </p>
+
+
+            <h4>Wireframes</h4>
+            <div class="row3">
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/mk1.svg" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/mk2.svg" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/mk3.svg" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/mk4.svg" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/mk5.svg" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/mk6.svg" alt="unwind">
+                </div>
             </div>
 
-            <div class="mySlides fade">
-                <img src="img/Frame%2055.png" style="width:100%">
-            </div>
 
-            <div class="mySlides fade">
-                <img src="img/Web1920.png" style="width:100%">
-            </div>
+            <h4>MOCKUPS</h4>
+            <img class="img-fluid d-block mx-auto unwindSize" src="img/mockup1.png" alt="unwind">
+            <img class="img-fluid d-block mx-auto unwindSize" src="img/mockup2.png" alt="unwind">
 
-            <div class="mySlides fade">
-                <img src="img/Frame%2042.svg" style="width:100%">
-            </div>
+            <h4>Dependecies</h4>
+            <p>
+                npm install @react-navigation/native expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view npm install @react-navigation/stack npm install @react-navigation/bottom-tabs npm install redux@4.0.5 react-redux@7.2.1 npm install --save react-native-maps npm install @react-native-picker/picker --save npm install @react-native-community/slider --save npm install react-native-paper
 
-            <div class="mySlides fade">
-                <img src="img/Frame%2064.svg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Group%2036.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Group%2038.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Group%2037.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Group%2039.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Group%2041.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Frame%2056.png" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <img src="img/Group%2078.png" style="width:100%">
-            </div>
+            </p>
 
         </div>
-
-        <div style="text-align:center">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-
-        </div>
-
-        <script>
-            var slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {
-                    slideIndex = 1
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-                setTimeout(showSlides, 500); // Change image every 2 seconds
-            }
-        </script>
-
     </section>
-    <br><br><br><br><br><br>
+
+    <br><br> <br>
+
+    <section id="contact">
+
+        <div class="d-none d-sm-block"><br><br><br><br><br></div>
+        <div id="contact" class="footer-dark mb-3 pt-3">
+            <footer>
+                <div class="container footerContainer">
+                    <div class="row mt-5 mb-5">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <h3>LET'S GET <a href="mailto:1999sharma19@gmail.com" class="NYText">in touch </a></h3>
+                        </div>
+                        <div class="col-sm-4">
+
+                        </div>
+                    </div>
+                </div>
 
 
+                <div class="container">
+                    <div class="row">
+                        <div class="col item social"><a target="_blank" class="item" href="https://github.com/Ishasharmax" style="text-decoration: none;">Gh.</a><a class="item" target="_blank" href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;">Tw.</a><a target="_blank" href="https://dribbble.com/Ishasharmax" class="item" style="text-decoration: none;">Dr.</a><a class="item" target="_blank" href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;">Lk.</a><a class="item" target="_blank" href="https://www.instagram.com/ishxshxrmx/" style="text-decoration: none;">In.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Md.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Pn.</a></div>
+                    </div>
+                </div>
 
-    <div class="bg33 mt-5">
-        <div class="marquee" id="showScroll2">
-            <div class="marquee__inner" aria-hidden="true">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>SASS</span>
-                <span>JAVASCRIPT</span>
-                <span>VUE.JS</span>
-                <span>PYTHON</span>
-                <span>JAVA</span>
-                <span>REACT</span>
-                <span>GIT</span>
-                <span>NPM</span>
-                <span>RSTUDIO</span>
-                <span>JIRA</span>
-                <span>AGILE</span>
-                <span>FIGMA</span>
-                <span>PS</span>
-                <span>ILLUSTRATOR</span>
-                <span>BALSAMIQ</span>
-                <span>BLENDER</span>
-            </div>
+                <p class="copyright mb-4 mt-5 pt-2"><i>©COPYRIGHT - ISHA 2021</i></p>
+            </footer>
         </div>
-    </div>
-
-
-
-    <div class="d-none d-sm-block"><br><br><br><br><br></div>
-    <div id="contact" class="footer-dark mb-3 pt-3">
-        <footer>
-            <div class="container footerContainer">
-                <div class="row mt-5 mb-5">
-                    <div class="col-sm-4"></div>
-                    <div class="col-sm-4">
-                        <h3>LET'S GET <a href="mailto:1999sharma19@gmail.com" class="NYText">in touch </a></h3>
-                    </div>
-                    <div class="col-sm-4">
-
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="container">
-                <div class="row">
-                    <div class="col item social"><a target="_blank" class="item" href="https://github.com/Ishasharmax" style="text-decoration: none;">Gh.</a><a class="item" target="_blank" href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;">Tw.</a><a target="_blank" href="https://dribbble.com/Ishasharmax" class="item" style="text-decoration: none;">Dr.</a><a class="item" target="_blank" href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;">Lk.</a><a class="item" target="_blank" href="https://www.instagram.com/ishxshxrmx/" style="text-decoration: none;">In.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Md.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Pn.</a></div>
-                </div>
-            </div>
-
-            <p class="copyright mb-4 mt-5 pt-2"><i>©COPYRIGHT - ISHA 2021</i></p>
-        </footer>
-    </div>
+    </section>
 
 
     <div class="cursor"></div>
