@@ -709,7 +709,7 @@ img {
 
     .link {
         cursor: pointer;
-        font-size: 15px;
+        font-size: 11px;
         position: relative;
         white-space: nowrap;
         color: white;
@@ -718,7 +718,7 @@ img {
 
     .link:hover {
         cursor: pointer;
-        font-size: 15px;
+        font-size: 11px;
         position: relative;
         white-space: nowrap;
         color: white;
