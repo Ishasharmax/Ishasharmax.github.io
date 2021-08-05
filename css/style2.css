@@ -343,11 +343,13 @@ body {
 
     }
 
+/*
     .imgMe:hover {
         filter: none;
         -webkit-filter: grayscale(0);
         -webkit-transform: scale(0.8);
     }
+*/
 }
 
 
@@ -367,11 +369,13 @@ body {
 
     }
 
+/*
     .imgMe:hover {
         filter: none;
         -webkit-filter: grayscale(0);
         -webkit-transform: scale(0.8);
     }
+*/
 }
 
 
@@ -411,6 +415,7 @@ body {
 }
 */
 
+/*
 
 @media screen and (max-width: 650px) {
     .imgMe {
@@ -434,6 +439,7 @@ body {
     -webkit-filter: grayscale(0);
     -webkit-transform: scale(0.8);
 }
+*/
 
 
 text {
