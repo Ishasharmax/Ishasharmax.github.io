@@ -343,13 +343,7 @@ body {
 
     }
 
-/*
-    .imgMe:hover {
-        filter: none;
-        -webkit-filter: grayscale(0);
-        -webkit-transform: scale(0.8);
-    }
-*/
+
 }
 
 
@@ -369,13 +363,7 @@ body {
 
     }
 
-/*
-    .imgMe:hover {
-        filter: none;
-        -webkit-filter: grayscale(0);
-        -webkit-transform: scale(0.8);
-    }
-*/
+
 }
 
 
@@ -395,51 +383,6 @@ body {
     }
 }
 
-
-/*
-
-
-
-@keyframes slide-right {
-    0% {
-        -webkit-transform: translateX(100px);
-        transform: translateX(100px);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-*/
-
-/*
-
-@media screen and (max-width: 650px) {
-    .imgMe {
-        -webkit-transform: translate(0%, 20%);
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 45%;
-        filter: gray;
-        -webkit-filter: grayscale(1);
-        -webkit-transition: all .8s ease-in-out;
-        position: relative;
-        animation: appear 6s ease-in-out both;
-        animation-delay: 4s;
-    }
-}
-
-
-.imgMe:hover {
-    filter: none;
-    -webkit-filter: grayscale(0);
-    -webkit-transform: scale(0.8);
-}
-*/
 
 
 text {

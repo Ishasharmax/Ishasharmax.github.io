@@ -33,12 +33,12 @@
         $(window).on('load', function() {
             $('#preloader').css({
                 "transform": "translateY(-100%)",
-                "transition-delay": "4s"
+                "transition-delay": "3s"
             });
             $('.loader').css({
                 "opacity": "0",
                 "transform": "translate(-50%,-100%)",
-                "transition-delay": "4s"
+                "transition-delay": "3s"
             });
 
             $('.loader_text_unit').each(function() {
@@ -53,7 +53,7 @@
 
                     {
 
-                        duration: 3000,
+                        duration: 2000,
                         easing: 'linear',
                         step: function() {
                             $this.text(Math.floor(this.countNum));
