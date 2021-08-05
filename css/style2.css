@@ -147,6 +147,31 @@ body {
 
 
 @media screen and (min-width: 651px) {
+    .h2About {
+        color: white;
+        font-family: 'Momcake';
+        font-size: 60px;
+        text-align: center;
+        position: relative;
+        z-index: 99;
+        animation: fade-in-bottom 5s ease-in-out both;
+
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .h2About {
+        color: white;
+        font-family: 'Momcake';
+        font-size: 50px;
+        text-align: center;
+        position: relative;
+        z-index: 99;
+    }
+}
+
+
+@media screen and (min-width: 651px) {
     h2 {
         color: white;
         font-family: 'Momcake';
@@ -154,12 +179,12 @@ body {
         text-align: center;
         position: relative;
         z-index: 99;
-        animation: fade-in-bottom 20s ease-in-out both;
+        animation: fade-in-bottom 10s ease-in-out both;
 
     }
-    
-    
-     .h2 {
+
+
+    .h2 {
         color: white;
         font-family: 'Momcake';
         font-size: 100px;
@@ -218,6 +243,23 @@ body {
 
 
 
+
+
+@media screen and (min-width: 651px) {
+    .h2Extra {
+        font-family: 'CL2';
+        font-style: italic;
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .h2Extra {
+        font-family: 'CL2';
+        font-style: italic;
+        font-size: 60px;
+    }
+}
 
 
 
@@ -294,12 +336,41 @@ body {
         margin-right: auto;
         width: 30%;
         filter: gray;
-        -webkit-filter: grayscale(1);
+        -webkit-transition: all .3s ease-in-out;
+        position: relative;
+        animation: appear 2s ease-in-out both;
+        animation-delay: 3s;
+
+    }
+
+    .imgMe:hover {
+        filter: none;
+        -webkit-filter: grayscale(0);
+        -webkit-transform: scale(0.8);
+    }
+}
+
+
+
+@media screen and (max-width: 650px) {
+    .imgMe {
+        -webkit-transform: translate(0%, 10%);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        filter: gray;
         -webkit-transition: all .8s ease-in-out;
         position: relative;
         animation: appear 6s ease-in-out both;
         animation-delay: 5s;
 
+    }
+
+    .imgMe:hover {
+        filter: none;
+        -webkit-filter: grayscale(0);
+        -webkit-transform: scale(0.8);
     }
 }
 
@@ -1288,7 +1359,7 @@ h5 {
 
 .js-scroll {
     opacity: 0;
-    transition: opacity 500ms;
+    transition: opacity 300ms;
 }
 
 .js-scroll.scrolled {
@@ -1373,6 +1444,6 @@ h5 {
 }
 
 
-.p2{
+.p2 {
     font-size: 18px;
 }
