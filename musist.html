@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Musist - App Study</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/is2.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="thumbnail" content="img/mockup1.svg" />
+    <link rel="image_src" href="img/mockup1.svg">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- TweenMax - GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <!-- TweenMax - GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+    <link rel="stylesheet" media="screen" href="css/style2.css">
+</head>
+
+<body>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <div id="preloader2">
+        <div class="loader">
+        </div>
+    </div>
+
+    <script>
+        $(window).on('load', function() {
+            $('#preloader2').css({
+                "transform": "translateY(-100%)",
+                "transition-delay": "2s"
+            });
+            $('.loader').css({
+                "opacity": "0",
+                "transform": "translate(-50%,-100%)",
+                "transition-delay": "2s"
+            });
+
+            $('.loader_text_unit').each(function() {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+
+                $({
+                    countNum: $this.text()
+                }).animate({
+                        countNum: countTo
+                    },
+
+                    {
+
+                        duration: 400,
+                        easing: 'linear',
+                        step: function() {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function() {
+                            $this.text(this.countNum);
+                        }
+                    });
+            });
+
+        });
+
+    </script>
+
+
+
+    <div class="navbar js-scroll fade-in">
+        <a class="menu" href="index.html"><img alt="3d logo" class="sigIMG" src="img/is.png"></a>
+        <a href="index.html" class="menu link link--metis" style="text-decoration: none;">HOME</a>
+        <a class="menu link link--metis" style="text-decoration: none;" href="#cs">CASE STUDY</a>
+        <a class="menu link link--metis" style="text-decoration: none;" href="#contact">CONTACT</a>
+        <a class="menu link link--metis" style="text-decoration: none;" href="CP.html">CREATIVE PROCESS</a>
+
+    </div>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <h2 class="h2 ml-5 mr-5"><span class="h1Extra">Musist</span> is a app design concept for local musicians in the town, who are in look for <span class="h1Extra"> best</span> and <span class="h1Extra"> affordable</span> music event<span class="h1Extra"> venues, instruments, add on musicians, etc.</span>.</h2>
+    <br>
+
+
+    <br><br><br>
+    <span class="dot2"></span>
+    <br><br>
+
+    <section class="scrollerH scrollerDown mt-5 mb-5 pb-5 pt-5">
+        <div class="wrapper22">
+            <div class="circle">
+                <svg class="svg2" viewBox="0 0 600 400" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" id="reload2" alt="scroll">
+                    <defs>
+                        <path id="topSemiCircle" d="
+        M 120, 200
+        a 175,175 0 1,1 350,0
+        " />
+                        <path id="bottomSemiCircle" d="
+        M 470, 200
+        a 175,175 0 1,1 -350,0
+        " />
+                    </defs>
+
+                    <text dy="1" font-size="40" stroke="white" textLength="531">
+                        <textPath textLength="531" href="#topSemiCircle" aria-label="Smashing">
+                            scroll down to learn more
+                        </textPath>
+                    </text>
+                    <text dy="1" font-size="40" stroke="white" textLength="531">
+                        <textPath textLength="531" href="#bottomSemiCircle" aria-label="MAGAZINE">
+                            scroll down to learn more
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.onscroll = function() {
+            scrollRotate();
+        };
+
+        function scrollRotate() {
+            let image = document.getElementById("reload2");
+            image.style.transform = "rotate(" + window.pageYOffset / 30 + "deg)";
+        }
+
+    </script>
+
+
+    <div class="progressbar"></div>
+
+    <script>
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop(),
+                dh = $(document).height(),
+                wh = $(window).height();
+            scrollPercent = (scroll / (dh - wh)) * 100;
+            $(".progressbar").css("height", scrollPercent + "%");
+        });
+
+    </script>
+
+
+    <section id="cs">
+
+        <div class="content2">
+
+            <img class="img-fluid d-block mx-auto unwindSize2" src="img/Group%203.png" alt="unwind">
+
+            <h4>Year</h4>
+
+            <p class="text-center">2021</p>
+
+
+            <h4>Role</h4>
+
+            <p class="text-center">Designer</p>
+
+            <h4>Responsibilities</h4>
+
+            <p class="text-center">Development of Personas, Wireframing, Mockups, User Research, Design Principles, Market Research, Typography, Illustration</p>
+
+
+            <h4>Tools</h4>
+
+            <p class="text-center">Adobe Xd, Figma</p>
+
+
+            <h4>Project Summary</h4>
+            <p>
+                Musist helps local musicians with a convenient way to search for the best and most affordable venues, instruments, add on musicians around the town.
+            </p>
+
+            <h4>Problem Statement</h4>
+            <p>
+                Provide grocery store customers with a convenient way to maneuver around the store to find the items they are looking for efficiently and effectively.
+
+            </p>
+
+
+            <h4>Audience</h4>
+
+            <p>
+                The audience for this app would ideally be musicians and people who are passionate about giving the best and affordable music experiences to their audiences. This app could be utilized both by younger and older audiences who are familiar and reliant on technology for recreational activities. This app can play a beneficial role in the life of people, who are in need for quick venues, instruments, or add on musicians for their gigs.
+            </p>
+
+
+
+            <h4>Personas</h4>
+            <div class="row3">
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/Alexis.png" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/Jacob.png" alt="unwind">
+                </div>
+            </div>
+
+            <h4>WIREFRAMES</h4>
+            <div class="row3">
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/Alexis.png" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/Jacob.png" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/mk3.svg" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/mk4.svg" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/mk5.svg" alt="unwind">
+                </div>
+                <div class="column3">
+                    <img class="img-fluid d-block mx-auto unwindSize" src="img/mk6.svg" alt="unwind">
+                </div>
+            </div>
+
+            <h4>MOCKUPS</h4>
+            <img class="img-fluid d-block mx-auto unwindSize" src="img/Group%202.png" alt="unwind">
+            <br><br> <br>
+            <img class="img-fluid d-block mx-auto unwindSize2" src="img/Group%205.png" alt="unwind">
+
+
+        </div>
+    </section>
+
+
+    <br><br> <br>
+
+    <section id="contact">
+
+        <div class="d-none d-sm-block"><br><br><br><br><br></div>
+        <div id="contact" class="footer-dark mb-3 pt-3">
+            <footer>
+                <div class="container footerContainer">
+                    <div class="row mt-5 mb-5">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <h3>LET'S GET <a href="mailto:1999sharma19@gmail.com" class="NYText">in touch </a></h3>
+                        </div>
+                        <div class="col-sm-4">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col item social"><a target="_blank" class="item" href="https://github.com/Ishasharmax" style="text-decoration: none;">Gh.</a><a class="item" target="_blank" href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;">Tw.</a><a target="_blank" href="https://dribbble.com/Ishasharmax" class="item" style="text-decoration: none;">Dr.</a><a class="item" target="_blank" href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;">Lk.</a><a class="item" target="_blank" href="https://www.instagram.com/ishxshxrmx/" style="text-decoration: none;">In.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Md.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Pn.</a></div>
+                    </div>
+                </div>
+
+                <p class="copyright mb-4 mt-5 pt-2"><i>©COPYRIGHT - ISHA 2021</i></p>
+            </footer>
+        </div>
+    </section>
+
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <!--
+        <div id="wrapper">
+            <div class="portfolio-item">
+                <div class="portfolio-thumb">
+                    <img src="img/14.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+-->
+
+
+
+
+    <script>
+        const scrollElements = document.querySelectorAll(".js-scroll");
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+
+            return (
+                elementTop <=
+                (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+
+        const elementOutofView = (el) => {
+            const elementTop = el.getBoundingClientRect().top;
+
+            return (
+                elementTop > (window.innerHeight || document.documentElement.clientHeight)
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add("scrolled");
+        };
+
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                } else if (elementOutofView(el)) {
+                    hideScrollElement(el)
+                }
+            })
+        }
+
+        window.addEventListener("scroll", () => {
+            handleScrollAnimation();
+        });
+
+    </script>
+
+
+
+    <script>
+        var cursor = $(".cursor"),
+            follower = $(".cursor-follower");
+
+        var posX = 0,
+            posY = 0,
+            mouseX = 0,
+            mouseY = 0;
+
+        TweenMax.to({}, 0.016, {
+            repeat: -1,
+            onRepeat: function() {
+                posX += (mouseX - posX) / 9;
+                posY += (mouseY - posY) / 9;
+
+                TweenMax.set(follower, {
+                    css: {
+                        left: posX - 20,
+                        top: posY - 20
+                    }
+                });
+
+                TweenMax.set(cursor, {
+                    css: {
+                        left: mouseX,
+                        top: mouseY
+                    }
+                });
+            }
+        });
+
+        $(document).on("mousemove", function(e) {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+        });
+
+        $(".portfolio-item img").on("mouseenter", function() {
+            cursor.addClass("active");
+            follower.addClass("active");
+        });
+
+        $(".portfolio-item img").on("mouseleave", function() {
+            cursor.removeClass("active");
+            follower.removeClass("active");
+        });
+
+    </script>
+
+
+</body>
+
+</html>
+
+Pain Points
+1. Too many options to choose from, whether musicians, venues, or instruments, which can interfere with users' availability of time.
+2.
+
+
+Personas
+Personas are fictional characters that represent the target users. Their demographic, goals, needs and behaviors are, however, based on real data from user research. If you have created personas for your project, include them so readers can get a relatable snapshot of the users.
+Customer Journey Mapping
+A customer journey map illustrates the different phases in which a customer interacts with the product or service and the organization that creates it. If you have created a customer journey map, include the diagram, briefly describe the categories of information you decided to illustrate, and the design decisions that were influenced by it.
+Design Solutions
+List 3 - 5 design solutions that you have come up with in regards to the particular pain points that you have discovered. Describe the desired outcome of these design solutions briefly. If you have done analysis with a prioritization matrix, include the workshop photo or a diagram.
+User Flow
+A user flow illustrates how the user completes a task within the product or by using a service. It also makes it easy to see how each step relates to others, and the steps that can be eliminated, added or improved. If you have created a user flow, include it and briefly describe which steps you've optimized and why.
+Storyboards
+Storyboarding as an UX tool helps to visualize the user's experience with a product or service. If you have created a storyboard for your project, include the images.
+Sketches
+It is fascinating for the readers to see sketches of your design because it symbolizes the beginning of the solution taking shape. It shows your thinking process and also means that you are capable of quickly iterating ideas with minimal tools. Include a photo of your sketches, or a few sketched screens put together.
+Wireframes
+It is likely that you have worked on the wireframes for the project. Presenting them after the sketches and
+
+before the visual designs help illustrate how the design evolves from ideas to real life.
+Visual Design
+Describe design choices such as colors and styles, explain how a particular design solves the user pain point mentioned before, present a few screens together to show user flow or zoom in on details of a specific component.
+Prototype
+You can embed a live prototype or record video clips of essential interactions that you'd like to explain further. Briefly describe the points you wish readers to notice when reviewing the prototype.
+Conclusion
+At the end of the case study, briefly summarize the journey that you just took the readers through. What are the key learnings? Was there any step that was particularly challenging? What are the next steps for this project? Are there ways to contact you if people are interested in talking with you? You can also mention project collaborators here and encourage readers to leave feedback.
