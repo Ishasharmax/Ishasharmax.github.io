@@ -1195,6 +1195,31 @@ h5 {
 }
 
 
+@media screen and (min-width: 651px) {
+    li {
+        color: white;
+        font-size: 14px;
+        margin: auto;
+        display: block;
+        font-family: 'Momcake';
+
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    li {
+        color: white;
+        font-size: 12px;
+        margin: auto;
+        display: block;
+        font-family: 'Momcake';
+
+    }
+
+}
+
+
 
 
 .content2 {
