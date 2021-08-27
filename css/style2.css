@@ -586,7 +586,7 @@ text {
 
 @media screen and (max-width: 350px) {
 
-/*
+    /*
 
     .cursor {
         position: absolute;
@@ -1525,6 +1525,9 @@ h5 {
 
 .p2 {
     font-size: 18px;
+    margin-right: 22%;
+        margin-left: 22%;
+
 }
 
 
