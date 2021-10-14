@@ -1,3 +1,10 @@
+@media (max-width: 450px) {
+    #secondary {
+        clear: both;
+    }
+}
+
+
 html {
     scroll-behavior: smooth;
     margin: 0;
@@ -19,7 +26,6 @@ html {
     body {
         background-color: #1a1a1a;
         cursor: none;
-        pointer-events: none;
     }
 }
 
@@ -1526,7 +1532,7 @@ h5 {
 .p2 {
     font-size: 18px;
     margin-right: 22%;
-        margin-left: 22%;
+    margin-left: 22%;
 
 }
 
