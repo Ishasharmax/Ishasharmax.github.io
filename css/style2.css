@@ -1,7 +1,5 @@
 @media (max-width: 450px) {
-    #secondary {
-        clear: both;
-    }
+#secondary {clear: both;}
 }
 
 
@@ -26,6 +24,7 @@ html {
     body {
         background-color: #1a1a1a;
         cursor: none;
+        
     }
 }
 
@@ -1532,7 +1531,7 @@ h5 {
 .p2 {
     font-size: 18px;
     margin-right: 22%;
-    margin-left: 22%;
+        margin-left: 22%;
 
 }
 
@@ -1540,3 +1539,7 @@ h5 {
 .sizeimg2 {
     width: 500px;
 }
+
+
+
+
