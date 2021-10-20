@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+
 @media (max-width: 450px) {
-#secondary {clear: both;}
+    #secondary {
+        clear: both;
+    }
 }
 
 
@@ -24,7 +30,7 @@ html {
     body {
         background-color: #1a1a1a;
         cursor: none;
-        
+
     }
 }
 
@@ -1236,10 +1242,10 @@ img {
 
 h4 {
     color: white;
-    font-size: 30px;
+    font-size: 35px;
     margin: 30px;
     display: block;
-    font-family: 'Momcake';
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
 
@@ -1277,11 +1283,10 @@ h5 {
 @media screen and (min-width: 651px) {
     p {
         color: white;
-        font-size: 14px;
+        font-size: 20px;
         margin: auto;
         display: block;
-        font-family: 'Momcake';
-
+        font-family: 'Open Sans', sans-serif;
     }
 
 }
@@ -1289,11 +1294,10 @@ h5 {
 @media screen and (max-width: 650px) {
     p {
         color: white;
-        font-size: 12px;
+        font-size: 14px;
         margin: auto;
         display: block;
-        font-family: 'Momcake';
-
+        font-family: 'Open Sans', sans-serif;
     }
 
 }
@@ -1531,7 +1535,7 @@ h5 {
 .p2 {
     font-size: 18px;
     margin-right: 22%;
-        margin-left: 22%;
+    margin-left: 22%;
 
 }
 
@@ -1539,7 +1543,3 @@ h5 {
 .sizeimg2 {
     width: 500px;
 }
-
-
-
-
