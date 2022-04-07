@@ -1257,20 +1257,23 @@ h5 {
     display: block;
     font-family: 'Momcake';
     text-align: center;
+    
 }
 
 
 .live {
     color: white;
     font-size: 20px;
-    margin: 30px;
+        margin: 30px;
+
     display: block;
     font-family: 'Momcake';
-    text-align: center;
+    text-align: center;    
+    
 }
 
 .live:hover {
-    color: white;
+    color: darkgray;
     font-size: 20px;
     margin: 30px;
     display: block;
@@ -1345,6 +1348,14 @@ h5 {
 
 .unwindSize2 {
     width: 1200px;
+}
+
+.unwindSize3 {
+    width: 200px;
+}
+
+.marginVid{
+    margin-top: -80px;
 }
 
 .row3 {
@@ -1542,4 +1553,12 @@ h5 {
 
 .sizeimg2 {
     width: 500px;
+}
+
+.sizeimg3 {
+    width: 800px;
+}
+
+.Frist {
+    transform-origin: 90% 40%;
 }
