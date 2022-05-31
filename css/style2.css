@@ -1257,19 +1257,19 @@ h5 {
     display: block;
     font-family: 'Momcake';
     text-align: center;
-    
+
 }
 
 
 .live {
     color: white;
     font-size: 20px;
-        margin: 30px;
+    margin: 30px;
 
     display: block;
     font-family: 'Momcake';
-    text-align: center;    
-    
+    text-align: center;
+
 }
 
 .live:hover {
@@ -1315,7 +1315,7 @@ h5 {
         font-size: 14px;
         margin: auto;
         display: block;
-        font-family: 'Momcake';
+        font-family: 'Open Sans', sans-serif;
 
     }
 
@@ -1327,12 +1327,18 @@ h5 {
         font-size: 12px;
         margin: auto;
         display: block;
-        font-family: 'Momcake';
+        font-family: 'Open Sans', sans-serif;
 
     }
 
 }
 
+.Bullets {
+    color: white;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 20px;
+}
 
 
 
@@ -1356,11 +1362,11 @@ h5 {
 
 
 
-.CDsize_IMG{
+.CDsize_IMG {
     width: 300px;
 }
 
-.marginVid{
+.marginVid {
     margin-top: -80px;
 }
 
