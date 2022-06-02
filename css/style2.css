@@ -1352,12 +1352,23 @@ h5 {
     width: 800px;
 }
 
+.cdSize {
+    width: 800px;
+}
+
 .unwindSize2 {
     width: 1200px;
 }
 
 .unwindSize3 {
     width: 200px;
+}
+
+.CDVid {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 
