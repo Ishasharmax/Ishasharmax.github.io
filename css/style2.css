@@ -1312,9 +1312,9 @@ h5 {
 @media screen and (min-width: 651px) {
     li {
         color: white;
-        font-size: 14px;
+        font-size: 15px;
         margin: auto;
-        display: block;
+/*        display: block;*/
         font-family: 'Open Sans', sans-serif;
 
     }
@@ -1324,7 +1324,7 @@ h5 {
 @media screen and (max-width: 650px) {
     li {
         color: white;
-        font-size: 12px;
+        font-size: 13px;
         margin: auto;
         display: block;
         font-family: 'Open Sans', sans-serif;
