@@ -1352,6 +1352,15 @@ h5 {
     width: 800px;
 }
 
+.lofiIMG{
+    width: 1400px;
+}
+
+
+.hifiIMG{
+    width: 1200px;
+}
+
 .cdSize {
     width: 800px;
 }
