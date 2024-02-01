@@ -1868,8 +1868,8 @@ p {
 
 
 .imgName {
-    max-width: 8vw;
-    margin: -2%;
+    max-width: 7vw;
+/*    margin: -%;*/
     margin-top: 0.1px;
     /*    z-index: 111111;*/
     /*    height: auto;*/
