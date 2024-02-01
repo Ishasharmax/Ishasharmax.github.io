@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Isha Sharma - About</title>
+    <title>Isha Sharma - Portfolio Website</title>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/is.png" type="image/x-icon">
+    <link rel="icon" href="imgs/Logo_isha.png" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <meta name="thumbnail" content="img/mockup1.svg" />
     <link rel="image_src" href="img/mockup1.svg">
@@ -17,26 +17,31 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <!-- TweenMax - GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
-    <link rel="stylesheet" media="screen" href="css/style2.css">
+    <link rel="stylesheet" media="screen" href="css/style.css">
 </head>
 
 <body>
+
+
+    <!--
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <div id="preloader2">
+    <div id="preloader">
         <div class="loader">
+            <img class="loaderLogo" src="imgs/3852068b-a84d-46f3-b83a-fae42b173f3c.gif">
         </div>
     </div>
+-->
 
     <script>
         $(window).on('load', function() {
-            $('#preloader2').css({
+            $('#preloader').css({
                 "transform": "translateY(-100%)",
-                "transition-delay": "2s"
+                "transition-delay": "3s"
             });
             $('.loader').css({
                 "opacity": "0",
                 "transform": "translate(-50%,-100%)",
-                "transition-delay": "2s"
+                "transition-delay": "3s"
             });
 
             $('.loader_text_unit').each(function() {
@@ -51,7 +56,7 @@
 
                     {
 
-                        duration: 400,
+                        duration: 2000,
                         easing: 'linear',
                         step: function() {
                             $this.text(Math.floor(this.countNum));
@@ -63,82 +68,39 @@
             });
 
         });
+
     </script>
 
-    <div class="navbar js-scroll fade-in">
-        <a class="menu" href="https://ishasharmax.github.io"><img alt="3d logo" class="sigIMG" src="img/is.png"></a>
-        <a href="https://ishasharmax.github.io" class="menu link link--metis" style="text-decoration: none;">WORK</a>
-        <a class="menu link link--metis" style="text-decoration: none;" href="About.html">ABOUT</a>
-        <a class="menu link link--metis" style="text-decoration: none;" href="#contact">CONTACT ME</a>
-    </div>
 
-
-
-    <section id="home">
-        <br><br><br><br><br>
-        <img class="imgMe mx-auto img-fluid d-block border-rounded" src="img/hold.png">
-        <h2 class="h2About ml-5 mr-5">Hello, I'm Isha! I'm constantly exploring the advanced possibilites of <span class="h2Extra">UX/UI </span>design and interactive <span class="h2Extra">web development</span>. I strive to create <span class="h2Extra">thoughtful, functional</span>, and <span class="h2Extra">visually soothing</span> designs, based on a <span class="h2Extra"> strategic</span> approach. </h2>
-        
-          <br><br><br>
-    <span class="dot2"></span>
-    <br><br>
-        <h2 class="h2About ml-5 mr-5"><span class="h2Extra"> Junior UX/UI Designer </span> at Adventure Club AMS </h2>
-        <h2 class="h2About ml-5 mr-5"><span class="h2Extra"> Awwwards Young Jury </span> Member</h2>
-    </section>
-
-
-
-  
-
-    <section class="scrollerH scrollerDown mt-5 mb-5 pb-5 pt-5">
-        <div class="wrapper22">
-            <div class="circle">
-                <svg class="svg2" viewBox="0 0 600 400" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" id="reload2" alt="scroll">
-                    <defs>
-                        <path id="topSemiCircle" d="
-        M 120, 200
-        a 175,175 0 1,1 350,0
-        " />
-                        <path id="bottomSemiCircle" d="
-        M 470, 200
-        a 175,175 0 1,1 -350,0
-        " />
-                    </defs>
-
-                    <text dy="1" font-size="40" stroke="white" textLength="531">
-                        <textPath textLength="531" href="#topSemiCircle" aria-label="Smashing">
-                            i believe in getting shit done.
-                        </textPath>
-                    </text>
-                    <text dy="1" font-size="40" stroke="white" textLength="531">
-                        <textPath textLength="531" href="#bottomSemiCircle" aria-label="MAGAZINE">
-                            i believe in getting shit done.
-                        </textPath>
-                    </text>
-                </svg>
-            </div>
-        </div>
-    </section>
 
     <script>
-        window.onscroll = function() {
-            scrollRotate();
-        };
+        $('.loader_text_unit').each(function() {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
 
-        function scrollRotate() {
-            let image = document.getElementById("reload2");
-            image.style.transform = "rotate(" + window.pageYOffset / 30 + "deg)";
-        }
+            $({
+                countNum: $this.text()
+            }).animate({
+                    countNum: countTo
+                },
+
+                {
+                    duration: 300,
+                    easing: 'linear',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum);
+                    }
+                });
+        });
+
     </script>
 
-    <h2 class="h2About ml-5 mr-5">The <span class="h2Extra">creative processes</span> that aids me getting into this creative mindset are stemming from the idea of <span class="h2Extra"> giving myself</span> the space to make anything I want. Some of them are <span class="h2Extra">reading, writing, cleaning, hiking, </span>and <span class="h2Extra"> playing guitar</span>.</h2>
-    <br>
-
-    <img src="img/dragonn2.png" class="img-fluid mx-auto d-block freudImg">
 
 
     <div class="progressbar"></div>
-
     <script>
         $(window).scroll(function() {
             var scroll = $(window).scrollTop(),
@@ -147,181 +109,359 @@
             scrollPercent = (scroll / (dh - wh)) * 100;
             $(".progressbar").css("height", scrollPercent + "%");
         });
+
+    </script>
+
+    <div class="cursor"><span id="myspan"></span></div>
+
+    <script>
+        var cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        });
+
     </script>
 
 
-    <br><br>
-    <br><br><br>
-    <span class="dot2"></span>
-    <br><br>
 
-    <h5 class="ml-5 h2 mr-5">My Creative Process</h5>
-
-    <section id="cs">
-
-        <div class="content2">
-
-            <h5 class="ml-5 h2 mr-5"><span class="h5Extra">Understanding The Objective</span></h5>
-            <br>
-            <p class="p2">
-                I believe in thoroughly understanding the objective behind the project, which I'm about to create. This way I can get familiarity with the project and company/client hat will further help me create something meaning full original for the client.I believe in thoroughly understading the .</p>
-            <h5 class="ml-5 h2 mr-5"><span class="h5Extra">Generating Ideas</span></h5>
-            <br>
-
-            <p class="p2">In this step, I get to immerse myself in several premade ideas, from which I seek inspiration and proceed to create something innovative and fresh according to the brief given by the client. I believe in iteratively drafting and researching till I find something suitable. A few of the regular things that aid me during this step are hiking, mediation, reading, painting, music.
-            </p>
-
-            <h5 class="ml-5 h2 mr-5"><span class="h5Extra">Implementing Ideas</span></h5>
-            <br>
-
-            <p class="p2">When I come up with something innovative and get the green light from the client, I proceed with implementing it. This is where I begin the creation process and implement ideas according to the project brief.
-            </p>
-
-
-
-            <h5 class="ml-5 h2 mr-5"><span class="h5Extra">Testing Ideas</span></h5>
-            <br>
-
-            <p class="p2">In this step, I test out the deliverable with my friends and family and get their feedback on any improvement. Then I deliver the deliverable to the client in the requested format. If any revisions are required, I iterate the deliverable accordingly. I strongly believe in revising the project until the client is fully satisfied.
-
-            </p>
-
-
-            <h5 class="ml-5 mr-5"><span class="h5Extra">Presenting Final Deliverible</span></h5>
-            <br>
-
-            <p class="p2">In the end, I present the final deliverable to the client after working on the revision. I believe in curating the best for my customers and provide quality service and hundred percent satisfaction to them.
-            </p>
-            <br>
-
+    <div class="navbar js-scroll fade-in">
+        <div class="div-2">
+            <span class="span">
+                <a href="Index2.html" class="div-5 menu link link--metis">
+                    Home</a>
+                <a class="div-4"><img class="logoImg" src="imgs/Logo_isha.png"></a>
+                <a href="#contact" class="div-5 menu link link--metis">Contact Me</a>
+            </span>
         </div>
-    </section>
+    </div>
 
-    <br><br> <br>
 
-    <section id="contact">
 
-        <div class="d-none d-sm-block"><br><br><br><br><br></div>
-        <div id="contact" class="footer-dark mb-3 pt-3">
-            <footer>
-                <div class="container footerContainer">
-                    <div class="row mt-5 mb-5">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-4">
-                            <h3>LET'S GET <a href="mailto:1999sharma19@gmail.com" class="NYText">in touch </a></h3>
-                        </div>
-                        <div class="col-sm-4">
+    <div class="row">
+        <div class=" col-sm-7 order-sm-12 span-2About">
+            <div class="div-9 div-666 ">
+                <p class="text">Hi! I'm <span>
+                        <img id="western1" class="imgName" src="imgs/name/1.png" />
+                    </span>, a UX/UI designer focusing on building <b>thoughtful</b>, <b>seamless</b>, & <b>delightful</b> user experiences, based on a <i>strategic</i> approach. I'm constantly exploring the advanced possibilites of UX/UI design & interactive website development.</p>
 
-                        </div>
+                <br>
+                <span class="span-3x">
+                    <div class="div-10"><span class="dot"></span>
                     </div>
-                </div>
-
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col item social"><a target="_blank" class="item" href="https://github.com/Ishasharmax" style="text-decoration: none;">Gh.</a><a class="item" target="_blank" href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;">Tw.</a><a target="_blank" href="https://dribbble.com/Ishasharmax" class="item" style="text-decoration: none;">Dr.</a><a class="item" target="_blank" href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;">Lk.</a><a class="item" target="_blank" href="https://www.instagram.com/ishxshxrmx/" style="text-decoration: none;">In.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Md.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Pn.</a></div>
+                    <div class="div-88">
+                        When I'm not indulging myself in the realm of designing, I'm trying to cerative juices flowing by expolrign the outside world, reading, playing guitar, &
                     </div>
-                </div>
-
-                <p class="copyright mb-4 mt-5 pt-2"><i>©COPYRIGHT - ISHA 2021</i></p>
-            </footer>
+                </span>
+            </div>
         </div>
-    </section>
-
-
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+        <div class="col-sm-5 order-sm-1 span-2About2">
+            <img src="imgs/im/IMG_5326.jpg" class="aboutIMG">
+        </div>
+    </div>
 
 
     <script>
-        const scrollElements = document.querySelectorAll(".js-scroll");
+        var western = ["imgs/name/1.png", "imgs/name/2.png", "imgs/name/3.png", "imgs/name/4.png"];
 
-        const elementInView = (el, dividend = 1) => {
-            const elementTop = el.getBoundingClientRect().top;
+        let imageTimer, imageIndex = 0;
 
-            return (
-                elementTop <=
-                (window.innerHeight || document.documentElement.clientHeight) / dividend
-            );
-        };
+        function updateImage() {
+            var image = western[imageIndex];
+            $("#western1").attr("src", image);
+            console.log(image);
+            imageIndex++;
+            imageIndex *= (imageIndex < western.length);
+            for (var i = 0; i < western.length; i++) {
+                // create the image element
+                var imageElement = document.createElement('img');
+                imageElement.setAttribute('src', western[i]);
+            }
 
-        const elementOutofView = (el) => {
-            const elementTop = el.getBoundingClientRect().top;
-
-            return (
-                elementTop > (window.innerHeight || document.documentElement.clientHeight)
-            );
-        };
-
-        const displayScrollElement = (element) => {
-            element.classList.add("scrolled");
-        };
-
-
-        const handleScrollAnimation = () => {
-            scrollElements.forEach((el) => {
-                if (elementInView(el, 1.25)) {
-                    displayScrollElement(el);
-                } else if (elementOutofView(el)) {
-                    hideScrollElement(el)
-                }
-            })
+            imageTimer = setTimeout(updateImage, 300);
         }
 
-        window.addEventListener("scroll", () => {
-            handleScrollAnimation();
-        });
+
+        window.addEventListener('load', () => {
+            imageTimer = setTimeout(updateImage, 300);
+        })
+
     </script>
 
+    <!--
+    <div class=" company">
+        <p class="aboutList "><img src="imgs/star.png" class="starImg">
+            Previously @ <span class="companyLink">Markaworks</span> as Web designer</p>
+
+        <p class="aboutList "><img src="imgs/star.png" class="starImg">
+            Previously @ <span class="companyLink">Adventure Club</span> as Junior UX/UI designer</p>
+
+        <p class="aboutList "><img src="imgs/star.png" class="starImg">
+            Previously @ <span class="companyLink">Cashdrop</span> as UX/UI designer</p>
+
+        <p class="aboutList "><img src="imgs/star.png" class="starImg">
+            Previously @ <span class="companyLink">Partiful</span> as UX Intern</p>
+    </div>
+-->
+    <section>
+        <div class="container2">
+            <div class="horizontal-scrolling-items2">
+
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> My creative process
+                </div>
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> My creative process
+                </div>
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> My creative process
+                </div>
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> My creative process
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> My creative process
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> My creative process
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> My creative process
+                </div>
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> My creative process
+                </div>
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> My creative process
+                </div>
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> My creative process
+
+                </div>
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> My creative process
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> My creative process
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> My creative process
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> My creative process
+                </div>
+            </div>
+        </div>
+
+    </section>
 
 
+
+    <div class="content2 ">
+
+        <h5 class="ml-5 mr-5"><span class="div-11"><span class="dot2"></span>Understanding The Objective
+            </span></h5>
+        <br>
+        <p class="valueText">
+            I believe in thoroughly understanding the objective behind the project, which I'm about to create. This way I can get familiarity with the project and company/client hat will further help me create something meaning full original for the client.I believe in thoroughly understading the .</p>
+        <h5 class="ml-5 h2 mr-5"><span class="div-11"><span class="dot2"></span>Generating Ideas</span></h5>
+        <br>
+
+        <p class="valueText">In this step, I get to immerse myself in several premade ideas, from which I seek inspiration and proceed to create something innovative and fresh according to the brief given by the client. I believe in iteratively drafting and researching till I find something suitable. A few of the regular things that aid me during this step are hiking, mediation, reading, painting, music.
+        </p>
+
+        <h5 class="ml-5 h2 mr-5"><span class="div-11"><span class="dot2"></span>Implementing Ideas</span></h5>
+        <br>
+
+        <p class="valueText">When I come up with something innovative and get the green light from the client, I proceed with implementing it. This is where I begin the creation process and implement ideas according to the project brief.
+        </p>
+
+
+
+        <h5 class="ml-5 h2 mr-5"><span class="div-11"><span class="dot2"></span>Testing Ideas</span></h5>
+        <br>
+
+        <p class="valueText">In this step, I test out the deliverable with my friends and family and get their feedback on any improvement. Then I deliver the deliverable to the client in the requested format. If any revisions are required, I iterate the deliverable accordingly. I strongly believe in revising the project until the client is fully satisfied.
+
+        </p>
+
+
+        <h5 class="ml-5 mr-5"><span class="div-11"><span class="dot2"></span>Presenting Final Deliverible</span></h5>
+        <br>
+
+        <p class="valueText">In the end, I present the final deliverable to the client after working on the revision. I believe in curating the best for my customers and provide quality service and hundred percent satisfaction to them.
+        </p>
+        <br>
+
+    </div>
+
+    <!--
+
+    <style>
+        #bound-one {
+            background: #000000;
+            margin-top: 200px;
+            margin-bottom: 100px;
+        }
+
+        .scroll-bound {
+            height: 500vh;
+        }
+
+        .content {
+            height: 100vh;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video {
+            width: 80%;
+        }
+
+    </style>
+
+    <section>
+        <div id="bound-one" class="scroll-bound">
+            <div class="content">
+                <video width="600" muted preload>
+                    <source src="imgs/fincirclex.mp4" type="video/webm">
+                </video>
+            </div>
+        </div>
+    </section>
 
     <script>
-        var cursor = $(".cursor"),
-            follower = $(".cursor-follower");
+        const registerVideo = (bound, video) => {
+            bound = document.querySelector(bound);
+            video = document.querySelector(video);
+            const scrollVideo = () => {
+                if (video.duration) {
+                    const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
+                    const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
+                    const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
 
-        var posX = 0,
-            posY = 0,
-            mouseX = 0,
-            mouseY = 0;
-
-        TweenMax.to({}, 0.016, {
-            repeat: -1,
-            onRepeat: function() {
-                posX += (mouseX - posX) / 9;
-                posY += (mouseY - posY) / 9;
-
-                TweenMax.set(follower, {
-                    css: {
-                        left: posX - 20,
-                        top: posY - 20
-                    }
-                });
-
-                TweenMax.set(cursor, {
-                    css: {
-                        left: mouseX,
-                        top: mouseY
-                    }
-                });
+                    video.currentTime = video.duration * percentScrolled;
+                }
+                requestAnimationFrame(scrollVideo);
             }
-        });
+            requestAnimationFrame(scrollVideo);
+        }
+        registerVideo("#bound-one", "#bound-one video");
 
-        $(document).on("mousemove", function(e) {
-            mouseX = e.pageX;
-            mouseY = e.pageY;
-        });
-
-        $(".portfolio-item img").on("mouseenter", function() {
-            cursor.addClass("active");
-            follower.addClass("active");
-        });
-
-        $(".portfolio-item img").on("mouseleave", function() {
-            cursor.removeClass("active");
-            follower.removeClass("active");
-        });
     </script>
+-->
 
 
-</body></html>
+
+    <section>
+        <div class="container2">
+            <div class="horizontal-scrolling-items2">
+
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> Striving to bring funk to the junk since 1999
+                </div>
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> Striving to bring funk to the junk since 1999
+                </div>
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> Striving to bring funk to the junk since 1999
+                </div>
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> Striving to bring funk to the junk since 1999
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> Striving to bring funk to the junk since 1999
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> Striving to bring funk to the junk since 1999
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img src="imgs/im/star.gif" class="star"> Striving to bring funk to the junk since 1999
+                </div>
+                <div class="horizontal-scrolling-items__item"><img src="imgs/Star%201.png" class="star">Striving to bring funk to the junk since 1999
+                </div>
+                <div class="horizontal-scrolling-items__item"><img src="imgs/Star%201.png" class="star">Striving to bring funk to the junk since 1999
+                </div>
+                <div class="horizontal-scrolling-items__item"><img src="imgs/Star%201.png" class="star">Striving to bring funk to the junk since 1999
+
+                </div>
+                <div class="horizontal-scrolling-items__item"><img src="imgs/Star%201.png" class="star">Striving to bring funk to the junk since 1999
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img src="imgs/Star%201.png" class="star">Striving to bring funk to the junk since 1999
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img src="imgs/Star%201.png" class="star">Striving to bring funk to the junk since 1999
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img src="imgs/Star%201.png" class="star">Striving to bring funk to the junk since 1999
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <footer id="contact" class="mt-5">
+        <div class="div-33">
+            <a href="mailto:1999sharma19@gmail.com" class="a1" style="cursor:none">
+                <span class="span-11 cursorHover arrowChange">
+                    LET’S GET SOMETHIN’
+                    <br />
+                    COOKIN’.
+                    <div class="rotate"> <img src="imgs/im/Vector.png" class="arrow" class="rotate" id="my-div" /></div>
+                </span>
+            </a>
+        </div>
+
+        <script>
+            var cursor = document.querySelector('.cursor');
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.pageX + 'px';
+                cursor.style.top = e.pageY + 'px';
+            });
+
+            var cursor3 = document.querySelector('.div-33');
+            span = document.getElementById("myspan");
+            txt = document.createTextNode("Say hi!");
+
+            cursor3.addEventListener('mouseenter', () => {
+                var element = document.querySelector('.cursor');
+                element.style.transform = 'scale(6)';
+
+
+                //            element.style.transition = 'width 2s linear 1s';
+
+                element.style.background = '#FF6E1D';
+                span.appendChild(txt);
+            });
+
+            cursor3.addEventListener('mouseleave', () => {
+                var element = document.querySelector('.cursor');
+                element.style.transform = '';
+                element.style.background = '';
+                span.removeChild(txt);
+            })
+
+        </script>
+
+
+
+        <div class="div-33">
+            <span class="span-12">
+                <a target="_blank" href="https://www.linkedin.com/in/ishasharmax/" class="footer link2 link--metis">LinkedIn</a>
+                <a target="_blank" href="https://www.instagram.com/ishxshxrmx/" class="footer link2  link--metis">Instagram</a>
+                <a target="_blank" href="https://www.behance.net/ishx" class="footer link2 link--metis">Behance</a>
+                <a target="_blank" href="https://dribbble.com/ishasharmax" class="footer link2 link--metis">Dribbble</a>
+                <a target="_blank" href="https://www.figma.com/file/w8xvScqssOziCOnEXZsAoW/Recent-UI%2FUX-Collaborations?type=design&node-id=0%3A1&mode=design&t=GvkMhb13kVf2cV5C-1" class="footer link2 link--metis">Recent UIs</a>
+
+                <a href="https://github.com/Ishasharmax" class="footer link2 link--metis">Github</a>
+            </span>
+
+            <div class="div-171"></div>
+
+            <span class="span-13">
+                <div class="div-40">All Rights Reserved. Copyright © 2024.</div>
+                <div class="div-41">Created with 🤍 by Isha.</div>
+            </span>
+        </div>
+
+    </footer>
+</body>
