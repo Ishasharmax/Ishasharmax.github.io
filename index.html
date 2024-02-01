@@ -5,10 +5,14 @@
     <title>Isha Sharma - Portfolio Website</title>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/is.png" type="image/x-icon">
+    <link rel="icon" href="imgs/Logo_isha.png" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <meta name="thumbnail" content="img/mockup1.svg" />
     <link rel="image_src" href="img/mockup1.svg">
+
+
+
+
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- TweenMax - GSAP -->
@@ -17,17 +21,25 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <!-- TweenMax - GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
-    <link rel="stylesheet" media="screen" href="css/style2.css">
+
+    <link rel="stylesheet" media="screen" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 </head>
 
 <body>
 
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <div id="preloader">
         <div class="loader">
-            <p class="loader_text" id="loader_text"><span class="loader_text_unit" data-count="100">0</span><span>%</span></p>
+            <img class="loaderLogo" src="imgs/im/12eda373-70c9-40fa-95f0-58529429bc1a.gif">
         </div>
     </div>
+
+
 
     <script>
         $(window).on('load', function() {
@@ -68,8 +80,6 @@
 
     </script>
 
-
-
     <script>
         $('.loader_text_unit').each(function() {
             var $this = $(this),
@@ -94,527 +104,661 @@
         });
 
     </script>
+
+    <div class="progressbar"></div>
+    <script>
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop(),
+                dh = $(document).height(),
+                wh = $(window).height();
+            scrollPercent = (scroll / (dh - wh)) * 100;
+            $(".progressbar").css("height", scrollPercent + "%");
+        });
+
+    </script>
+
+    <div class="cursor"><span id="myspan"></span></div>
+
+    <script>
+        var cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        });
+
+    </script>
+
+    <!--    <div class="divIDK">-->
     <div class="navbar js-scroll fade-in">
-        <a class="menu" href="https://ishasharmax.github.io"><img alt="3d logo" class="sigIMG" src="img/is.png"></a>
-        <a class="menu link link--metis" style="text-decoration: none;" href="#work">WORK</a>
-        <a class="menu link link--metis" style="text-decoration: none;" href="About.html">ABOUT</a>
-        <a class="menu link link--metis" style="text-decoration: none;" href="#contact">CONTACT ME</a>
+        <div class="div-2">
+            <span class="span">
+                <a href="about2.html" class="div-3 menu link link--metis">About</a>
+                <a class="div-4"><img class="logoImg" src="imgs/Logo_isha.png"></a>
+                <a href="#contact" class="div-5 menu link link--metis">Contact Me</a>
+            </span>
+        </div>
     </div>
+    <!--    </div>-->
 
-    <section id="home">
-        <br><br><br><br><br>
-        <img class="imgMe mx-auto img-fluid d-block border-rounded" src="img/me2.JPG">
-        <h2 class="scrolled fade-in-bottom ml-5 mr-5">Hello! I’m Isha, <span class="h1Extra">designer</span> and creative front-end <span class="h1Extra">developer</span>.</h2>
-        <br>
-    </section>
 
+
+    <!--    <div data-scroll-container>-->
+
+    <div class="row">
+        <!--        <div class="div-6">-->
+        <!--            <span class="span-2">-->
+        <div class=" col-sm-7 order-sm-12 span-2">
+            <div class="div-9 div-6 ">
+                Desig
+                <span>
+                    <img id="western1" class="img2" src="imgs/n/n1.png" />
+                </span>
+                er &
+                <br />C<span>
+                    <img id="western3" class="img2" src="imgs/r/r1.png" />
+                </span>eative
+                <br />
+                Develo<span>
+                    <img id="western2" class="img2" src="imgs/p/p2.png" />
+                </span>er
+            </div>
+        </div>
+        <div class="col-sm-5 order-sm-1 span-22">
+            <div class="HeroText">
+                <div>
+                    <h2 class="time link--metis2">Local Time → <span class="display-time"></span></h2>
+                    <span class="span-3">
+                        <div class="div-10"><span class="dot"></span>
+                        </div>
+                        <div class="div-8">
+                            Bringing your ideas to life through visually captivating designs and interactive experiences, I strive to push the boundaries by solving complex problems, and delivering tailored solutions that exceed expectations and engage audiences.
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--            </span>-->
+    </div>
+    <!--    </div>-->
+
+
+
+
+
+    <script>
+        var western = ["imgs/n/n1.png", "imgs/n/n2.png", "imgs/n/n3.png", "imgs/n/n4.png", "imgs/n/n5.png"];
+
+        let imageTimer, imageIndex = 0;
+
+        function updateImage() {
+            var image = western[imageIndex];
+            $("#western1").attr("src", image);
+            console.log(image);
+            imageIndex++;
+            imageIndex *= (imageIndex < western.length);
+            for (var i = 0; i < western.length; i++) {
+                // create the image element
+                var imageElement = document.createElement('img');
+                imageElement.setAttribute('src', western[i]);
+            }
+
+            imageTimer = setTimeout(updateImage, 300);
+        }
+
+
+        window.addEventListener('load', () => {
+            imageTimer = setTimeout(updateImage, 300);
+        })
+
+    </script>
+
+
+    <script>
+        var western2 = ["imgs/p/p1.png", "imgs/p/p2.png", "imgs/p/p3.png", "imgs/p/p4.png", "imgs/p/p5.png"];
+
+        let imageTimer2, imageIndex2 = 0;
+
+        function updateImage2() {
+            var image2 = western2[imageIndex2];
+            $("#western2").attr("src", image2);
+            console.log(image2);
+            imageIndex2++;
+            imageIndex2 *= (imageIndex2 < western2.length);
+            for (var i = 0; i < western2.length; i++) {
+                // create the image element
+                var imageElement2 = document.createElement('img');
+                imageElement2.setAttribute('src', western2[i]);
+            }
+            imageTimer2 = setTimeout(updateImage2, 300);
+        }
+
+        onload = () => {
+            imageTimer2 = setTimeout(updateImage2, 300);
+        }
+
+        window.addEventListener('load', () => {
+            imageTimer2 = setTimeout(updateImage2, 300);
+        })
+
+    </script>
+
+    <script>
+        var western3 = ["imgs/r/r1.png", "imgs/r/r2.png", "imgs/r/r3.png", "imgs/r/r4.png"];
+
+        let imageTimer3, imageIndex3 = 0;
+
+        function updateImage3() {
+            var image3 = western3[imageIndex3];
+            $("#western3").attr("src", image3);
+            console.log(image3);
+            imageIndex3++;
+            imageIndex3 *= (imageIndex3 < western3.length);
+            for (var i = 0; i < western3.length; i++) {
+                // create the image element
+                var imageElement3 = document.createElement('img');
+                imageElement3.setAttribute('src', western3[i]);
+            }
+
+            imageTimer3 = setTimeout(updateImage3, 300);
+        }
+
+        window.addEventListener('load', () => {
+            imageTimer3 = setTimeout(updateImage3, 300);
+        })
+
+    </script>
+
+
+    <script>
+        const displayTime = document.querySelector(".display-time");
+        // Time
+        function showTime() {
+            let time = new Date();
+            displayTime.innerText = time.toLocaleTimeString("en-US", {
+                hour12: false
+            });
+            setTimeout(showTime, 1000);
+        }
+        showTime();
+
+    </script>
 
     <br><br><br>
-    <span class="dot2"></span>
-    <br><br>
 
-    <section class="scrollerH scrollerDown mt-5 mb-5 pb-5 pt-5">
-        <div class="wrapper22">
-            <div class="circle">
-                <svg class="svg2" viewBox="0 0 600 400" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" id="reload2" alt="scroll">
-                    <defs>
-                        <path id="topSemiCircle" d="
-        M 120, 200
-        a 175,175 0 1,1 350,0
-        " />
-                        <path id="bottomSemiCircle" d="
-        M 470, 200
-        a 175,175 0 1,1 -350,0
-        " />
-                    </defs>
+    <!--      </div>-->
 
-                    <text dy="1" font-size="40" stroke="white" textLength="531">
-                        <textPath textLength="531" href="#topSemiCircle" aria-label="Smashing">
-                            scroll down for some groove
-                        </textPath>
-                    </text>
-                    <text dy="1" font-size="40" stroke="white" textLength="531">
-                        <textPath textLength="531" href="#bottomSemiCircle" aria-label="MAGAZINE">
-                            scroll down for some groove
-                        </textPath>
-                    </text>
-                </svg>
+
+    <section id="mySection">
+        <div id="demo">
+            <video playsinline loop muted autoplay data-wf-ignore="true" data-object-fit="cover">
+                <source src="imgs/im/updateshowrel2.mp4" data-wf-ignore="true">
+            </video>
+        </div>
+    </section>
+
+    <div id="demo2">
+        <video playsinline loop muted autoplay data-wf-ignore="true" data-object-fit="cover">
+            <source src="imgs/im/fin2x.mp4" data-wf-ignore="true">
+        </video>
+    </div>
+
+    <script>
+        const mySection = document.getElementById("mySection");
+        const demoVideo = document.querySelector("#demo video");
+
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const newSize = 280 + scrollPosition * 0.1;
+
+            demoVideo.style.transform = 'scale(' + newSize / 100 + ')';
+        });
+
+    </script>
+
+    <div class="navigation-wrapper">
+        <div class="project-preview-wrapper">
+            <div class="project-preview"></div>
+        </div>
+        <div class="workDiv">
+            <span class="span-4 mb-5">
+                <div class="div-10"><span class="dot"></span>
+                </div>
+                <div class="div-11">Featured work</div>
+            </span>
+
+            <span class="span-5 navigation-item cursorHover1 mt-3">
+                <a class="navigation-link navigation-link-1" style="text-decoration: none; cursor:none;" target="_blank" href="vegan.html"> <span class="span2" data-text="WLFF">Ravissant</span>
+                </a>
+                <div class="div13">2023</div>
+            </span>
+            <div class="div-14"></div>
+            <span class="span-5 navigation-item cursorHover2">
+                <a class="navigation-link navigation-link-2" style="text-decoration: none; cursor:none;" target="_blank" href="vegan.html"> <span class="span2" data-text="WLFF">Obelisk</span>
+                </a>
+                <div class="div13">2023</div>
+            </span>
+            <div class="div-14"></div>
+            <span class="span-5 navigation-item cursorHover3">
+                <a class="navigation-link navigation-link-3" style="text-decoration: none; cursor:none;" target="_blank" href="vegan.html"> <span class="span2" data-text="WLFF">Oxana</span>
+                </a>
+                <div class="div13">2023</div>
+            </span>
+            <div class="div-14"></div>
+            <span class="span-5 navigation-item cursorHover4">
+                <a class="navigation-link navigation-link-4" style="text-decoration: none; cursor:none;" target="_blank" href="https://twitter.com/?lang=en"> <span class="span2" data-text="WLFF">Veganxzer</span>
+                </a>
+                <div class="div13">2022</div>
+            </span>
+            <div class="div-14"></div>
+            <span class="span-5 navigation-item cursorHover5">
+                <a class="navigation-link navigation-link-5" style="text-decoration: none; cursor:none;" target="_blank" href="vegan.html"> <span class="span2" data-text="WLFF">Gucci</span>
+                </a>
+                <div class="div13">2022</div>
+            </span>
+            <div class="div-14"></div>
+            <span class="span-5 navigation-item cursorHover6">
+                <a class="navigation-link navigation-link-6" style="text-decoration: none; cursor:none;" target="_blank" href="vegan.html"> <span class="span2" data-text="WLFF">WeMeet</span>
+                </a>
+                <div class="div13">2021</div>
+            </span>
+        </div>
+    </div>
+
+
+    <script>
+        var cursor3 = document.querySelector('.cursorHover1');
+        span = document.getElementById("myspan");
+        txt2 = document.createTextNode("Explore");
+
+        cursor3.addEventListener('mouseenter', () => {
+            var element = document.querySelector('.cursor');
+            element.style.transform = 'scale(4)';
+            element.style.background = 'white';
+            span.style.color = 'black';
+            span.appendChild(txt2);
+
+        });
+
+        cursor3.addEventListener('mouseleave', () => {
+            var element = document.querySelector('.cursor');
+            element.style.transform = '';
+            element.style.background = '';
+            span.style.color = '';
+            span.removeChild(txt2);
+
+        })
+
+        var cursor4 = document.querySelector('.cursorHover2');
+
+        cursor4.addEventListener('mouseenter', () => {
+            var element = document.querySelector('.cursor');
+            element.style.transform = 'scale(4)';
+            element.style.background = 'white';
+            span.style.color = 'black';
+            span.appendChild(txt2);
+
+        });
+
+        cursor4.addEventListener('mouseleave', () => {
+            var element = document.querySelector('.cursor');
+            element.style.transform = '';
+            element.style.background = '';
+            span.style.color = '';
+            span.removeChild(txt2);
+
+        })
+
+
+        var cursor5 = document.querySelector('.cursorHover3');
+
+        cursor5.addEventListener('mouseenter', () => {
+            var element = document.querySelector('.cursor');
+            element.style.transform = 'scale(4)';
+            element.style.background = 'white';
+            span.style.color = 'black';
+            span.appendChild(txt2);
+
+        });
+
+        cursor5.addEventListener('mouseleave', () => {
+            var element = document.querySelector('.cursor');
+            element.style.transform = '';
+            element.style.background = '';
+            span.style.color = '';
+            span.removeChild(txt2);
+
+        })
+
+        var cursor6 = document.querySelector('.cursorHover4');
+
+        cursor6.addEventListener('mouseenter', () => {
+            var element = document.querySelector('.cursor');
+            element.style.transform = 'scale(4)';
+            element.style.background = 'white';
+            span.style.color = 'black';
+            span.appendChild(txt2);
+
+        });
+
+        cursor6.addEventListener('mouseleave', () => {
+            var element = document.querySelector('.cursor');
+            element.style.transform = '';
+            element.style.background = '';
+            span.style.color = '';
+            span.removeChild(txt2);
+
+        })
+
+        var cursor7 = document.querySelector('.cursorHover5');
+
+        cursor7.addEventListener('mouseenter', () => {
+            var element = document.querySelector('.cursor');
+            element.style.transform = 'scale(4)';
+            element.style.background = 'white';
+            span.style.color = 'black';
+            span.appendChild(txt2);
+
+        });
+
+        cursor7.addEventListener('mouseleave', () => {
+            var element = document.querySelector('.cursor');
+            element.style.transform = '';
+            element.style.background = '';
+            span.style.color = '';
+            span.removeChild(txt2);
+
+        })
+
+
+        var cursor8 = document.querySelector('.cursorHover6');
+
+        cursor8.addEventListener('mouseenter', () => {
+            var element = document.querySelector('.cursor');
+            element.style.transform = 'scale(4)';
+            element.style.background = 'white';
+            span.style.color = 'black';
+            span.appendChild(txt2);
+
+        });
+
+        cursor8.addEventListener('mouseleave', () => {
+            var element = document.querySelector('.cursor');
+            element.style.transform = '';
+            element.style.background = '';
+            span.style.color = '';
+            span.removeChild(txt2);
+
+        })
+
+    </script>
+
+    <div class="progressbar"></div>
+
+    <script>
+        $(document).ready(function() {
+            TweenMax.set(".project-preview", {
+                width: 0
+            });
+
+            var tl = new TimelineLite();
+
+            $(document)
+                .on("mouseover", ".navigation-item", function(evt) {
+                    tl = new TimelineLite();
+                    tl.to($(".project-preview"), 1, {
+                        width: "600px",
+                        ease: Expo.easeInOut
+                    });
+                })
+                .on("mouseout", ".navigation-item", function(evt) {
+                    tl = new TimelineLite();
+                    tl.to($(".project-preview"), 0.5, {
+                        width: 0,
+                        ease: Expo.easeInOut
+                    });
+                });
+        });
+
+
+        $(".navigation-link-1").hover(function() {
+            $(".project-preview").css({
+                "background-image": "url(imgs/ravissant.png)"
+            });
+        });
+
+        $(".navigation-link-2").hover(function() {
+            $(".project-preview").css({
+                "background-image": "url(imgs/obelisk.png)"
+            });
+        });
+
+        $(".navigation-link-3").hover(function() {
+            $(".project-preview").css({
+                "background-image": "url(img/VELVET_GIF.gif)"
+            });
+        });
+
+        $(".navigation-link-4").hover(function() {
+            $(".project-preview").css({
+                "background-image": "url(img/vegan/MAIN_IMG.png)"
+            });
+        });
+
+        $(".navigation-link-5").hover(function() {
+            $(".project-preview").css({
+                "background-image": "url(img/gucci.png)"
+            });
+        });
+
+        $(".navigation-link-6").hover(function() {
+            $(".project-preview").css({
+                "background-image": "url(img/wemeet/wemeet.png)"
+            });
+        });
+
+    </script>
+
+
+    <section>
+        <div class="clientsSection">
+            <span class="span-44">
+                <div class="div-10"><span class="dot"></span>
+                </div>
+                <div class="div-11">Featured clients</div>
+            </span>
+        </div>
+
+
+        <div class="container2">
+            <div class="horizontal-scrolling-items">
+
+                <div class="horizontal-scrolling-items__item"><img alt="3d logo" class="client_img" src="imgs/logos/Frame%205264.png">
+                </div>
+                <div class="horizontal-scrolling-items__item"><img alt="3d logo" class="client_img" src="imgs/logos/Frame%205265.png">
+                </div>
+                <div class="horizontal-scrolling-items__item"><img alt="3d logo" class="client_img" src="imgs/logos/Frame%205266.png">
+
+                </div>
+                <div class="horizontal-scrolling-items__item"><img alt="3d logo" class="client_img" src="imgs/logos/Frame%205267.png">
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img alt="3d logo" class="client_img" src="imgs/logos/Frame%205268.png">
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img alt="3d logo" class="client_img" src="imgs/logos/Frame%205269.png">
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img alt="3d logo" class="client_img" src="imgs/logos/Frame%205270.png">
+                </div>
+
+
+                <div class="horizontal-scrolling-items__item"><img alt="3d logo" class="client_img" src="imgs/logos/Frame%205264.png">
+                </div>
+                <div class="horizontal-scrolling-items__item"><img alt="3d logo" class="client_img" src="imgs/logos/Frame%205265.png">
+                </div>
+                <div class="horizontal-scrolling-items__item"><img alt="3d logo" class="client_img" src="imgs/logos/Frame%205266.png">
+
+                </div>
+                <div class="horizontal-scrolling-items__item"><img alt="3d logo" class="client_img" src="imgs/logos/Frame%205267.png">
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img alt="3d logo" class="client_img" src="imgs/logos/Frame%205268.png">
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img alt="3d logo" class="client_img" src="imgs/logos/Frame%205269.png">
+                </div>
+
+                <div class="horizontal-scrolling-items__item"><img alt="3d logo" class="client_img" src="imgs/logos/Frame%205270.png">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    
+    
+    <style>
+        #bound-one {
+            background: #000000;
+/*            margin-top: 60px;*/
+/*            border: 3px white;*/
+            margin-bottom: 60px;
+        }
+        
+        
+@media (max-width: 991px) {
+    #bound-one {
+            display: none;
+        }
+}
+
+        .scroll-bound {
+            height: 500vh;
+        }
+
+        .content {
+            height: 100vh;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+        
+    </style>
+
+    <section>
+        <div id="bound-one" class="scroll-bound">
+            <div class="content">
+                <video class="bottomVid" muted preload>
+                    <source src="imgs/shapefiny.mp4" type="video/webm">
+                </video>
             </div>
         </div>
     </section>
 
     <script>
-        // index.js
-        window.onscroll = function() {
-            scrollRotate();
-        };
+        const registerVideo = (bound, video) => {
+            bound = document.querySelector(bound);
+            video = document.querySelector(video);
+            const scrollVideo = () => {
+                if (video.duration) {
+                    const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
+                    const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
+                    const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
 
-        function scrollRotate() {
-            let image = document.getElementById("reload2");
-            image.style.transform = "rotate(" + window.pageYOffset / 30 + "deg)";
+                    video.currentTime = video.duration * percentScrolled;
+                }
+                requestAnimationFrame(scrollVideo);
+            }
+            requestAnimationFrame(scrollVideo);
         }
+        registerVideo("#bound-one", "#bound-one video");
 
     </script>
 
-    <section id="work">
-        <div class="mt-5 pt-5 mb-4">
-            <svg width="100%" height="210px" viewBox="0 0 1098.72 89.55">
-                <path id="curve" fill="transparent" d="M0.17,0.23c0,0,105.85,77.7,276.46,73.2s243.8-61.37,408.77-54.05c172.09,7.64,213.4,92.34,413.28,64.19"></path>
-                <text class="wave" width="100%">
-                    <textPath xlink:href="#curve" startOffset="-120px" id="text-path">Selected work</textPath>
-                </text>
-            </svg>
+
+    <footer id="contact" class="mt-5">
+        <div class="div-33">
+            <a href="mailto:1999sharma19@gmail.com" class="a1" style="cursor:none">
+                <span class="span-11 cursorHover arrowChange">
+                    LET’S GET SOMETHIN’
+                    <br />
+                    COOKIN’.
+                    <div class="rotate"> <img src="imgs/im/Vector.png" class="arrow" class="rotate" id="my-div" /></div>
+                </span>
+            </a>
         </div>
 
-        <script>
-            const textPath = document.querySelector("#text-path");
-            const h = document.documentElement,
-                b = document.div,
-                st = 'scrollTop',
-                sh = 'scrollHeight';
 
-            document.addEventListener("scroll", e => {
-                let percent = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
-                textPath.setAttribute("startOffset", (-percent * 20) + 1200)
+        <script>
+            var cursor = document.querySelector('.cursor');
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.pageX + 'px';
+                cursor.style.top = e.pageY + 'px';
             });
+
+            var cursor3 = document.querySelector('.div-33');
+            span = document.getElementById("myspan");
+            txt = document.createTextNode("Say hi!");
+
+            cursor3.addEventListener('mouseenter', () => {
+                var element = document.querySelector('.cursor');
+                element.style.transform = 'scale(6)';
+
+
+                //            element.style.transition = 'width 2s linear 1s';
+
+                element.style.background = '#FF6E1D';
+                span.appendChild(txt);
+            });
+
+            cursor3.addEventListener('mouseleave', () => {
+                var element = document.querySelector('.cursor');
+                element.style.transform = '';
+                element.style.background = '';
+                span.removeChild(txt);
+            })
 
         </script>
 
 
-        <div class="navigation-wrapper">
-            <div class="project-preview-wrapper">
-                <div class="project-preview"></div>
-            </div>
-            <ul class="navigation-list">
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-10" style="text-decoration: none;" target="_blank" href="vegan.html"> <span class="span2" data-text="WLFF">VEGANXZER</span>
-                    </a>
-                </li>
-                
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-12" style="text-decoration: none;" target="_blank" href="wemeet.html"> <span class="span2" data-text="WLFF">WEMEET</span>
-                    </a>
-                </li>
-                
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-13" style="text-decoration: none;" href="https://www.behance.net/gallery/164800003/Sabyasachi-Website-Re-design"> <span class="span2" data-text="UNWIND">SABYASACHI</span>
-                    </a>
-                </li>     
-                
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-11" style="text-decoration: none;" href="https://www.behance.net/gallery/149644883/Gucci-Decor-A-Website-Concept"> <span class="span2" data-text="UNWIND">GUCCI DECOR</span>
-                    </a>
-                </li>
-                
-                
-
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-1" style="text-decoration: none;" href="unwind.html"> <span class="span2" data-text="UNWIND">UNWIND</span>
-                    </a>
-                </li>
-                
-           
-
-
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-7" style="text-decoration: none;" href="jiv.html"> <span class="span2" data-text="JIV">JIV'S GROCERIES</span>
-                    </a>
-                </li>
-
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-3" style="text-decoration: none;" target="_blank" href="NVB.html"> <span class="span2" data-text="JIV">NORDIC BIO VENTURES</span>
-                    </a>
-                </li>
-
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-2" style="text-decoration: none;" target="_blank" href="CD.html"> <span class="span2" data-text="WLFF">CASHDROP</span>
-                    </a>
-                </li>
-
-                <!--                <div class="project-overlay"></div>-->
-
-                <li class=" navigation-item">
-                    <a class="navigation-link navigation-link-4" style="text-decoration: none;" href="https://github.com/Ishasharmax/Generative_Art"> <span class="span2" data-text="GENERATIVE ART">GENERATIVE ART</span>
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-5" style="text-decoration: none;" target="_blank" href="https://github.com/Ishasharmax/undercovermusic"> <span class="span2" data-text="UNDERCOVER MUSIC">UNDERCO. MUSIC</span>
-                    </a>
-                </li>
-
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-6" style="text-decoration: none;" target="RAAG" href="musist.html"> <span class="span2" data-text="RAAG">MUSIST</span>
-                    </a>
-                </li>
-
-                <!--
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-7" style="text-decoration: none;" target="_blank" href="stickers.html"> <span class="span2" data-text="Ithacares">Digital art for sale</span>
-                    </a>
-                </li>
--->
-                <!--
-
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-8" style="text-decoration: none;" href="blender.html"> <span class="span2" data-text="BLENDER">BLENDER</span>
-                    </a>
-                </li>
-
-                <li class="navigation-item">
-                    <a class="navigation-link navigation-link-9" style="text-decoration: none;" target="_blank" href="https://devpost.com/software/ithaca-care"> <span class="span2" data-text="Ithacares">Ithacares</span>
-                    </a>
-                </li>
--->
-            </ul>
-        </div>
-        <div class="progressbar"></div>
-
-        <script>
-            $(document).ready(function() {
-                TweenMax.set(".project-preview", {
-                    width: 0
-                });
-
-                var tl = new TimelineLite();
-
-                $(document)
-                    .on("mouseover", ".navigation-item", function(evt) {
-                        tl = new TimelineLite();
-                        tl.to($(".project-preview"), 1, {
-                            width: "600px",
-                            ease: Expo.easeInOut
-                        });
-                    })
-                    .on("mouseout", ".navigation-item", function(evt) {
-                        tl = new TimelineLite();
-                        tl.to($(".project-preview"), 0.5, {
-                            width: 0,
-                            ease: Expo.easeInOut
-                        });
-                    });
-            });
-            
-             $(".navigation-link-11").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/gucci.png)"
-                });
-            });
-
-            $(".navigation-link-1").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/Unwind.png)"
-                });
-            });
-
-            $(".navigation-link-2").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/CD.png)"
-                });
-            });
-
-            $(".navigation-link-3").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/NBV.png)"
-                });
-            });
-
-            $(".navigation-link-4").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/download.png)"
-                });
-            });
-
-            $(".navigation-link-5").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/C45E8DC6-5038-4A77-A734-E3EDDDFB10C3.JPEG)"
-                });
-            });
-
-            $(".navigation-link-6").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/musist.png)"
-                });
-            });
-
-            $(".navigation-link-7").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/logo.gif)"
-                });
-            });
-
-            $(".navigation-link-10").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/vegan/MAIN_IMG.png)"
-                });
-            });
-            
-            $(".navigation-link-12").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/wemeet/wemeet.png)"
-                });
-            });
-            
-             $(".navigation-link-13").hover(function() {
-                $(".project-preview").css({
-                    "background-image": "url(img/sabyasachi.png)"
-                });
-            });
-
-
-            //            $(".navigation-link-7").hover(function() {
-            //                $(".project-preview").css({
-            //                    "background-image": "url(img/butterfly3.png)"
-            //                });
-            //            });
-            //
-            //            $(".navigation-link-8").hover(function() {
-            //                $(".project-preview").css({
-            //                    "background-image": "url(img/Group35.JPG)"
-            //                });
-            //            });
-            //
-            //            $(".navigation-link-9").hover(function() {
-            //                $(".project-preview").css({
-            //                    "background-image": "url(img/cares.jpg)"
-            //                });
-            //            });
-
-
-
-            $(window).scroll(function() {
-                var scroll = $(window).scrollTop(),
-                    dh = $(document).height(),
-                    wh = $(window).height();
-                scrollPercent = (scroll / (dh - wh)) * 100;
-                $(".progressbar").css("height", scrollPercent + "%");
-            });
-
-        </script>
-
-        <br><br><br><br><br><br><br><br><br>
-
-        <div>
-            <svg width="100%" height="210px" viewBox="0 0 1098.72 89.55">
-                <path id="curve2" fill="transparent" d="M0.17,0.23c0,0,105.85,77.7,276.46,73.2s243.8-61.37,408.77-54.05c172.09,7.64,213.4,92.34,413.28,64.19"></path>
-                <text class="wave" width="100%">
-                    <textPath xlink:href="#curve2" startOffset="3000px" id="text-path2">3D, UI, & Graphic Designs</textPath>
-                </text>
-            </svg>
-        </div>
-
-        <script>
-            const textPath2 = document.querySelector("#text-path2");
-            const h2 = document.documentElement,
-                b2 = document.div,
-                st2 = 'scrollTop',
-                sh2 = 'scrollHeight';
-
-            document.addEventListener("scroll", e => {
-                let percent = (h2[st2] || b2[st2]) / ((h2[sh2] || b2[sh2]) - h2.clientHeight) * 140;
-                textPath2.setAttribute("startOffset", (-percent * 20) + 2300)
-            });
-
-        </script>
-
-        <br><br><br><br><br><br><br><br><br>
-        <div class="slideshow-container">
-
-            <div class="mySlides fade">
-                <img src="img/Custom%20Size%20%E2%80%93%202.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Frame%2055.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/C_imgs/Frame%2010.png" style="width:100%"> ;;
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/C_imgs/Frame%2011.png" style="width:100%"> ;;
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/C_imgs/Frame%207.png" style="width:100%"> ;;
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/C_imgs/Frame%208.png" style="width:100%"> ;;
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Group%2038.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/C_imgs/Frame%209.png" style="width:100%"> ;;
-            </div>
-
-
-            <div class="mySlides fade">
-                <img src="img/Group%2041.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/Frame%2056.png" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <img src="img/C_imgs/Frame%20155.png" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <img src="img/C_imgs/Frame%20157.png" style="width:100%">
-            </div>
-            
-             <div class="mySlides fade">
-                <img src="img/C_imgs/Frame%20156.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img/jacquemus.png" style="width:100%">
-            </div>
-
-        </div>
-
-        <div style="text-align:center">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-             <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-
-
-        </div>
-
-        <script>
-            var slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {
-                    slideIndex = 1
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-                setTimeout(showSlides, 550); // Change image every 2 seconds
+        <style>
+            .parallax {
+                background-image: url("img_parallax.jpg");
+                min-height: 500px;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
 
-        </script>
+        </style>
 
-    </section>
-    <br><br><br><br><br><br>
+        <div class="div-33">
+            <span class="span-12">
+                <a target="_blank" href="https://www.linkedin.com/in/ishasharmax/" class="footer link2 link--metis">LinkedIn</a>
+                <a target="_blank" href="https://www.instagram.com/ishxshxrmx/" class="footer link2  link--metis">Instagram</a>
+                <a target="_blank" href="https://www.behance.net/ishx" class="footer link2 link--metis">Behance</a>
+                <a target="_blank" href="https://dribbble.com/ishasharmax" class="footer link2 link--metis">Dribbble</a>
+                <a target="_blank" href="https://www.figma.com/file/w8xvScqssOziCOnEXZsAoW/Recent-UI%2FUX-Collaborations?type=design&node-id=0%3A1&mode=design&t=GvkMhb13kVf2cV5C-1" class="footer link2 link--metis">Recent UIs</a>
 
+                <a href="https://github.com/Ishasharmax" class="footer link2 link--metis">Github</a>
+            </span>
 
+            <div class="div-171"></div>
 
-    <div class="bg33 mt-5">
-        <div class="marquee" id="showScroll2">
-            <div class="marquee__inner" aria-hidden="true">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JAVASCRIPT</span>
-                <span>VUE.JS</span>
-                <span>PYTHON</span>
-                <span>REACT</span>
-                <span>GIT</span>
-                <span>AGILE</span>
-                <span>FIGMA</span>
-                <span>PS</span>
-                <span>XD</span>
-                <span>ILLUSTRATOR</span>
-                <span>SKETCH</span>
-                <span>STORYBOARDING</span>
-                <span>BLENDER</span>
-                <span>WIREFRAMING</span>
-                <span>PROTOTYPING</span>
-            </div>
+            <span class="span-13">
+                <div class="div-40">All Rights Reserved. Copyright © 2024.</div>
+                <div class="div-41">Created with 🤍 by Isha.</div>
+            </span>
         </div>
-    </div>
 
-    <br><br><br> <br><br>
-    <!--    <span class="dot2"></span>-->
-    <!--
-
-
-    <section class="scroll-container">
-        <div class="scroll-element js-scroll fade-in">
-
-        </div>
-        <div class="scroll-caption">
-        </div>
-    </section>
-    <section class="scroll-container">
-        <div class="scroll-element js-scroll fade-in-bottom">
-
-        </div>
-        <div class="scroll-caption">
-        </div>
-    </section>
-    <section class="scroll-container">
-        <div class="scroll-element js-scroll slide-left">
-
-        </div>
-        <div class="scroll-caption">
-        </div>
-    </section>
-    <section class="scroll-container">
-        <div class="scroll-element js-scroll slide-right">
-
-        </div>
-        <div class="scroll-caption">
-        </div>
-    </section>
--->
-
-
-    <div class="d-none d-sm-block"><br><br><br><br></div>
-    <div id="contact" class="footer-dark mb-3">
-        <footer>
-            <div class="container footerContainer">
-                <div class="row mt-5 mb-5">
-                    <div class="col-sm-4"></div>
-                    <div class="col-sm-4">
-                        <h3>LET'S GET <a href="mailto:1999sharma19@gmail.com" class="NYText">in touch </a></h3>
-                    </div>
-                    <div class="col-sm-4">
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col item social"><a target="_blank" class="item" href="https://github.com/Ishasharmax" style="text-decoration: none;">Gh.</a><a class="item" target="_blank" href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;">Tw.</a><a target="_blank" href="https://dribbble.com/Ishasharmax" class="item" style="text-decoration: none;">Dr.</a><a class="item" target="_blank" href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;">Lk.</a><a class="item" target="_blank" href="https://www.instagram.com/ishxshxrmx/" style="text-decoration: none;">In.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Md.</a><a class="item" target="_blank" href="https://ishasharmax.medium.com/" style="text-decoration: none;">Pn.</a></div>
-                </div>
-            </div>
-
-            <p class="copyright mt-5 pt-2"><i>CREATED WITH LOVE BY ISHA</i></p>
-            <p class="copyright mb-4"><i>©COPYRIGHT 2022 </i></p>
-
-        </footer>
-    </div>
-
-
+    </footer>
 
 
 
@@ -661,57 +805,15 @@
 
 
 
+    <!--    </div>-->
 
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+    <!--
     <script>
-        var cursor = $(".cursor"),
-            follower = $(".cursor-follower");
-
-        var posX = 0,
-            posY = 0,
-            mouseX = 0,
-            mouseY = 0;
-
-        TweenMax.to({}, 0.016, {
-            repeat: -1,
-            onRepeat: function() {
-                posX += (mouseX - posX) / 9;
-                posY += (mouseY - posY) / 9;
-
-                TweenMax.set(follower, {
-                    css: {
-                        left: posX - 20,
-                        top: posY - 20
-                    }
-                });
-
-                TweenMax.set(cursor, {
-                    css: {
-                        left: mouseX,
-                        top: mouseY
-                    }
-                });
-            }
-        });
-
-        $(document).on("mousemove", function(e) {
-            mouseX = e.pageX;
-            mouseY = e.pageY;
-        });
-
-        $(".portfolio-item img").on("mouseenter", function() {
-            cursor.addClass("active");
-            follower.addClass("active");
-        });
-
-        $(".portfolio-item img").on("mouseleave", function() {
-            cursor.removeClass("active");
-            follower.removeClass("active");
+        const LocoScroll = new LocomotiveScroll({
+            el: document.querySelector("[data-scroll-container]"),
+            smooth: true
         });
 
     </script>
-
+-->
 </body>
-
-</html>
