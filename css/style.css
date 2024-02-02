@@ -60,7 +60,7 @@ a.Class {
 
 @media (max-width: 991px) {
     .loaderLogo {
-        width: 40vw;
+        width: 20px;
     }
 }
 
@@ -627,7 +627,7 @@ video {
 @media (max-width: 991px) {
     .div-9 {
         max-width: 100%;
-        font-size: 56px;
+        font-size: 48px;
     }
 }
 
