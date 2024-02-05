@@ -358,8 +358,10 @@
                 </a>
                 <div class="div13">2022</div>
             </span>
-            <span class="span-5 navigation-item cursorHover6">
-                <a class="navigation-link navigation-link-6" style="text-decoration: none; cursor:none;" target="_blank" href="https://www.behance.net/gallery/164800003/Sabyasachi-Website-Re-design"> <span class="span2" data-text="WLFF">WeMeet</span>
+            <div class="div-14"></div>
+
+            <span class="span-5 navigation-item cursorHover7">
+                <a class="navigation-link navigation-link-7" style="text-decoration: none; cursor:none;" target="_blank" href="https://www.behance.net/gallery/164800003/Sabyasachi-Website-Re-design"> <span class="span2" data-text="WLFF">WeMeet</span>
                 </a>
                 <div class="div13">2021</div>
             </span>
@@ -491,6 +493,26 @@
             span.removeChild(txt2);
 
         })
+        
+        var cursor9 = document.querySelector('.cursorHover7');
+
+        cursor9.addEventListener('mouseenter', () => {
+            var element = document.querySelector('.cursor');
+            element.style.transform = 'scale(4)';
+            element.style.background = 'white';
+            span.style.color = 'black';
+            span.appendChild(txt2);
+
+        });
+
+        cursor9.addEventListener('mouseleave', () => {
+            var element = document.querySelector('.cursor');
+            element.style.transform = '';
+            element.style.background = '';
+            span.style.color = '';
+            span.removeChild(txt2);
+
+        })
 
     </script>
 
@@ -554,10 +576,16 @@
 
         $(".navigation-link-6").hover(function() {
             $(".project-preview").css({
-                "background-image": "url(img/wemeet/wemeet.png)"
+                "background-image": "url(img/Sabyasachi.png)"
             });
         });
 
+        
+        $(".navigation-link-7").hover(function() {
+            $(".project-preview").css({
+                "background-image": "url(img/wemeet/wemeet.png)"
+            });
+        });
     </script>
 
 
@@ -622,7 +650,7 @@
     <style>
         #bound-one {
             background: #000000;
-                        margin-top: 40px;
+            margin-top: 40px;
             /*            border: 3px white;*/
             margin-bottom: 60px;
         }
